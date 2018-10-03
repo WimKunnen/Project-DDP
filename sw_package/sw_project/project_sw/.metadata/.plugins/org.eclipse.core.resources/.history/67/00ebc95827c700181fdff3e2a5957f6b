@@ -1,0 +1,80 @@
+/*
+ * mp_arith.c
+ *
+ */
+#include <stdint.h>
+// Calculates res = a + b.
+// a and b represent large integers stored in uint32_t arrays
+// a and b are arrays of size elements, res has size+1 elements
+void mp_add(uint32_t *a, uint32_t *b, uint32_t *res, uint32_t size)
+{
+	uint32_t c = 0;
+	uint32_t i = 0;
+	for(i=0;i<size;i++) {
+		uint64_t t = (uint64_t)a[i] + b[i] + c;
+		res[i] = (uint32_t)t;
+		if ((t >> 32) > 0) {
+			c = 1;
+		}
+		else {
+			c = 0;
+		}
+
+	}
+	res[size] = c;
+}
+
+// Calculates res = a - b.
+// a and b represent large integers stored in uint32_t arrays
+// a, b and res are arrays of size elements
+void mp_sub(uint32_t *a, uint32_t *b, uint32_t *res, uint32_t size)
+{
+	uint32_t c = 0;
+	uint32_t i = 0;
+	for(i=0;i<size;i++) {
+		int64_t t = (int64_t)a[i] - b[i] - c;
+		res[i] = (uint32_t)t;
+		if ((t >> 32) > 0) {
+			c = 0;
+		}
+		else {
+			c = 1;
+		}
+	}
+	res[size] = c;
+}
+
+boolean mp_comp(res, N, 33) {
+	
+}
+
+// Calculates res = (a + b) mod N.
+// a and b represent operands, N is the modulus. They are large integers stored in uint32_t arrays of size elements
+void mod_add(uint32_t *a, uint32_t *b, uint32_t *N, uint32_t *res, uint32_t size)
+{
+	uint32_t c = 0;
+	uint32_t i = 0;
+	for(i=0;i<size;i++) {
+		uint64_t t = (uint64_t)a[i] + b[i] + c;
+		res[i] = (uint32_t)t;
+		if ((t >> 32) > 0) {
+			c = 1;
+		}
+		else {
+			c = 0;
+		}
+	}
+	res[size] = c;
+	if (mp_comp(res, N, 33) >= 0) {
+		mp_sub(res, N, res, 33);		
+	}
+}
+
+// Calculates res = (a - b) mod N.
+// a and b represent operands, N is the modulus. They are large integers stored in uint32_t arrays of size elements
+void mod_sub(uint32_t *a, uint32_t *b, uint32_t *N, uint32_t *res, uint32_t size)
+{
+
+}
+
+

@@ -1,0 +1,10 @@
+18:32:03 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+
+18:32:03 Build Finished (took 63ms)
+
