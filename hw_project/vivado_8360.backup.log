@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Oct  3 14:18:38 2018
+# Process ID: 8360
+# Current directory: /users/start2017/r0634161/Desktop/DDP/package/hw_project
+# Command line: vivado -mode batch -source tcl/build_warmup.tcl
+# Log file: /users/start2017/r0634161/Desktop/DDP/package/hw_project/vivado.log
+# Journal file: /users/start2017/r0634161/Desktop/DDP/package/hw_project/vivado.jou
+#-----------------------------------------------------------
+source tcl/build_warmup.tcl
+# set script_dir [file dirname [info script]]
+# set origin_dir "$script_dir/.."
+# create_project project_hw $origin_dir/project_hw -part xc7z010clg400-1
+# set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
+# set files []
+# foreach file [glob $origin_dir/src/warmup/rtl/*] {
+#         lappend files [file normalize "$file"]
+#     }
+# add_files -norecurse -fileset [get_filesets sources_1] $files
+# set files []
+# foreach file [glob $origin_dir/src/warmup/rtl_tb/*] {
+#         lappend files [file normalize "$file"]
+#     }
+# add_files -norecurse -fileset [get_filesets sim_1] $files
+# update_compile_order -fileset sim_1
+# update_compile_order -fileset sources_1
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  3 14:19:26 2018...

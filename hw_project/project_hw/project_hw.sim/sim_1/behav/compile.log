@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2017/r0634161/Desktop/DDP/package/hw_project/src/warmup/rtl/warmup2_mpadder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module warmup2_mpadder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2017/r0634161/Desktop/DDP/package/hw_project/src/warmup/rtl_tb/tb_warmup2_mpadder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_warmup2_mpadder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2017/r0634161/Desktop/DDP/package/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

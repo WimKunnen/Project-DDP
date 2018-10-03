@@ -1,0 +1,264 @@
+
+*** Running vivado
+    with args -log warmup1_verilog.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source warmup1_verilog.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source warmup1_verilog.tcl -notrace
+Command: synth_design -top warmup1_verilog -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21087 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1151.430 ; gain = 164.137 ; free physical = 10530 ; free virtual = 45635
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'warmup1_verilog' [/users/start2017/r0634161/Desktop/DDP/package/hw_project/src/warmup/rtl/warmup1_verilog.v:3]
+INFO: [Synth 8-256] done synthesizing module 'warmup1_verilog' (1#1) [/users/start2017/r0634161/Desktop/DDP/package/hw_project/src/warmup/rtl/warmup1_verilog.v:3]
+WARNING: [Synth 8-3917] design warmup1_verilog has port a_out[3] driven by constant 0
+WARNING: [Synth 8-3917] design warmup1_verilog has port a_out[2] driven by constant 0
+WARNING: [Synth 8-3917] design warmup1_verilog has port c_out[3] driven by constant 0
+WARNING: [Synth 8-3917] design warmup1_verilog has port c_out[2] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1191.875 ; gain = 204.582 ; free physical = 10486 ; free virtual = 45591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1191.875 ; gain = 204.582 ; free physical = 10486 ; free virtual = 45590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1199.879 ; gain = 212.586 ; free physical = 10486 ; free virtual = 45590
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1207.879 ; gain = 220.586 ; free physical = 10479 ; free virtual = 45583
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module warmup1_verilog 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1282.207 ; gain = 294.914 ; free physical = 10405 ; free virtual = 45509
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design warmup1_verilog has port a_out[3] driven by constant 0
+WARNING: [Synth 8-3917] design warmup1_verilog has port a_out[2] driven by constant 0
+WARNING: [Synth 8-3917] design warmup1_verilog has port b_out[3] driven by constant 0
+WARNING: [Synth 8-3917] design warmup1_verilog has port b_out[2] driven by constant 0
+WARNING: [Synth 8-3917] design warmup1_verilog has port c_out[3] driven by constant 0
+WARNING: [Synth 8-3917] design warmup1_verilog has port c_out[2] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1290.207 ; gain = 302.914 ; free physical = 10397 ; free virtual = 45502
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1290.207 ; gain = 302.914 ; free physical = 10397 ; free virtual = 45502
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1298.215 ; gain = 310.922 ; free physical = 10390 ; free virtual = 45494
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1298.215 ; gain = 310.922 ; free physical = 10390 ; free virtual = 45494
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1298.215 ; gain = 310.922 ; free physical = 10390 ; free virtual = 45494
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |LUT2 |     1|
+|4     |LUT3 |     1|
+|5     |LUT4 |     2|
+|6     |LUT5 |     3|
+|7     |FDRE |     6|
+|8     |IBUF |     2|
+|9     |OBUF |    12|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    30|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.223 ; gain = 318.930 ; free physical = 10381 ; free virtual = 45486
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1306.223 ; gain = 226.789 ; free physical = 10381 ; free virtual = 45486
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1306.230 ; gain = 318.938 ; free physical = 10381 ; free virtual = 45486
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1468.445 ; gain = 401.598 ; free physical = 10318 ; free virtual = 45422
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1500.469 ; gain = 0.000 ; free physical = 10316 ; free virtual = 45421
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  3 15:48:11 2018...
