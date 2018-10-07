@@ -1,6 +1,6 @@
 /******************************************************************
  * This is the main file for the Software Sessions
- *
+ * by Group 3: Kunnen Wim, Koyen Yrjo, Van Mieghem Arnaud
  */
 
 #include <stdint.h>
