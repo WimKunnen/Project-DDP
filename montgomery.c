@@ -47,7 +47,7 @@ void mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, ui
 }
 
 void mont_add(uint32_t* t, uint32_t index, uint32_t c) {
-	while(c != 0) {
+	while(c != 0 && index <32) {
 		uint64_t sum = (uint64_t)c + (uint64_t)t[index];
 		uint32_t s = (uint32_t)sum;
 		c = (uint32_t)(sum >> 32);
