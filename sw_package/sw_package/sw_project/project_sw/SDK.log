@@ -3095,3 +3095,32 @@ con
 ----------------End of Script----------------
 
 13:02:24 INFO  : Launch script is exported to file '/users/start2017/r0634161/Desktop/DDP/sw_package/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+13:59:20 INFO  : Launching XSDB server: xsdb -n -interactive /home/wim/Documents/DDP/Project-DDP/sw_package/sw_package/sw_project/project_sw/temp_xsdb_launch_script.tcl
+13:59:21 INFO  : XSDB server has started successfully.
+14:00:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+14:00:16 INFO  : 'fpga -state' command is executed.
+14:00:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:00:24 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+14:00:24 INFO  : 'jtag frequency' command is executed.
+14:00:24 INFO  : Sourcing of '/home/wim/Documents/DDP/Project-DDP/sw_package/sw_package/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+14:00:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+14:00:25 INFO  : Hardware design information is loaded from '/home/wim/Documents/DDP/Project-DDP/sw_package/sw_package/sw_project/project_sw/hw_platform/system.hdf'.
+14:00:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+14:00:25 INFO  : 'stop' command is executed.
+14:00:25 ERROR : Cannot flush JTAG server queue. ftdi_write_data_submit failed: all fine
+14:00:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/wim/Documents/DDP/Project-DDP/sw_package/sw_package/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /home/wim/Documents/DDP/Project-DDP/sw_package/sw_package/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+----------------End of Script----------------
+
+14:30:29 INFO  : Launching XSDB server: xsdb -n -interactive /home/wim/Documents/DDP/Project-DDP/sw_package/sw_package/sw_project/project_sw/temp_xsdb_launch_script.tcl
+14:30:30 INFO  : XSDB server has started successfully.
+14:40:11 INFO  : Launching XSDB server: xsdb -n -interactive /home/wim/Documents/DDP/Project-DDP/sw_package/sw_package/sw_project/project_sw/temp_xsdb_launch_script.tcl
+14:40:12 INFO  : XSDB server has started successfully.
+14:48:36 INFO  : Launching XSDB server: xsdb -n -interactive /home/wim/Documents/DDP/Project-DDP/sw_package/sw_package/sw_project/project_sw/temp_xsdb_launch_script.tcl
+14:48:37 INFO  : XSDB server has started successfully.

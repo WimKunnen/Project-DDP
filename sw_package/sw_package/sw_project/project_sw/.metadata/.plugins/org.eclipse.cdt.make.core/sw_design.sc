@@ -2,6 +2,9 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.armv7.exe.debug.422935073;xilinx.gnu.armv7.exe.debug.422935073.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/opt/Xilinx/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/include"/>
+<includePath path="/opt/Xilinx/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/include-fixed"/>
+<includePath path="/opt/Xilinx/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/../../../../arm-none-eabi/include"/>
 <includePath path="/esat/micas-data/software/xilinx_vivado_2016.2/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/include"/>
 <includePath path="/esat/micas-data/software/xilinx_vivado_2016.2/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/include-fixed"/>
 <includePath path="/esat/micas-data/software/xilinx_vivado_2016.2/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/../../../../arm-none-eabi/include"/>
@@ -696,6 +699,9 @@
 </instance>
 <instance id="xilinx.gnu.armv7.exe.debug.422935073;xilinx.gnu.armv7.exe.debug.422935073.;xilinx.gnu.armv7.c.toolchain.compiler.debug.1915194227;xilinx.gnu.armv7.c.compiler.input.1879900432">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/opt/Xilinx/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/include"/>
+<includePath path="/opt/Xilinx/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/include-fixed"/>
+<includePath path="/opt/Xilinx/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/../../../../arm-none-eabi/include"/>
 <includePath path="/esat/micas-data/software/xilinx_vivado_2016.2/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/include"/>
 <includePath path="/esat/micas-data/software/xilinx_vivado_2016.2/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/include-fixed"/>
 <includePath path="/esat/micas-data/software/xilinx_vivado_2016.2/SDK/2016.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.2/../../../../arm-none-eabi/include"/>
