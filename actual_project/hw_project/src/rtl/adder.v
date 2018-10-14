@@ -10,30 +10,38 @@ module mpadder(
     output wire [1027:0] result,
     output wire          done    
     );
-//    always @(posedge(clk))
-//        result = in_a + in_b;
-    
-//    assign done = 1'b1;
+
+    wire [257:0] temp_result1;
+    wire [257:0] temp_result2;
+    wire [257:0] temp_result3;
 
     // in_a mux
     reg input_mux_sel;
-    reg [1031:0] a_reg;
-    wire [1026:0] a_mux_out;
-    assign a_mux_out = (input_mux_sel == 1) ? {5'b0, in_a} : {129'b0, a_reg[1031:129]};
+    reg [1029:0] a_reg;
+    
+    wire [1029:0] a_mux_out;
+    
+    assign a_mux_out = (input_mux_sel ==1) 
+    ? (start == 1 ? {3'b0, in_a} : a_reg[1029:514]) 
+    : (temp_result1[257] == 1 
+    ? {temp_result3, temp_result1, a_reg[1029:514]} 
+    : {temp_result2, temp_result1, a_reg[1029:514]});  
     
     // in_b mux
-    reg [1031:0] b_reg;
-    wire [1026:0] b_mux_out;
-    assign b_mux_out = (input_mux_sel == 1) ? {5'b0, in_b} : {129'b0, b_reg[1031:129]};
+    reg [1029:0] b_reg;
+    wire [1029:0] b_mux_out;   
+
+    assign b_mux_out = (input_mux_sel == 1) ? {3'b0, in_b} : {514'b0, b_reg[1029:514]};
     
     // input registers
     reg input_enable;
+    
     always @(posedge clk)
     begin
         if(resetn == 0)
         begin
-            a_reg <= 1032'b0;
-            b_reg <= 1032'b0;
+            a_reg <= 1030'b0;
+            b_reg <= 1030'b0;
         end
         else if(input_enable == 1)
         begin
@@ -42,7 +50,7 @@ module mpadder(
         end
     end
 
-    // add/sub mux
+    // add/sub muxest bone a
     reg sub;
     always @(posedge clk)
     begin
@@ -52,19 +60,23 @@ module mpadder(
             sub <= subtract;
     end
     
-    wire [128:0] add_sub_mux;
-    assign add_sub_mux = (sub == 1) ? ~b_reg[128:0] : b_reg[128:0];
+    wire [256:0] add_sub_mux1;
+    wire [256:0] add_sub_mux2;
+    assign add_sub_mux1 = (sub == 1) ? ~b_reg[256:0] : b_reg[256:0];
+    assign add_sub_mux2 = (sub == 1) ? ~b_reg[513:257] : b_reg[513:0];
     
     // adder
     wire carry_in;
-    wire [129:0] temp_result;
-    assign carry_in = carry_reg;
-    assign temp_result = a_reg[128:0] + add_sub_mux[128:0] + carry_in;
-    
-    // carry register
     wire carry_mux;
     reg carry_reg;
-    assign carry_mux = (start == 1) ? subtract : temp_result[129];
+    
+    assign carry_in = carry_reg;
+    assign temp_result1 = a_reg[256:0] + add_sub_mux1[256:0] + carry_in;
+    assign temp_result2 = a_reg[513:257] + add_sub_mux2[513:257];
+    assign temp_result3 = a_reg[513:257] + add_sub_mux2[513:257] + 1;
+        
+    // carry register
+    assign carry_mux = (start == 1) ? subtract : (temp_result1[257] == 1 ? temp_result3[257] : temp_result2[257]);
    
     always @(posedge clk)
     begin
@@ -74,18 +86,8 @@ module mpadder(
             carry_reg <= carry_mux;
     end
     
-    // output register
-    reg out_enable;
-    reg [1031:0] out;
-    assign result = out[1027:0];
-    
-    always @(posedge clk)
-    begin
-        if (resetn == 0)
-            out <= 1031'b0;
-        else if (out_enable == 1)
-            out <= {temp_result, out[1031:129]};
-    end
+    // Assign output
+    assign result = a_reg[1029:3];
     
     // FSM
     reg [1:0] state, nextstate;
@@ -104,7 +106,9 @@ module mpadder(
     always @(posedge clk)
     begin
         if (resetn == 0)
-            counter <= 3'd0;
+            counter <= 2'd0;
+        else if (state == 2'd3)
+            counter <= 0;
         else if (count_enable == 1)
             counter <= counter + 1;
     end
@@ -117,28 +121,24 @@ module mpadder(
                 input_mux_sel <= 1'b1;
                 input_enable <= 1'b1;
                 count_enable <= 1'b0;
-                out_enable <= 1'b0;
             end
             // Add state
             2'd1: begin
                 input_mux_sel <= 1'b0;
                 input_enable <= 1'b1;
                 count_enable <= 1'b1;
-                out_enable <= 1'b1;
             end
             // Sub state
             2'd2: begin
-                input_mux_sel <= 1'b1;
-                input_enable <= 1'b0;
+                input_mux_sel <= 1'b0;
+                input_enable <= 1'b1;
                 count_enable <= 1'b1;
-                out_enable <= 1'b0;
             end
             // Done state
             2'd3: begin
                 input_mux_sel <= 1'b1;
                 input_enable <= 1'b0;
                 count_enable <= 1'b0;
-                out_enable <= 1'b0;
            end
         endcase
     end
@@ -166,13 +166,13 @@ module mpadder(
                         nextstate <= 2'd0;
                     end
                 2'd1: begin
-                    if (counter == 7)
+                    if (counter == 3)
                         nextstate <= 2'd3;
                     else
                         nextstate <= state;
                 end
                 2'd2: begin
-                    if (counter == 7)
+                    if (counter == 3)
                         nextstate <= 2'd3;
                     else
                         nextstate <= state;
