@@ -21,17 +21,17 @@ module mpadder(
     
     wire [1029:0] a_mux_out;
     
-    assign a_mux_out = (input_mux_sel ==1) 
-    ? (start == 1 ? {3'b0, in_a} : a_reg[1029:514]) 
+    assign a_mux_out = (input_mux_sel == 1) 
+    ? (start == 1 ? {3'b0, in_a} : a_reg[1029:515]) 
     : (temp_result1[257] == 1 
-    ? {temp_result3, temp_result1, a_reg[1029:514]} 
-    : {temp_result2, temp_result1, a_reg[1029:514]});  
+    ? {temp_result3, temp_result1, a_reg[1029:515]} 
+    : {temp_result2, temp_result1, a_reg[1029:515]});  
     
     // in_b mux
     reg [1029:0] b_reg;
     wire [1029:0] b_mux_out;   
 
-    assign b_mux_out = (input_mux_sel == 1) ? {3'b0, in_b} : {514'b0, b_reg[1029:514]};
+    assign b_mux_out = (input_mux_sel == 1) ? {3'b0, in_b} : {515'b0, b_reg[1029:515]};
     
     // input registers
     reg input_enable;
@@ -63,7 +63,7 @@ module mpadder(
     wire [256:0] add_sub_mux1;
     wire [256:0] add_sub_mux2;
     assign add_sub_mux1 = (sub == 1) ? ~b_reg[256:0] : b_reg[256:0];
-    assign add_sub_mux2 = (sub == 1) ? ~b_reg[513:257] : b_reg[513:0];
+    assign add_sub_mux2 = (sub == 1) ? ~b_reg[514:257] : b_reg[514:257];
     
     // adder
     wire carry_in;
@@ -72,8 +72,8 @@ module mpadder(
     
     assign carry_in = carry_reg;
     assign temp_result1 = a_reg[256:0] + add_sub_mux1[256:0] + carry_in;
-    assign temp_result2 = a_reg[513:257] + add_sub_mux2[513:257];
-    assign temp_result3 = a_reg[513:257] + add_sub_mux2[513:257] + 1;
+    assign temp_result2 = a_reg[514:257] + add_sub_mux2;
+    assign temp_result3 = a_reg[514:257] + add_sub_mux2 + 1;
         
     // carry register
     assign carry_mux = (start == 1) ? subtract : (temp_result1[257] == 1 ? temp_result3[257] : temp_result2[257]);
@@ -87,7 +87,7 @@ module mpadder(
     end
     
     // Assign output
-    assign result = a_reg[1029:3];
+    assign result = a_reg[1027:0];
     
     // FSM
     reg [1:0] state, nextstate;
@@ -102,15 +102,15 @@ module mpadder(
     
     // Add cycle counter
     reg count_enable;
-    reg [2:0] counter;
+    reg counter;
     always @(posedge clk)
     begin
         if (resetn == 0)
-            counter <= 2'd0;
+            counter <= 0;
         else if (state == 2'd3)
             counter <= 0;
         else if (count_enable == 1)
-            counter <= counter + 1;
+            counter <= 1;
     end
 
     always @(*)
@@ -149,7 +149,7 @@ module mpadder(
     begin
     if(resetn == 0)
         done_reg <= 0;
-    else if (state == 2'd3)
+    else if (counter == 1)
         done_reg <= 1;
     else 
         done_reg <= 0;
@@ -166,13 +166,13 @@ module mpadder(
                         nextstate <= 2'd0;
                     end
                 2'd1: begin
-                    if (counter == 3)
+                    if (counter == 1)
                         nextstate <= 2'd3;
                     else
                         nextstate <= state;
                 end
                 2'd2: begin
-                    if (counter == 3)
+                    if (counter == 1)
                         nextstate <= 2'd3;
                     else
                         nextstate <= state;
