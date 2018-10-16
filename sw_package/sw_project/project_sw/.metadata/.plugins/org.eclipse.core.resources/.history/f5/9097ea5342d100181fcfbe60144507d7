@@ -65,7 +65,7 @@ void sub_cond(uint32_t* u, uint32_t* n, uint32_t size) {
 		t[index] = 0;
 	}
 	
-	for(index=0;index<size;index++) {
+	for(index=0;index<=size;index++) {
 		uint32_t sub = u[index] - n[index] - b;
 		if (u[index] >= n[index] + b) {
 			b = 0;
@@ -74,13 +74,6 @@ void sub_cond(uint32_t* u, uint32_t* n, uint32_t size) {
 		}
 		t[index] = sub;
 	}
-	uint32_t sub = u[size] - b;
-	if (u[size] >= b) {
-		b = 0;
-	} else {
-		b = 1;
-	}
-	t[size] = sub;
 	if (b == 0) {
 		for(index=0;index<=size;index++) {
 			u[index] = t[index];
