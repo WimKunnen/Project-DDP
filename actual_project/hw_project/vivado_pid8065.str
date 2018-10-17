@@ -1,0 +1,263 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+Process ID: 8065
+
+Current time: 	10/17/18 2:14:54 PM CEST
+Time zone: 	Central European Time (Europe/Brussels)
+
+OS: CentOS Linux release 7.5.1804 (Core) 
+Version: 3.10.0-862.14.4.el7.x86_64
+Architecture: amd64
+Available processors (cores): 6
+
+DISPLAY: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/tps/lnx64/jre
+
+User name: 	r0634161
+User home directory: /users/start2017/r0634161
+User working directory: /users/start2017/r0634161/Desktop/DDP/Project-DDP/actual_project/hw_project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado
+RDI Data directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data
+RDI Bin directory: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin
+
+Vivado preferences path: /users/start2017/r0634161/.Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: /users/start2017/r0634161/.Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,907 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: project_hw/project_hw.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// [GUI Memory]: 38 MB (+37150kb) [00:00:02]
+// [Engine Memory]: 4,883 MB (+4968491kb) [00:00:02]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_hw/project_hw.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: IP_LOCK_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,959 MB. GUI used memory: 23 MB. Current time: 10/17/18 2:14:56 PM CEST
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 52 MB (+12791kb) [00:00:07]
+// [GUI Memory]: 57 MB (+2592kb) [00:00:07]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project project_hw/project_hw.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/wim/Documents/DDP/Project-DDP/actual_project/hw_project/project_hw' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2017/r0634161/Desktop/DDP/Project-DDP/actual_project/hw_project/project_ipcores'. INFO: [IP_Flow 19-2207] Repository '/users/start2017/r0634161/Desktop/DDP/Project-DDP/actual_project/hw_project/project_ipcores' already exists; ignoring attempt to add it again. INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2017/r0634161/Desktop/DDP/Project-DDP/actual_project/hw_project/project_ipcores'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Project name: project_hw; location: /users/start2017/r0634161/Desktop/DDP/Project-DDP/actual_project/hw_project/project_hw; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 5987.309 ; gain = 136.359 ; free physical = 11879 ; free virtual = 46545 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rsa_project_wrapper (rsa_project_wrapper.v)]", 3, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v)]", 2, true); // z:k (G:JPanel, cv:JFrame) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rsa_project_wrapper (rsa_project_wrapper.v)]", 3); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v)]", 2, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v)]", 2, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v), montgomery_instance - montgomery (montgomery.v)]", 3, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v), montgomery_instance - montgomery (montgomery.v)]", 3, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+// [GUI Memory]: 61 MB (+1416kb) [00:00:15]
+selectCodeEditor("montgomery.v", 179, 243); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 304, 267); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 365, 269); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 48 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, hweval_montgomery (hweval_montgomery.v)]", 9, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, hweval_montgomery (hweval_montgomery.v)]", 9, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, hweval_montgomery (hweval_montgomery.v), montgomery_instance - montgomery (montgomery.v)]", 10, false, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top montgomery [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 5,036 MB. GUI used memory: 28 MB. Current time: 10/17/18 2:16:06 PM CEST
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, hweval_montgomery (hweval_montgomery.v)]", 9); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_montgomery (tb_montgomery.v)]", 12, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_montgomery (tb_montgomery.v)]", 12, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top tb_montgomery [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_adder (hweval_adder.v)]", 1, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_adder (hweval_adder.v)]", 1, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v)]", 2, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ab:JMenu (am:JPopupMenu, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v)]", 2); // z:k (G:JPanel, cv:JFrame)
+// [GUI Memory]: 65 MB (+921kb) [00:01:39]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v), montgomery_instance - montgomery (montgomery.v)]", 3, false); // z:k (G:JPanel, cv:JFrame)
+// Elapsed time: 245 seconds
+selectCodeEditor("hweval_montgomery.v", 60, 129); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("hweval_montgomery.v", 144, 138); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v), montgomery_instance - montgomery (montgomery.v)]", 3, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_montgomery (hweval_montgomery.v), montgomery_instance - montgomery (montgomery.v)]", 3, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hweval_montgomery.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D:b
+selectCodeEditor("montgomery.v", 249, 137); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D:b
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // u:aK
+selectCodeEditor("montgomery.v", 189, 165); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("montgomery.v", 134, 307); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 290, 325); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 85, 86); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 214, 138); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 189, 141); // bH:N (JPanel:JComponent, cv:JFrame)
+// [GUI Memory]: 68 MB (+16kb) [00:28:15]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 28 MB. Current time: 10/17/18 2:46:06 PM CEST
+// [GUI Memory]: 72 MB (+532kb) [00:56:36]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 27 MB. Current time: 10/17/18 3:16:06 PM CEST
+// Elapsed time: 4001 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_adder (hweval_adder.v)]", 1); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_adder (hweval_adder.v), dut - mpadder (adder.v)]", 2, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hweval_adder (hweval_adder.v), dut - mpadder (adder.v)]", 2, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+selectCodeEditor("adder.v", 2, 37); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "adder.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adder.v", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectCodeEditor("montgomery.v", 68, 181); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "montgomery.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 6, 204); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 73, 209); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 75, 209, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("montgomery.v", 74, 198); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 34 seconds
+selectCodeEditor("montgomery.v", 214, 215); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 210, 233); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 116, 228); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 89, 193); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 24 seconds
+selectCodeEditor("montgomery.v", 122, 247); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 134, 203); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 179, 190); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 178, 200); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 211, 261); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 109, 267); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 212, 279); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 139, 278); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 64, 295); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 64, 295, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("montgomery.v", 107, 295); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 213, 305); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 116, 312); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 64, 325); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 25 seconds
+selectCodeEditor("montgomery.v", 184, 207); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("montgomery.v", 212, 369); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 92, 373); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 92, 373, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("montgomery.v", 222, 233); // bH:N (JPanel:JComponent, cv:JFrame)
+// [GUI Memory]: 78 MB (+2400kb) [01:16:47]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 75 seconds
+selectCodeEditor("montgomery.v", 103, 222); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 231, 323); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("montgomery.v", 102, 367); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 231, 307); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("montgomery.v", 239, 332); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 233, 319); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 240, 351); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 55, 323); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 159, 337); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 504, 324); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 463, 352); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 188, 306); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("montgomery.v", 49, 186); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor("montgomery.v", 109, 421); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 408 seconds
+selectCodeEditor("montgomery.v", 191, 326); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor("montgomery.v", 208, 291); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 86, 295); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 86, 295, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("montgomery.v", 89, 295); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 92, 267); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "montgomery.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 60, 306); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 202, 306); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 76 seconds
+selectCodeEditor("montgomery.v", 265, 202); // bH:N (JPanel:JComponent, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,043 MB. GUI used memory: 27 MB. Current time: 10/17/18 3:46:06 PM CEST
+// Elapsed time: 1019 seconds
+selectCodeEditor("montgomery.v", 198, 418); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 30 seconds
+selectCodeEditor("montgomery.v", 183, 321); // bH:N (JPanel:JComponent, cv:JFrame)
