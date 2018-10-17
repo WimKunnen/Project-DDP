@@ -1675,3 +1675,797 @@ arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
 Finished building: sw_design.elf.size
  
 make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+17:42:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:7: Error: bad instruction `comp r2,#0'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+17:42:47 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+Finished building: ../src/mont_add.S
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30792	   1152	  22580	  54524	   d4fc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+17:45:13 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+Finished building: ../src/mont_add.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug/../src/main.c:40: undefined reference to `asm_mont_add'
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+collect2: error: ld returned 1 exit status
+make[1]: *** [sw_design.elf] Error 1
+17:45:29 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug/../src/main.c:40: undefined reference to `asm_mont_add'
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+collect2: error: ld returned 1 exit status
+make[1]: *** [sw_design.elf] Error 1
+17:46:45 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug/../src/main.c:40: undefined reference to `asm_mont_add'
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+collect2: error: ld returned 1 exit status
+make[1]: *** [sw_design.elf] Error 1
+17:58:30 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+Finished building: ../src/mont_add.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1152	  22580	  52412	   ccbc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+17:58:33 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+17:59:28 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1152	  22580	  52412	   ccbc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+17:59:30 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+17:59:53 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1152	  22580	  52412	   ccbc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:00:17 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:36:22: error: 'oxffffffff' undeclared (first use in this function)
+     uint32_t a[4] = {oxffffffff, 0xffffffff, 0, 0};
+                      ^
+../src/main.c:36:22: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [src/main.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:00:23 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:00:26 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:00:41 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:00:50 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:01:12 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:04:53 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:12: Error: cannot combine pre- and post-indexing -- `ldr r1,[r0,r1],#4'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:07:37 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:12: Error: shift expression expected -- `add r0,r0,[r1,lsl 2]'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:08:10 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:12: Error: shift expression expected -- `add r0,r0,[r1,#0,lsl 2]'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:08:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:12: Error: shift expression expected -- `add r0,r0,[r1,#0,lsl#2]'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:10:52 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:12: Error: shift expression expected -- `ldr r1,[r0,r1,4]'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:10:59 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:12: Error: shift expression expected -- `ldr r1,[r0,r1,#4]'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:11:12 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:12: Error: shift expression expected -- `ldr r1,[r0,r1,4]'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:11:56 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:12: Error: immediate expression requires a # prefix -- `ldr r1,[r0,r1,lsl 2]'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:12:08 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+Finished building: ../src/mont_add.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:15:17 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:15: Error: bad instruction `addc r2,r2,#0'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:15:28 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+Finished building: ../src/mont_add.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:15:33 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:17:01 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+../src/mont_add.S: Assembler messages:
+../src/mont_add.S:15: Error: bad expression -- `adc r2,#0,#0'
+make[1]: *** [src/mont_add.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:19:49 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+Finished building: ../src/mont_add.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:19:52 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:20:59 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:21:30 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1152	  22580	  52412	   ccbc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:21:51 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:22:14 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1152	  22580	  52412	   ccbc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:22:37 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1152	  22580	  52412	   ccbc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:23:03 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:23:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:23:58 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:24:20 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:25:20 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:27:19 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+Finished building: ../src/mont_add.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:27:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:28:07 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mont_add.d" -MT"src/mont_add.o" -o "src/mont_add.o" "../src/mont_add.S"
+Finished building: ../src/mont_add.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:28:23 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:28:44 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:28:58 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   1152	  22580	  52428	   cccc	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:29:00 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:29:12 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:29:27 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:29:30 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:30:05 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28760	   1152	  22580	  52492	   cd0c	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:31:05 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:42:10: error: redefinition of 'a'
+ uint32_t a[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe};
+          ^
+../src/main.c:36:14: note: previous definition of 'a' was here
+     uint32_t a[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe};
+              ^
+make[1]: *** [src/main.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+18:31:20 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_func.o ./src/main.o ./src/mont_add.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28824	   1152	  22580	  52556	   cd4c	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'

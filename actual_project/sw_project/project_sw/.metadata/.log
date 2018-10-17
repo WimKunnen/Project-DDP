@@ -1,0 +1,12 @@
+!SESSION 2018-10-17 16:38:43.878 -----------------------------------------------
+eclipse.buildId=2016.2
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data ./project_sw
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-17 16:38:56.860
+!MESSAGE XSDB Command: [::hsi::utils::init_repo], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-17 16:38:59.174
+!MESSAGE XSDB command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1

@@ -12,16 +12,19 @@ C_SRCS += \
 ../src/mp_arith.c 
 
 S_UPPER_SRCS += \
-../src/asm_func.S 
+../src/asm_func.S \
+../src/mont_add.S 
 
 OBJS += \
 ./src/asm_func.o \
 ./src/main.o \
+./src/mont_add.o \
 ./src/montgomery.o \
 ./src/mp_arith.o 
 
 S_UPPER_DEPS += \
-./src/asm_func.d 
+./src/asm_func.d \
+./src/mont_add.d 
 
 C_DEPS += \
 ./src/main.d \
