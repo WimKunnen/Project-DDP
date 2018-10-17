@@ -1,0 +1,89 @@
+/*
+ * montgomery.c
+ *
+ */
+
+#include "montgomery.h"
+
+void mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, uint32_t SIZE)
+{
+	uint32_t i;
+	uint32_t j;
+	uint32_t t[2*SIZE+1];
+	for(i=0;i<2*SIZE+1;i++) {
+		t[i] = 0;
+	}
+	
+	for(i=0; i<SIZE; i++)
+	{
+		uint32_t c = 0;
+		for(j=0;j<SIZE;j++){
+			uint64_t sum = (uint64_t)t[i+j] + (uint64_t)a[j] * (uint64_t)b[i] + (uint64_t)c;
+			uint32_t s = (uint32_t)sum;
+			c = (uint32_t)(sum >> 32);
+			t[i+j] = s;
+		}
+		t[i+SIZE] = c;
+	}
+	for(i=0;i<SIZE;i++)
+	{
+		uint32_t c = 0;
+		uint32_t m = (uint32_t)(t[i] * (uint32_t)(n0[0]));
+		for(j=0;j<SIZE;j++)
+		{
+			uint64_t sum =  (uint64_t)t[i+j] + (uint64_t)m * (uint64_t)n[j] + c;
+			uint32_t s = (uint32_t)sum;
+			c = (uint32_t)(sum >> 32);
+			t[i+j]=s;
+		}
+		mont_add(t,i+SIZE,c);
+		for(j=0;j<=SIZE;j++)
+		{
+			res[j] = t[j+SIZE];
+		}
+
+	}
+	sub_cond(res,n,SIZE);
+}
+
+void mont_add(uint32_t* t, uint32_t index, uint32_t c) {
+	uint32_t sum;
+	while(c != 0 && index <32) {
+		sum = (uint64_t)c + (uint64_t)t[index];
+		c = (uint32_t)(sum >> 32);
+		t[index] = (uint32_t)sum;
+		index++;
+	}
+}
+
+// Subtracts n from u if u >= n, result is stored in u.
+void sub_cond(uint32_t* u, uint32_t* n, uint32_t size) {
+	uint32_t b = 0;
+	uint32_t index = 0;
+	uint32_t t[size + 1];
+	for(index=0;index<=size;index++) {
+		t[index] = 0;
+	}
+	
+	for(index=0;index<size;index++) {
+		uint32_t sub = u[index] - n[index] - b;
+		if (u[index] >= n[index] + b) {
+			b = 0;
+		} else {
+			b = 1;
+		}
+		t[index] = sub;
+	}
+	uint32_t sub = u[size] - b;
+	if (u[size] >= b) {
+		b = 0;
+	} else {
+		b = 1;
+	}
+	t[size] = sub;
+	if (b == 0) {
+		for(index=0;index<=size;index++) {
+			u[index] = t[index];
+		}
+	}
+}
