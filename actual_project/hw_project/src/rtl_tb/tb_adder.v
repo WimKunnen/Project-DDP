@@ -32,6 +32,7 @@ module tb_adder();
 
     // Generate Clock
     initial begin
+	//$dumpvars(0, tb_adder);
         clk = 0;
         forever #`CLK_HALF clk = ~clk;
     end
@@ -146,7 +147,104 @@ module tb_adder();
     $display("result calculated=%x", result);
     $display("result expected  =%x", expected);
     $display("error            =%x", expected-result);
+
+    // Custom tests
+    $display("\nAddition with custom test vectors.");
     
+    // 0 + 0 
+    $display("1)"); 
+    #`CLK_PERIOD;
+    perform_add(1027'h0, 
+                1027'h0);
+    expected  = 1028'h0;
+    wait (done==1);
+    #`CLK_PERIOD;   
+    result_ok = (expected==result);
+    $display("result calculated=%x", result);
+    $display("result expected  =%x", expected);
+    $display("error            =%x", expected-result);
+    #`CLK_PERIOD;
+
+    // Test addition with minimal clock cycles between two additions.
+    // Start becomes 1 to start the next addition immediately after the first addition communicates that is is done.
+    $display("2)"); 
+    #`CLK_PERIOD;
+    perform_add(1027'h590314ef38956b949cf70b559598fff3810343f584b6e94df7e7ef563c2c2b20187b85e2ffdeb2899d5ccf50b80bb6e674edf9e03b16b07b96ebb90a7d020223ed01fec3facaa2e1e12bae6ddbbf40bc1bd8f921bc5b911a6de0148df4dce2f0b6ce2ba3d40996a0d1c66f26c6523a2d880db50fad6e04f97e6065d7607db4e21, 
+                1027'h70e39380bd4d22631df98f504d60fcf527cfb8cf7d4f53bf7c204f9d3ea79ef965f0dac51c2b601e38f9b9aded472290a186a9e9f3c7041207d38cb68398186321e5fa1a21125f38153bebac11f7ebe508057da9adafa33465d25634ab0362185cc24fd61b29ccdbb489d8c537dfdaeb069b2604aabb5e23877002c84fa963d15);
+    expected  = 1028'hc9e6a86ff5e28df7baf09aa5e2f9fce8a8d2fcc502063d0d74083ef37ad3ca197e6c60a81c0a12a7d65688fea552d9771674a3ca2eddb48d9ebf45c1009a1a870ee7f8de1bdd0219f6679a19edb72ca123de76cb6a0b344ed3b26ac29fe0450913907b79ef33637c865047ebfe3215188ea8db145829631d05d0689fb02718b36;
+    wait (done==1);
+    //#`CLK_PERIOD; No additional delay
+    result_ok = (expected==result);
+    $display("result calculated=%x", result);
+    $display("result expected  =%x", expected);
+    $display("error            =%x", expected-result);
+    //#`CLK_PERIOD; No additional delay    
+
+    $display("3)"); 
+    //#`CLK_PERIOD; No additional delay    
+    perform_add(1027'h697eb5d979391c04af4817c51ba444fd4bb2381b7d2bd6230430594534dad3b9a877b364c51859c3b1515e2d668a837897f0e27fcf72328344267ffec09a11d10b36db9f8bfbee9c2185768fb08e45c2b95a7206ff6258be46f5a5666a794462d3954e77600b75cd8c4de2fefa732831f746a70c8203549d1e671c0363e4d15dd, 
+                1027'h7107390a7b0819e9debffd9c8e178722e310a6175f83a3442fa07711947ef39c526db63d1841934adf1ddf91761a2dc0cd562358794308cbb5eb03fd309df63ae9d79090fe4e01700ccd47279f651f30271cd2633b6a797bb80b2d42a2a0361a183467c5cc833d5ffaa17f59176302706daf6c331353d75b71959af864e00db59);
+    expected  = 1028'hda85eee3f44135ee8e081561a9bbcc202ec2de32dcaf796733d0d056c959c755fae569a1dd59ed0e906f3dbedca4b139654705d848b53b4efa1183fbf138080bf50e6c308a49f00c2e52bdb74ff364f2e077446a3accd239ff00d2a90d197a7cebc9b63d2c8eb32d86ef625811d62aa264f6133f95572bf88ffcb6fbc8c4df136;
+    wait (done==1);
+    #`CLK_PERIOD;   
+    result_ok = (expected==result);
+    $display("result calculated=%x", result);
+    $display("result expected  =%x", expected);
+    $display("error            =%x", expected-result);
+    #`CLK_PERIOD;
+
+    $display("3)"); 
+    #`CLK_PERIOD;
+     perform_add(1027'h7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff,
+1027'h7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff);
+    expected  = 1028'hffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe;
+    wait (done==1);
+    #`CLK_PERIOD;   
+    result_ok = (expected==result);
+    $display("result calculated=%x", result);
+    $display("result expected  =%x", expected);
+    $display("error            =%x", expected-result);
+    #`CLK_PERIOD;   
+
+    $display("\nSubtraction with custom test vectors.");
+
+    // 0 - 0
+    $display("1)"); 
+    #`CLK_PERIOD;
+    perform_sub(0, 0);
+    expected  = 1028'b0;
+    wait (done==1);
+    #`CLK_PERIOD;   
+    result_ok = (expected==result);
+    $display("result calculated=%x", result);
+    $display("result expected  =%x", expected);
+    $display("error            =%x", expected-result);
+    #`CLK_PERIOD;     
+
+    $display("2)"); 
+    #`CLK_PERIOD;
+    perform_sub(1027'h5e12030e89153c485ada92e178c656d538e09204064149f9f49986f1e89345e60c4b8ad2cc2d21e3a98a212a1b8cebac099a7be9cdfa7db1bac5bcafe022650bc3824f73645ec526fcb61022ff7eeecf06b85fc1c619899dd86649553a419883a268fcc0b1fa44a6dcd7e8438d0e5408a3e75998a6e50420cd10b5196a21b2261, 
+                1027'h7350eb6102f1fcaa52c84078db60172906df1264ca2fe7bc982163ebf24418daa286e8a74796f2fe621c411d6a02951dc607eef8d525edcd61f3198cdf08aaabfe31d5cbb798a263b68e5ddf0a6cf3413ec8c772cc3c4dd6fe468b2b1c2319d2aa389d1931b5a25973d3b2da31a61b8385969e11e6623c9ce2f71fc4eedc33829);
+    expected  = 1028'heac117ad86233f9e081252689d663fac32017f9f3c11623d5c782305f64f2d0b69c4a22b84962ee5476de00cb18a568e43928cf0f8d48fe458d2a3230119ba5fc55079a7acc622c34627b243f511fb8dc7ef984ef9dd3bc6da1fbe2a1e1e7eb0f8305fa78044a24d690435695b6838851e50bb86c082c783ea1995547b457ea38;
+    wait (done==1);
+    #`CLK_PERIOD;   
+    result_ok = (expected==result);
+    $display("result calculated=%x", result);
+    $display("result expected  =%x", expected);
+    $display("error            =%x", expected-result);
+    #`CLK_PERIOD;    
+
+    $display("3)"); 
+    #`CLK_PERIOD;
+    perform_sub(1027'h7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff,
+1027'h7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff);
+    expected  = 1028'h0;
+    wait (done==1);
+    #`CLK_PERIOD;   
+    result_ok = (expected==result);
+    $display("result calculated=%x", result);
+    $display("result expected  =%x", expected);
+    $display("error            =%x", expected-result);
     #`CLK_PERIOD;     
 
     $finish;
