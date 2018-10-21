@@ -13,7 +13,7 @@ void mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, ui
 	for(i=0;i<2*SIZE+1;i++) {
 		t[i] = 0;
 	}
-	
+
 	for(i=0; i<SIZE; i++)
 	{
 		uint32_t c = 0;
@@ -64,7 +64,7 @@ void sub_cond(uint32_t* u, uint32_t* n, uint32_t size) {
 	for(index=0;index<=size;index++) {
 		t[index] = 0;
 	}
-	
+
 	for(index=0;index<size;index++) {
 		uint32_t sub = u[index] - n[index] - b;
 		if (u[index] >= n[index] + b) {
@@ -74,6 +74,7 @@ void sub_cond(uint32_t* u, uint32_t* n, uint32_t size) {
 		}
 		t[index] = sub;
 	}
+
 	uint32_t sub = u[size] - b;
 	if (u[size] >= b) {
 		b = 0;
