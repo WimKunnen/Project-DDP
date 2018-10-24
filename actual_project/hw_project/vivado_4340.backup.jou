@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Oct 15 10:46:28 2018
+# Process ID: 4340
+# Current directory: /users/start2016/r0629332/Project-DDP/actual_project/hw_project
+# Command line: vivado -mode batch -source tcl/build_project.tcl
+# Log file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.log
+# Journal file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.jou
+#-----------------------------------------------------------
+source tcl/build_project.tcl

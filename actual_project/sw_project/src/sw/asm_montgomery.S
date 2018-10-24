@@ -1,53 +1,47 @@
 .text
 
-.global asm_mont
-.func asm_mont, asm_mont
-.type asm_mont, %function
+.global asm_mont_mul_loop
+.func asm_mont_mul_loop, asm_mont_mul_loop
+.type asm_mont_mul_loop, %function
 
-// initial params:
 // r0: a
 // r1: b
-// r2: n
-// r3: n0
-// r4: res
-// r5: size
-// r6: t
-// r7: 2*size+1
-// r8: i
-// r9: j
-// r10: c
-asm_mont:
+// r2: t
+// r3: size
+// r4: i
+// r5: j
+// r6: c
+asm_mont_mul_loop:
 // Push previous registers?
-pop {r6, r5, r4}
-push {r7, r8, r9,r10}
-lsr r7, r5, #1
-add r7, r7, #1
-mov r8, #0
-mov r9, #0
-cmp r8, r5
-bge end_init_loop_mont
+push {r4-r12}
+mov r4, #0
+mov r5, #0
 
-init_loop_mont:
-	str	r8, [r6], #4
-	add r8, r8, #1
-	cmp r8, r5
-	blt init_loop_mont
-	mov r8, #0
+outer_loop:
+	mov r6, #0
+	mov r5, #0
+	inner_loop:
+		ldr r8, [r0, r5, lsl #2]	// r8: a[j]
+		ldr r9, [r0, r4, lsl #2]	// r9: b[i]
+		add r12, r4, r5				// r12: i + j
+		ldr r10, [r2, r12, lsl #2]	// r10: t[i+j]
+		mov r11, #0					// upper register = 0
+		umlal r10, r11, r8, r9
+		adds r10, r10, r6			// r10: s
+		adc r6, r11, #0				// r6: update c
+		str r10, [r2, r12, lsl #2]  // t[i+j] = s
 
-end_init_loop_mont:
+		add r5, r5, #1
+		cmp r5, r3
+		blt inner_loop
 
-cmp r8, r5
-bge end_first_outer_loop
+	add r12, r3, r4
+	str r10, [r2, r12, lsl #2]  // t[i+size] = c
+	add r4, r4, #1
+	cmp r4, r3
+	blt outer_loop
 
-first_outer_loop:
-	mov r10, #0
-	cmp r9, r5
-	bge end_first_inner_loop
-
-	first_inner_loop:
-
-	end_first_inner_loop:
-
-end_first_outer_loop:
-mov r8, #0
+pop {r4-r12}
+bx lr
 .endfunc
+

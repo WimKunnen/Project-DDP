@@ -14,17 +14,19 @@ void mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, ui
 		t[i] = 0;
 	}
 
-	for(i=0; i<SIZE; i++)
-	{
-		uint32_t c = 0;
-		for(j=0;j<SIZE;j++){
-			uint64_t sum = (uint64_t)t[i+j] + (uint64_t)a[j] * (uint64_t)b[i] + (uint64_t)c;
-			uint32_t s = (uint32_t)sum;
-			c = (uint32_t)(sum >> 32);
-			t[i+j] = s;
-		}
-		t[i+SIZE] = c;
-	}
+	
+//	for(i=0; i<SIZE; i++)
+//	{
+//		uint32_t c = 0;
+//		for(j=0;j<SIZE;j++){
+//			uint64_t sum = (uint64_t)t[i+j] + (uint64_t)a[j] * (uint64_t)b[i] + (uint64_t)c;
+//			uint32_t s = (uint32_t)sum;
+//			c = (uint32_t)(sum >> 32);
+//			t[i+j] = s;
+//		}
+//		t[i+SIZE] = c;
+//	}
+	asm_mont_mul_loop(a, b, t, SIZE);
 	for(i=0;i<SIZE;i++)
 	{
 		uint32_t c = 0;
@@ -67,7 +69,7 @@ void sub_cond(uint32_t* u, uint32_t* n, uint32_t size) {
 
 	for(index=0;index<size;index++) {
 		uint32_t sub = u[index] - n[index] - b;
-		if (u[index] >= n[index] + b) {
+		if (u[index] >= (uint64_t) n[index] + b) {
 			b = 0;
 		} else {
 			b = 1;
@@ -75,15 +77,9 @@ void sub_cond(uint32_t* u, uint32_t* n, uint32_t size) {
 		t[index] = sub;
 	}
 
-	uint32_t sub = u[size] - b;
-	if (u[size] >= b) {
-		b = 0;
-	} else {
-		b = 1;
-	}
-	t[size] = sub;
+
 	if (b == 0) {
-		for(index=0;index<=size;index++) {
+		for(index=0;index<size;index++) {
 			u[index] = t[index];
 		}
 	}

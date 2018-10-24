@@ -15,74 +15,46 @@
 // r7: b
 asm_cond_sub:
 
-push {r4,r5,r6,r7}
+push {r4,r5,r6,r7,r8}
 mov r4, #0
 mov r7, #0
-cmp r2, r4
-bgt end_init_loop
-
-init_loop:
-	str	r4, [r3], #4
-	add r4, #1
-	cmp r4, r2
-	blt init_loop
-mov r4, #0
-
-end_init_loop:
 cmp r4, r2
-bge end_sub_loop
+bge end
+
+// r5: &t + offset
+mov r5, #0
+init_loop:
+	str	r4, [r3,r5]
+	add r5, r5, #4
+	cmp r5, r2
+	blt init_loop
 
 sub_loop:
-	ldr r5, [r0, r4, lsl #2]
-	ldr r6, [r1, r4, lsl #2]
+	ldr r5, [r0, r4]
+	ldr r6, [r1, r4]
 	sub r8, r5, r6
-	sub r8, r8, r6
-	add r6, r6, r7
-	cmp r5, r6
-	blt first_else
+	sub r8, r8, r7
+	mov r7, #0
+	movcc r7, #1
 
-	first_if:
-		mov r7, #0
-		bl end_first_if
-
-	first_else:
-		mov r7, #1
-
-	end_first_if:
 	str r8, [r3, r4, lsl #2]
+	add r4, #1
 	cmp r4, r2
 	blt sub_loop
 
-end_sub_loop:
-	ldr r5, [r0, r3, lsl #2]
-	sub r6, r5, r7
-	cmp r5, r7
-	blt second_else
-
-	second_if:
-		mov r7, #0
-		bl end_second_if
-
-	second_else:
-		mov r7, #1
-
-	end_second_if:
-	str r6, [r3, r2, lsl #2]
 
 	cmp r7, #0
 	bne end
 	mov r4, #0
-	cmp r4, r2
-	bgt end
 
 	final_loop:
-		ldr r5, [r3, r4, lsl #2]
+		ldr r5, [r3, r4]
 		str r5, [r0, r4, lsl #2]
 		add r4, #1
 		cmp r4, r2
 		ble final_loop
 
 end:
-pop {r4,r5,r6,r7}
+pop {r4,r5,r6,r7,r8}
 bx lr
 .endfunc

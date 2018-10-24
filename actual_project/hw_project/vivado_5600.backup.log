@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Oct 15 10:52:04 2018
+# Process ID: 5600
+# Current directory: /users/start2016/r0629332/Project-DDP/actual_project/hw_project
+# Command line: vivado -mode batch -source tcl/build_project.tcl
+# Log file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.log
+# Journal file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.jou
+#-----------------------------------------------------------
+source tcl/build_project.tcl
+# set script_dir [file dirname [info script]]
+# set origin_dir "$script_dir/.."
+# create_project project_hw $origin_dir/project_hw -part xc7z010clg400-1
+ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
+     /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.xpr
+     /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs
+     /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim
+     /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.cache
+     /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.hw
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 15 10:52:11 2018...

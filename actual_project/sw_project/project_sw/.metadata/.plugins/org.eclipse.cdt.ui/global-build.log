@@ -3101,3 +3101,2372 @@ arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
 Finished building: sw_design.elf.size
  
 make[1]: Leaving directory `/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+13:46:31 **** Incremental Build of project hw_bsp ****
+make -k all 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp'
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/qspips_v3_3/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/qspips_v3_3/src'
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ddrps_v1_0/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ddrps_v1_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_8/src
+make -C ps7_cortexa9_0/libsrc/sdps_v2_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/sdps_v2_8/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/sdps_v2_8/src'
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_2/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/emacps_v3_2/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/emacps_v3_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/uartps_v3_1/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/uartps_v3_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_3/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scugic_v3_3/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scugic_v3_3/src'
+Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_2/src
+make -C ps7_cortexa9_0/libsrc/axidma_v9_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_2/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_4/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_4/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_4/src'
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_1/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_1/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_5/src
+make -C ps7_cortexa9_0/libsrc/standalone_v5_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src'
+make[3]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src/profile'
+make[3]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src/profile'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src'
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/usbps_v2_4/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/usbps_v2_4/src'
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_3/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/qspips_v3_3/src'
+Compiling qspips
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/qspips_v3_3/src'
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ddrps_v1_0/src'
+Compiling ddrps
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ddrps_v1_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src'
+Compiling cpu_cortexa9
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_8/src
+make -C ps7_cortexa9_0/libsrc/sdps_v2_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/sdps_v2_8/src'
+Compiling sdps
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/sdps_v2_8/src'
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_2/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/emacps_v3_2/src'
+Compiling emacps
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/emacps_v3_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/uartps_v3_1/src'
+Compiling uartps
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/uartps_v3_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_3/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scugic_v3_3/src'
+Compiling scugic
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scugic_v3_3/src'
+Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_2/src
+make -C ps7_cortexa9_0/libsrc/axidma_v9_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+Compiling axidma
+make[3]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+make[3]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_2/src'
+Compiling xadcps
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_4/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_4/src'
+Compiling devcfg
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_4/src'
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Compiling dmaps
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_1/src'
+Compiling gpiops
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Compiling scuwdt
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_1/src'
+Compiling ttcps
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src'
+Compiling coresightps_dcc
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_5/src
+make -C ps7_cortexa9_0/libsrc/standalone_v5_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src'
+Compiling standalone
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src'
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/usbps_v2_4/src'
+Compiling usbps
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/usbps_v2_4/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Compiling scutimer
+make[2]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Finished building libraries
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_bsp'
+13:46:46 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/platform/interface.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform/interface.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform/interface.d" -MT"src/platform/interface.o" -o "src/platform/interface.o" "../src/platform/interface.c"
+../src/platform/interface.c: In function 'print_array_contents':
+../src/platform/interface.c:54:9: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+         xil_printf("%08x %08x %08x %08x\n\r",
+         ^
+Finished building: ../src/platform/interface.c
+ 
+Building file: ../src/platform/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform/platform.d" -MT"src/platform/platform.o" -o "src/platform/platform.o" "../src/platform/platform.c"
+Finished building: ../src/platform/platform.c
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building file: ../src/asm_func.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_func.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_func.d" -MT"src/asm_func.o" -o "src/asm_func.o" "../src/asm_func.S"
+Finished building: ../src/asm_func.S
+ 
+Building file: ../src/asm_mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_mont_add.d" -MT"src/asm_mont_add.o" -o "src/asm_mont_add.o" "../src/asm_mont_add.S"
+Finished building: ../src/asm_mont_add.S
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+../src/asm_montgomery.S: Assembler messages:
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+Finished building: ../src/asm_montgomery.S
+ 
+Building file: ../src/hw_accelerator.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hw_accelerator.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hw_accelerator.d" -MT"src/hw_accelerator.o" -o "src/hw_accelerator.o" "../src/hw_accelerator.c"
+Finished building: ../src/hw_accelerator.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building file: ../src/mp_arith.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mp_arith.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mp_arith.d" -MT"src/mp_arith.o" -o "src/mp_arith.o" "../src/mp_arith.c"
+../src/mp_arith.c: In function 'mod_add':
+../src/mp_arith.c:79:14: warning: pointer targets in passing argument 1 of 'mp_comp' differ in signedness [-Wpointer-sign]
+  if (mp_comp(res, N, size)) {
+              ^
+../src/mp_arith.c:47:10: note: expected 'int32_t *' but argument is of type 'uint32_t *'
+ uint32_t mp_comp(int32_t *a, uint32_t *b, uint32_t size) {
+          ^
+Finished building: ../src/mp_arith.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30580	   1928	  22580	  55088	   d730	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+13:51:46 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+13:51:51 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+13:53:07 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+13:55:36 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:42:2: warning: implicit declaration of function 'asm_conditional_sub' [-Wimplicit-function-declaration]
+  asm_conditional_sub(a, b, 4);
+  ^
+../src/main.c:44:10: error: redefinition of 'a'
+ uint32_t a[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe};
+          ^
+../src/main.c:36:14: note: previous definition of 'a' was here
+     uint32_t a[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe};
+              ^
+../src/main.c:45:10: error: redefinition of 'b'
+ uint32_t b[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff};
+          ^
+../src/main.c:37:14: note: previous definition of 'b' was here
+     uint32_t b[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff};
+              ^
+../src/main.c:48:2: warning: implicit declaration of function 'conditional_sub' [-Wimplicit-function-declaration]
+  conditional_sub(a, b, 4);
+  ^
+../src/main.c:40:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:39:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+make[1]: *** [src/main.o] Error 1
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+13:56:08 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:42:2: warning: implicit declaration of function 'asm_conditional_sub' [-Wimplicit-function-declaration]
+  asm_conditional_sub(a, b, 4);
+  ^
+../src/main.c:44:10: error: redefinition of 'a'
+ uint32_t a[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe};
+          ^
+../src/main.c:36:14: note: previous definition of 'a' was here
+     uint32_t a[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe};
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+              ^
+../src/main.c:45:10: error: redefinition of 'b'
+ uint32_t b[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff};
+          ^
+../src/main.c:37:14: note: previous definition of 'b' was here
+     uint32_t b[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff};
+              ^
+../src/main.c:48:2: warning: implicit declaration of function 'conditional_sub' [-Wimplicit-function-declaration]
+  conditional_sub(a, b, 4);
+  ^
+../src/main.c:40:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:39:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+make[1]: *** [src/main.o] Error 1
+13:56:14 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:42:2: warning: implicit declaration of function 'asm_conditional_sub' [-Wimplicit-function-declaration]
+  asm_conditional_sub(a, b, 4);
+  ^
+../src/main.c:44:9: error: expected expression before '{' token
+  a[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe};
+         ^
+../src/main.c:45:9: error: expected expression before '{' token
+  b[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff};
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+         ^
+../src/main.c:48:2: warning: implicit declaration of function 'conditional_sub' [-Wimplicit-function-declaration]
+  conditional_sub(a, b, 4);
+  ^
+../src/main.c:40:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:39:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+make[1]: *** [src/main.o] Error 1
+13:56:28 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:42:2: warning: implicit declaration of function 'asm_conditional_sub' [-Wimplicit-function-declaration]
+  asm_conditional_sub(a, b, 4);
+  ^
+../src/main.c:44:6: error: expected expression before '{' token
+  a = {0xffffffff, 0xffffffff, 0xffffffff, 0xfffffffe};
+      ^
+../src/main.c:45:9: error: expected expression before '{' token
+  b[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff};
+         ^
+../src/main.c:48:2: warning: implicit declaration of function 'conditional_sub' [-Wimplicit-function-declaration]
+  conditional_sub(a, b, 4);
+  ^
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+../src/main.c:40:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:39:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+make[1]: *** [src/main.o] Error 1
+13:57:25 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:42:2: warning: implicit declaration of function 'asm_conditional_sub' [-Wimplicit-function-declaration]
+  asm_conditional_sub(a, b, 4);
+  ^
+../src/main.c:48:2: warning: implicit declaration of function 'conditional_sub' [-Wimplicit-function-declaration]
+  conditional_sub(d, e, 4);
+  ^
+../src/main.c:40:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:39:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/../src/main.c:42: undefined reference to `asm_conditional_sub'
+/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/../src/main.c:48: undefined reference to `conditional_sub'
+collect2: error: ld returned 1 exit status
+make[1]: *** [sw_design.elf] Error 1
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+13:58:32 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_conditional_sub' [-Wimplicit-function-declaration]
+  asm_conditional_sub(a, b, 4);
+  ^
+../src/main.c:49:2: warning: implicit declaration of function 'conditional_sub' [-Wimplicit-function-declaration]
+  conditional_sub(d, e, 4);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/../src/main.c:43: undefined reference to `asm_conditional_sub'
+/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/../src/main.c:49: undefined reference to `conditional_sub'
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+collect2: error: ld returned 1 exit status
+make[1]: *** [sw_design.elf] Error 1
+14:00:09 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_conditional_sub' [-Wimplicit-function-declaration]
+  asm_conditional_sub(a, b, 4, a);
+  ^
+../src/main.c:49:2: warning: implicit declaration of function 'conditional_sub' [-Wimplicit-function-declaration]
+  conditional_sub(d, e, 4);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/../src/main.c:43: undefined reference to `asm_conditional_sub'
+/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/../src/main.c:49: undefined reference to `conditional_sub'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+make[1]: *** [sw_design.elf] Error 1
+14:00:58 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_conditional_sub' [-Wimplicit-function-declaration]
+  asm_conditional_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/../src/main.c:43: undefined reference to `asm_conditional_sub'
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+collect2: error: ld returned 1 exit status
+make[1]: *** [sw_design.elf] Error 1
+14:01:12 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:01:20 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:02:28 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:44:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30672	   1928	  22580	  55180	   d78c	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:02:45 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:44:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30672	   1928	  22580	  55180	   d78c	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:03:06 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:44:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30684	   1928	  22580	  55192	   d798	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:03:34 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+../src/main.c:38:14: warning: unused variable 'b' [-Wunused-variable]
+     uint32_t b[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff};
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30684	   1928	  22580	  55192	   d798	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:04:52 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+../src/main.c:38:14: warning: unused variable 'b' [-Wunused-variable]
+     uint32_t b[4] = {0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff};
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30596	   1928	  22580	  55104	   d740	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:05:48 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:06:35 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:07:43 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:31:29 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:36:07 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:39:24 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:42:13 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:44:32 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:44:38 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:48:36 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:48:56 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:49:21 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:50:13 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:52:39 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:52:45 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:55:16 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30660	   1928	  22580	  55168	   d780	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:55:20 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:55:52 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30676	   1928	  22580	  55184	   d790	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:56:11 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+14:56:16 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+15:01:07 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+15:02:28 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+15:03:28 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30692	   1928	  22580	  55200	   d7a0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+15:03:31 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:21:00 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:21:44 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:21:57 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30676	   1928	  22580	  55184	   d790	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:22:03 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:22:40 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:22:57 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30676	   1928	  22580	  55184	   d790	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:23:00 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:23:20 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30692	   1928	  22580	  55200	   d7a0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:23:23 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:24:10 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:26:18 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:27:47 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:28:20 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:28:29 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:28:47 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:33:26 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:33:31 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:34:15 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:36:08 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:36:20 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:36:23 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:36:43 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:36:56 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:36:59 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:37:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:37:27 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:37:41 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30612	   1928	  22580	  55120	   d750	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:37:45 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:41:46 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30612	   1928	  22580	  55120	   d750	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:41:52 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:42:58 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30548	   1928	  22580	  55056	   d710	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:43:01 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:43:25 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30564	   1928	  22580	  55072	   d720	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:43:30 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:43:53 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:43:59 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:44:13 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:44:16 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:45:26 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:46:38 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:47:42 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:50:25 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:50:31 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:50:53 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30612	   1928	  22580	  55120	   d750	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:50:57 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:51:27 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30612	   1928	  22580	  55120	   d750	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:51:30 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:51:44 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:51:47 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:52:26 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30628	   1928	  22580	  55136	   d760	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:52:30 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:52:52 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30612	   1928	  22580	  55120	   d750	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:52:56 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:55:07 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30612	   1928	  22580	  55120	   d750	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:55:49 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30612	   1928	  22580	  55120	   d750	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+16:55:53 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:04:11 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:04:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+../src/asm_conditional_sub.S: Assembler messages:
+../src/asm_conditional_sub.S:25: Error: expression too complex -- `push r8'
+../src/asm_conditional_sub.S:33: Error: expression too complex -- `pop r8'
+make[1]: *** [src/asm_conditional_sub.o] Error 1
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:04:52 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30612	   1928	  22580	  55120	   d750	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:07:21 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30548	   1928	  22580	  55056	   d710	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:24:13 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30548	   1928	  22580	  55056	   d710	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:24:18 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30548	   1928	  22580	  55056	   d710	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:25:52 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30548	   1928	  22580	  55056	   d710	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:25:56 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:26:26 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+17:28:02 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:18:54 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+../src/asm_montgomery.S: Assembler messages:
+../src/asm_montgomery.S:26: Error: only D registers may be indexed -- `ldr r10 [r2,r12,lsl#2]'
+../src/asm_montgomery.S:43: Error: bad instruction `pop{r4-r12}'
+make[1]: *** [src/asm_montgomery.o] Error 1
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:19:15 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+../src/asm_montgomery.S: Assembler messages:
+../src/asm_montgomery.S:26: Error: only D registers may be indexed -- `ldr r10 [r2,r12,lsl#2]'
+make[1]: *** [src/asm_montgomery.o] Error 1
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:20:55 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+Finished building: ../src/asm_montgomery.S
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:43:2: warning: implicit declaration of function 'asm_cond_sub' [-Wimplicit-function-declaration]
+  asm_cond_sub(a, b, 4, a);
+  ^
+../src/main.c:41:14: warning: unused variable 'c' [-Wunused-variable]
+     uint32_t c = 1;
+              ^
+../src/main.c:40:14: warning: unused variable 'index' [-Wunused-variable]
+     uint32_t index = 0;
+              ^
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30548	   1928	  22580	  55056	   d710	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:23:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:39:7: error: 'a' undeclared (first use in this function)
+  mont(a, b, N, n_prime, res, 32);
+       ^
+../src/main.c:39:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:39:10: error: 'b' undeclared (first use in this function)
+  mont(a, b, N, n_prime, res, 32);
+          ^
+../src/main.c:39:13: error: 'N' undeclared (first use in this function)
+  mont(a, b, N, n_prime, res, 32);
+             ^
+../src/main.c:39:16: error: 'n_prime' undeclared (first use in this function)
+  mont(a, b, N, n_prime, res, 32);
+                ^
+../src/main.c:39:25: error: 'res' undeclared (first use in this function)
+  mont(a, b, N, n_prime, res, 32);
+                         ^
+make[1]: *** [src/main.o] Error 1
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:23:30 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+../src/montgomery.c: In function 'mont':
+../src/montgomery.c:29:2: warning: implicit declaration of function 'asm_mont_mul_loop' [-Wimplicit-function-declaration]
+  asm_mont_mul_loop(a, b, t, SIZE);
+  ^
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  32228	   1928	  22580	  56736	   dda0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:23:33 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:26:54 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:39:5: error: expected ',' or ';' before 'uint32_t'
+     uint32_t b[4] = {0x0, 0x1, 0x0, 0x0}
+     ^
+In file included from ../src/common.h:10:0,
+                 from ../src/main.c:9:
+../src/performance.h:8:22: error: expected ',' or ';' before 'time_start'
+ #define START_TIMING time_start = get_cycle_counter();
+                      ^
+../src/main.c:41:1: note: in expansion of macro 'START_TIMING'
+ START_TIMING
+ ^
+../src/main.c:42:23: error: 'b' undeclared (first use in this function)
+  asm_mont_mul_loop(a, b, t, 4);
+                       ^
+../src/main.c:42:23: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:44:11: error: 'res' undeclared (first use in this function)
+ print_arr(res, 32);
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+           ^
+make[1]: *** [src/main.o] Error 1
+18:27:18 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30180	   1928	  22580	  54688	   d5a0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:27:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:27:36 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:29:18 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+Finished building: ../src/asm_montgomery.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30180	   1928	  22580	  54688	   d5a0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:30:49 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30180	   1928	  22580	  54688	   d5a0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:31:22 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30180	   1928	  22580	  54688	   d5a0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:32:02 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30180	   1928	  22580	  54688	   d5a0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:33:18 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  32228	   1928	  22580	  56736	   dda0	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+18:33:21 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
