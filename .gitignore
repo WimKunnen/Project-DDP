@@ -1,5 +1,7 @@
 hw_project/project_hw/project_hw.cache/
 hw_project/project_hw/project_hw.sim/
 
+*.zip
+*.str
 *.log
 *.jou
