@@ -2469,3 +2469,345 @@ arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
 Finished building: sw_design.elf.size
  
 make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+10:15:31 **** Build of project hw_bsp ****
+make -k all 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp'
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/qspips_v3_3/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/qspips_v3_3/src'
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ddrps_v1_0/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ddrps_v1_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_8/src
+make -C ps7_cortexa9_0/libsrc/sdps_v2_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/sdps_v2_8/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/sdps_v2_8/src'
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_2/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/emacps_v3_2/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/emacps_v3_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/uartps_v3_1/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/uartps_v3_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_3/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scugic_v3_3/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scugic_v3_3/src'
+Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_2/src
+make -C ps7_cortexa9_0/libsrc/axidma_v9_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_2/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_4/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_4/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_4/src'
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_1/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_1/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_5/src
+make -C ps7_cortexa9_0/libsrc/standalone_v5_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src'
+make[3]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src/profile'
+make[3]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src/profile'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src'
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/usbps_v2_4/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/usbps_v2_4/src'
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_3/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/qspips_v3_3/src'
+Compiling qspips
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/qspips_v3_3/src'
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ddrps_v1_0/src'
+Compiling ddrps
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ddrps_v1_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src'
+Compiling cpu_cortexa9
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_8/src
+make -C ps7_cortexa9_0/libsrc/sdps_v2_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/sdps_v2_8/src'
+Compiling sdps
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/sdps_v2_8/src'
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_2/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/emacps_v3_2/src'
+Compiling emacps
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/emacps_v3_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/uartps_v3_1/src'
+Compiling uartps
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/uartps_v3_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_3/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scugic_v3_3/src'
+Compiling scugic
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scugic_v3_3/src'
+Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_2/src
+make -C ps7_cortexa9_0/libsrc/axidma_v9_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+Compiling axidma
+make[3]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+make[3]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/axidma_v9_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_2/src'
+Compiling xadcps
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_4/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_4/src'
+Compiling devcfg
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_4/src'
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Compiling dmaps
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_1/src'
+Compiling gpiops
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Compiling scuwdt
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_1/src'
+Compiling ttcps
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src'
+Compiling coresightps_dcc
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_5/src
+make -C ps7_cortexa9_0/libsrc/standalone_v5_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src'
+Compiling standalone
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/standalone_v5_5/src'
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/usbps_v2_4/src'
+Compiling usbps
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/usbps_v2_4/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
+make[2]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Compiling scutimer
+make[2]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Finished building libraries
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/hw_bsp'
+10:15:50 **** Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/platform/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform/platform.d" -MT"src/platform/platform.o" -o "src/platform/platform.o" "../src/platform/platform.c"
+Finished building: ../src/platform/platform.c
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+../src/asm_conditional_sub.S: Assembler messages:
+../src/asm_conditional_sub.S:25: Error: ARM register expected -- `str #0,[r3],#4'
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+../src/asm_conditional_sub.S:72: Error: bad instruction `comp r7,#0'
+make[1]: *** [src/asm_conditional_sub.o] Error 1
+10:17:26 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+../src/asm_conditional_sub.S: Assembler messages:
+../src/asm_conditional_sub.S:25: Error: ARM register expected -- `str #0,[r3],#4'
+../src/asm_conditional_sub.S:72: Error: bad instruction `comp r7,#0'
+make[1]: *** [src/asm_conditional_sub.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+10:17:49 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+../src/asm_conditional_sub.S: Assembler messages:
+../src/asm_conditional_sub.S:25: Error: ARM register expected -- `str #0,[r3],#4'
+../src/asm_conditional_sub.S:72: Error: bad instruction `comp r7,#0'
+make[1]: *** [src/asm_conditional_sub.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+10:18:21 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+../src/asm_conditional_sub.S: Assembler messages:
+../src/asm_conditional_sub.S:25: Error: ARM register expected -- `str #0,[r3],#4'
+make[1]: *** [src/asm_conditional_sub.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+10:18:56 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building file: ../src/asm_mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_mont_add.d" -MT"src/asm_mont_add.o" -o "src/asm_mont_add.o" "../src/asm_mont_add.S"
+Finished building: ../src/asm_mont_add.S
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+../src/asm_montgomery.S: Assembler messages:
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+../src/asm_montgomery.S:31: Error: ARM register expected -- `str #0,[r6],#4'
+../src/asm_montgomery.S:39: Error: bad instruction `comp r8,r5'
+make[1]: *** [src/asm_montgomery.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+10:19:24 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+../src/asm_montgomery.S: Assembler messages:
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+../src/asm_montgomery.S:31: Error: ARM register expected -- `str #0,[r6],#4'
+../src/asm_montgomery.S:39: Error: bad instruction `comp r8,r5'
+make[1]: *** [src/asm_montgomery.o] Error 1
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+10:20:13 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+../src/asm_montgomery.S: Assembler messages:
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+Finished building: ../src/asm_montgomery.S
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/asm_montgomery.o: In function `first_outer_loop':
+/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug/../src/asm_montgomery.S:45: undefined reference to `end_first_inner_loop'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+make[1]: *** [sw_design.elf] Error 1
+10:20:31 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+../src/asm_montgomery.S: Assembler messages:
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+Finished building: ../src/asm_montgomery.S
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29080	   1152	  22580	  52812	   ce4c	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+10:20:39 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+10:20:55 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+make[1]: Nothing to be done for `main-build'.
+make[1]: Leaving directory `/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/sw_design/Debug'

@@ -1455,3 +1455,11 @@ con
 ----------------End of Script----------------
 
 14:59:51 INFO  : Launch script is exported to file '/users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+10:02:55 INFO  : Launching XSDB server: xsdb -n -interactive /users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/temp_xsdb_launch_script.tcl
+10:02:56 INFO  : XSDB server has started successfully.
+10:07:04 INFO  : Launching XSDB server: xsdb -n -interactive /users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/temp_xsdb_launch_script.tcl
+10:07:05 INFO  : XSDB server has started successfully.
+10:35:45 INFO  : Launching XSDB server: xsdb -n -interactive /users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/temp_xsdb_launch_script.tcl
+10:35:47 INFO  : XSDB server has started successfully.
+11:47:50 INFO  : Launching XSDB server: xsdb -n -interactive /users/start2017/r0634161/Desktop/DDP/Project-DDP/sw_package/sw_project/project_sw/temp_xsdb_launch_script.tcl
+11:47:52 INFO  : XSDB server has started successfully.

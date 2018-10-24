@@ -1,0 +1,89 @@
+12:12:58 **** Incremental Build of configuration Debug for project sw_design ****
+make pre-build main-build 
+make[1]: Entering directory `/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+a9-linaro-pre-build-step
+ 
+Building file: ../src/platform/interface.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform/interface.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform/interface.d" -MT"src/platform/interface.o" -o "src/platform/interface.o" "../src/platform/interface.c"
+../src/platform/interface.c: In function 'print_array_contents':
+../src/platform/interface.c:54:9: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+         xil_printf("%08x %08x %08x %08x\n\r",
+         ^
+Finished building: ../src/platform/interface.c
+ 
+Building file: ../src/platform/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform/platform.d" -MT"src/platform/platform.o" -o "src/platform/platform.o" "../src/platform/platform.c"
+Finished building: ../src/platform/platform.c
+ 
+Building file: ../src/asm_conditional_sub.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_conditional_sub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_conditional_sub.d" -MT"src/asm_conditional_sub.o" -o "src/asm_conditional_sub.o" "../src/asm_conditional_sub.S"
+Finished building: ../src/asm_conditional_sub.S
+ 
+Building file: ../src/asm_func.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_func.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_func.d" -MT"src/asm_func.o" -o "src/asm_func.o" "../src/asm_func.S"
+Finished building: ../src/asm_func.S
+ 
+Building file: ../src/asm_mont_add.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_mont_add.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_mont_add.d" -MT"src/asm_mont_add.o" -o "src/asm_mont_add.o" "../src/asm_mont_add.S"
+Finished building: ../src/asm_mont_add.S
+ 
+Building file: ../src/asm_montgomery.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm_montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/asm_montgomery.d" -MT"src/asm_montgomery.o" -o "src/asm_montgomery.o" "../src/asm_montgomery.S"
+../src/asm_montgomery.S: Assembler messages:
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+../src/asm_montgomery.S:21: Warning: register range not in ascending order
+Finished building: ../src/asm_montgomery.S
+ 
+Building file: ../src/hw_accelerator.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hw_accelerator.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hw_accelerator.d" -MT"src/hw_accelerator.o" -o "src/hw_accelerator.o" "../src/hw_accelerator.c"
+Finished building: ../src/hw_accelerator.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/montgomery.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/montgomery.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/montgomery.d" -MT"src/montgomery.o" -o "src/montgomery.o" "../src/montgomery.c"
+Finished building: ../src/montgomery.c
+ 
+Building file: ../src/mp_arith.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mp_arith.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mp_arith.d" -MT"src/mp_arith.o" -o "src/mp_arith.o" "../src/mp_arith.c"
+../src/mp_arith.c: In function 'mod_add':
+../src/mp_arith.c:79:14: warning: pointer targets in passing argument 1 of 'mp_comp' differ in signedness [-Wpointer-sign]
+  if (mp_comp(res, N, size)) {
+              ^
+../src/mp_arith.c:47:10: note: expected 'int32_t *' but argument is of type 'uint32_t *'
+ uint32_t mp_comp(int32_t *a, uint32_t *b, uint32_t size) {
+          ^
+Finished building: ../src/mp_arith.c
+ 
+Building file: ../src/testvector.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testvector.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/testvector.d" -MT"src/testvector.o" -o "src/testvector.o" "../src/testvector.c"
+Finished building: ../src/testvector.c
+ 
+Building target: sw_design.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../hw_bsp/ps7_cortexa9_0/lib -o "sw_design.elf"  ./src/platform/interface.o ./src/platform/platform.o  ./src/asm_conditional_sub.o ./src/asm_func.o ./src/asm_mont_add.o ./src/asm_montgomery.o ./src/hw_accelerator.o ./src/main.o ./src/montgomery.o ./src/mp_arith.o ./src/testvector.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sw_design.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sw_design.elf  |tee "sw_design.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30580	   1928	  22580	  55088	   d730	sw_design.elf
+Finished building: sw_design.elf.size
+ 
+make[1]: Leaving directory `/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug'
+
+12:12:58 Build Finished (took 617ms)
+

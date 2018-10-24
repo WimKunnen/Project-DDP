@@ -10,8 +10,7 @@
 #include "mp_arith.h"
 #include "montgomery.h"
 #include "asm_func.h"
-#include "mont_add.h"
-#include "mont_asm.h"
+#include "asm_montgomery.h"
 
 void print_arr(uint32_t* arr, uint32_t size) {
 	int32_t i;
