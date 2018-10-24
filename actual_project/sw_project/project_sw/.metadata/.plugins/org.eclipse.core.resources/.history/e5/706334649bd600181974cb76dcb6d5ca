@@ -1,7 +1,0 @@
-#ifndef MONT_ADD_H_
-#define MONT_ADD_H_
-
-#include <stdint.h>
-void asm_sub_cond(uint32_t* u, uint32_t* n, uint32_t size, uint32_t* t);
-#endif
-
