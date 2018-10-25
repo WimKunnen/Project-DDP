@@ -11,6 +11,7 @@ C_SRCS += \
 ../src/main.c \
 ../src/montgomery.c \
 ../src/mp_arith.c \
+../src/tests.c \
 ../src/testvector.c 
 
 S_UPPER_SRCS += \
@@ -28,6 +29,7 @@ OBJS += \
 ./src/main.o \
 ./src/montgomery.o \
 ./src/mp_arith.o \
+./src/tests.o \
 ./src/testvector.o 
 
 S_UPPER_DEPS += \
@@ -41,6 +43,7 @@ C_DEPS += \
 ./src/main.d \
 ./src/montgomery.d \
 ./src/mp_arith.d \
+./src/tests.d \
 ./src/testvector.d 
 
 

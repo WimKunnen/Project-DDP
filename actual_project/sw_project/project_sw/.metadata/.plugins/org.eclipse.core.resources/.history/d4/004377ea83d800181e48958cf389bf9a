@@ -44,8 +44,6 @@ START_TIMING
 STOP_TIMING
 print_arr(res, 32);
 
-	test();
-
 	xil_printf("\r\nEnd\n\r");
 
     cleanup_platform();
