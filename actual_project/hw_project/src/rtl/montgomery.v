@@ -11,9 +11,39 @@ module montgomery(
     output          done
      );
  
+    // Intance of 1027 bit adder module.
+    reg adder_resetn;
+    reg adder_start;
+    reg adder_subtract;
+    wire [1026:0] adder_input_a;
+    wire [1026:0] adder_input_b;
+    wire [1027:0] adder_result;
+    wire adder_done;
+    
+    mpadder adder(
+         .clk(clk),
+         .resetn(adder_resetn),
+         .start(adder_start),
+         .subtract(adder_subtract),
+         .in_a(adder_input_a),
+         .in_b(adder_input_b),
+         .result(adder_result),
+         .done(adder_done)    
+         );
+         
+         
+    // Next c multiplexer
+    wire [1027:0] next_c; 
+    
+    // 1027 bit C register.
+    reg [1027:0] c;
+    always @(posedge clk)
+    begin
+        c <= next_c;
+    end 
     /*
     Student tasks:
-    1. Instantiate an Adder
+    1. Instantiate an Adder -> done
     2. Use the Adder to implement the Montgomery multiplier in hardware.
     3. Use tb_montgomery.v to simulate your design.
     */

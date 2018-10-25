@@ -7,7 +7,7 @@
 
 #include "platform/platform.h"
 
-#include "platform/performance.h"
+#include "performance.h"
 
 #include "xil_printf.h"
 #include "xil_cache.h"

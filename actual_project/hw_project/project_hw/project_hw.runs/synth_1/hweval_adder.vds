@@ -1,0 +1,431 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Oct 15 13:21:50 2018
+# Process ID: 8112
+# Current directory: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1
+# Command line: vivado -log hweval_adder.vds -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_adder.tcl
+# Log file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/hweval_adder.vds
+# Journal file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source hweval_adder.tcl -notrace
+Command: synth_design -top hweval_adder -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8134 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1152.422 ; gain = 165.137 ; free physical = 10492 ; free virtual = 45492
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hweval_adder' [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:3]
+INFO: [Synth 8-638] synthesizing module 'mpadder' [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:3]
+INFO: [Synth 8-226] default block is never used [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:157]
+INFO: [Synth 8-256] done synthesizing module 'mpadder' (1#1) [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:3]
+INFO: [Synth 8-256] done synthesizing module 'hweval_adder' (2#1) [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1192.867 ; gain = 205.582 ; free physical = 10451 ; free virtual = 45451
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1192.867 ; gain = 205.582 ; free physical = 10450 ; free virtual = 45451
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Sourcing Tcl File [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
+Constraints for hw_evals
+INFO: [Vivado 12-1808] Property 'PACKAGE_PIN' is not supported for elaborated designs for objects of type 'port'. [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/tcl/constraints.tcl:7]
+Finished Sourcing Tcl File [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1579.867 ; gain = 0.008 ; free physical = 10176 ; free virtual = 45176
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "in_a" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "start" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register b_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:31]
+INFO: [Synth 8-3538] Detected potentially large (wide) register a_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:25]
+INFO: [Synth 8-3538] Detected potentially large (wide) register in_b_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:22]
+INFO: [Synth 8-3538] Detected potentially large (wide) register in_a_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:21]
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    173 Bit       Adders := 2     
+	   3 Input    173 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input   1027 Bit         XORs := 1     
++---Registers : 
+	             1032 Bit    Registers := 2     
+	             1027 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   4 Input   1032 Bit        Muxes := 1     
+	   2 Input   1032 Bit        Muxes := 3     
+	   2 Input   1027 Bit        Muxes := 1     
+	   2 Input    172 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register b_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:31]
+INFO: [Synth 8-3538] Detected potentially large (wide) register a_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:25]
+INFO: [Synth 8-3538] Detected potentially large (wide) register in_b_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:22]
+INFO: [Synth 8-3538] Detected potentially large (wide) register in_a_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:21]
+Hierarchical RTL Component report 
+Module hweval_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input   1027 Bit         XORs := 1     
++---Registers : 
+	             1027 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module mpadder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    173 Bit       Adders := 2     
+	   3 Input    173 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	             1032 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input   1032 Bit        Muxes := 1     
+	   2 Input   1032 Bit        Muxes := 3     
+	   2 Input   1027 Bit        Muxes := 1     
+	   2 Input    172 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'subtract_reg' (FDRE) to 'in_b_reg[1026]'
+WARNING: [Synth 8-3332] Sequential element (b_reg[1031]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1030]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1029]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1028]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1027]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1026]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1025]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1024]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1023]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1022]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1021]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1020]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1019]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1018]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1017]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1016]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1015]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1014]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1013]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1012]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1011]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1010]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1009]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1008]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1007]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1006]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1005]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1004]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1003]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1002]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1001]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[1000]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[999]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[998]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[997]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[996]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[995]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[994]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[993]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[992]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[991]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[990]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[989]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[988]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[987]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[986]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[985]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[984]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[983]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[982]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[981]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[980]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[979]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[978]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[977]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[976]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[975]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[974]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[973]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[972]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[971]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[970]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[969]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[968]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[967]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[966]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[965]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[964]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[963]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[962]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[961]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[960]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[959]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[958]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[957]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[956]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[955]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[954]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[953]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[952]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[951]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[950]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[949]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[948]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[947]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[946]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[945]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[944]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[943]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[942]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[941]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[940]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[939]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[938]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[937]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[936]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[935]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[934]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[933]) is unused and will be removed from module mpadder.
+WARNING: [Synth 8-3332] Sequential element (b_reg[932]) is unused and will be removed from module mpadder.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10174 ; free virtual = 45174
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Reading /tmp/.Xil_r0629332/Vivado-8112-pc-klas3-15.esat.kuleuven.be/realtime/hweval_adder_synth.xdc
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     1|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10166 ; free virtual = 45166
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4128 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1579.867 ; gain = 113.438 ; free physical = 10193 ; free virtual = 45193
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1579.867 ; gain = 592.582 ; free physical = 10194 ; free virtual = 45194
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1579.867 ; gain = 513.027 ; free physical = 10195 ; free virtual = 45195
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1579.867 ; gain = 0.000 ; free physical = 10194 ; free virtual = 45194
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 15 13:22:15 2018...

@@ -1,0 +1,242 @@
+!SESSION 2018-10-24 16:06:23.571 -----------------------------------------------
+eclipse.buildId=2016.2
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data ./project_sw
+
+This is a continuation of log file /users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/.metadata/.bak_0.log
+Created Time: 2018-10-24 18:32:08.408
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:32:08.411
+!MESSAGE XSDB Command: [con], Thread: Worker-48
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:32:08.416
+!MESSAGE XSDB command with result: [con], Result: [null, ]. Thread: Worker-48
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.453
+!MESSAGE XSDB Command: [disconnect tcfchan#43], Thread: Thread-2712
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.456
+!MESSAGE XSDB Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.462
+!MESSAGE XSDB command with result: [disconnect tcfchan#43], Result: [null, ]. Thread: Thread-2712
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.469
+!MESSAGE XSDB command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#44]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.472
+!MESSAGE XSDB Command: [jtag targets -filter {level == 0}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.484
+!MESSAGE XSDB command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279785167A]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.486
+!MESSAGE XSDB Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.501
+!MESSAGE XSDB command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.504
+!MESSAGE XSDB Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.519
+!MESSAGE XSDB command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.522
+!MESSAGE XSDB Command: [fpga -state], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.526
+!MESSAGE XSDB command with result: [fpga -state], Result: [null, FPGA is not configured]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.924
+!MESSAGE XSDB Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.927
+!MESSAGE XSDB command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#44]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.930
+!MESSAGE XSDB Command: [version -server], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.934
+!MESSAGE XSDB command with result: [version -server], Result: [null, 2016.2]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.936
+!MESSAGE XSDB Command: [version], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.940
+!MESSAGE XSDB command with result: [version], Result: [null, 2016.2]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.943
+!MESSAGE XSDB Command: [jtag targets -filter {level == 0}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.951
+!MESSAGE XSDB command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279785167A]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.953
+!MESSAGE XSDB Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.973
+!MESSAGE XSDB command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.976
+!MESSAGE XSDB Command: [jtag targets -filter {level == 0}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.984
+!MESSAGE XSDB command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279785167A]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:22.987
+!MESSAGE XSDB Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.007
+!MESSAGE XSDB command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.009
+!MESSAGE XSDB Command: [jtag targets -filter {level == 0}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.018
+!MESSAGE XSDB command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279785167A]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.021
+!MESSAGE XSDB Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.040
+!MESSAGE XSDB command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.043
+!MESSAGE XSDB Command: [jtag targets -filter {level == 0}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.051
+!MESSAGE XSDB command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279785167A]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.054
+!MESSAGE XSDB Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.072
+!MESSAGE XSDB command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.075
+!MESSAGE XSDB Command: [jtag targets -filter {level == 0}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.083
+!MESSAGE XSDB command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279785167A]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.086
+!MESSAGE XSDB Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.109
+!MESSAGE XSDB command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.112
+!MESSAGE XSDB Command: [jtag targets -set -filter {name =~ "Digilent Zybo 210279785167A" && level == 0}], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.159
+!MESSAGE XSDB command with result: [jtag targets -set -filter {name =~ "Digilent Zybo 210279785167A" && level == 0}], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.162
+!MESSAGE XSDB Command: [jtag frequency], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.166
+!MESSAGE XSDB command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.169
+!MESSAGE XSDB Command: [source /users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.182
+!MESSAGE XSDB command with result: [source /users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.185
+!MESSAGE XSDB Command: [targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.210
+!MESSAGE XSDB command with result: [targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:23.214
+!MESSAGE XSDB Command: [loadhw /users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.154
+!MESSAGE XSDB command with result: [loadhw /users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf], Result: [null, rsa_project_wrapper_42]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.156
+!MESSAGE XSDB Command: [targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.173
+!MESSAGE XSDB command with result: [targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.176
+!MESSAGE XSDB Command: [stop], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.192
+!MESSAGE XSDB command with result: [stop], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.195
+!MESSAGE XSDB Command: [ps7_init], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.953
+!MESSAGE XSDB command with result: [ps7_init], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.956
+!MESSAGE XSDB Command: [ps7_post_config], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.977
+!MESSAGE XSDB command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:25.980
+!MESSAGE XSDB Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.030
+!MESSAGE XSDB command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.033
+!MESSAGE XSDB Command: [rst -processor], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.047
+!MESSAGE XSDB command with result: [rst -processor], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.050
+!MESSAGE XSDB Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.075
+!MESSAGE XSDB command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.078
+!MESSAGE XSDB Command: [dow /users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.244
+!MESSAGE XSDB command with result: [dow /users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.258
+!MESSAGE XSDB Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.297
+!MESSAGE XSDB command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0], Result: [null, ]. Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.300
+!MESSAGE XSDB Command: [con], Thread: Worker-75
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-10-24 18:33:26.305
+!MESSAGE XSDB command with result: [con], Result: [null, ]. Thread: Worker-75
+
+!ENTRY org.eclipse.core.resources 4 568 2018-10-24 18:34:06.448
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /users/start2016/r0629332/Project-DDP/actual_project/sw_project/project_sw/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

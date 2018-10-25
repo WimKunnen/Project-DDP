@@ -30,9 +30,9 @@
 *
 ******************************************************************************/
 
-#include <stdio.h>
 #include "xparameters.h"
 #include "xil_cache.h"
+
 #include "platform_config.h"
 
 /*
@@ -96,9 +96,6 @@ init_platform()
     /* psu_init();*/
     enable_caches();
     init_uart();
-
-    // Do not delete this line
-    printf("\n\r");
 }
 
 void
