@@ -12,15 +12,16 @@
 #include "asm_func.h"
 #include "asm_montgomery.h"
 #include "asm_conditional_sub.h"
+#include "tests.h"
 
-void print_arr(uint32_t* arr, uint32_t size) {
-	int32_t i;
-	xil_printf("0x");
-	for(i=size-1;i>=0;i--) {
-		xil_printf("%08x", arr[i]);
-	}
-	xil_printf("\r\n\r\n");
-}
+//void print_arr(uint32_t* arr, uint32_t size) {
+//	int32_t i;
+//	xil_printf("0x");
+//	for(i=size-1;i>=0;i--) {
+//		xil_printf("%08x", arr[i]);
+//	}
+//	xil_printf("\r\n\r\n");
+//}
 
 int main()
 {
@@ -38,11 +39,11 @@ int main()
 //    uint32_t a[4] = {0x80000000, 0x0, 0x0, 0x0};
 //    uint32_t b[4] = {0x0, 0x80000000, 0x0, 0x0};
 //    uint32_t t[9] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
-START_TIMING
+// START_TIMING
 	//asm_mont_mul_loop(a, b, t, 4);
-	mont(a, b, N, n_prime, res, 32);
-STOP_TIMING
-print_arr(res, 32);
+	//mont(a, b, N, n_prime, res, 32);
+// STOP_TIMING
+// print_arr(res, 32);
 
 	test();
 

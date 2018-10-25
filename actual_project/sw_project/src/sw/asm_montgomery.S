@@ -14,15 +14,25 @@
 asm_mont_mul_loop:
 // Push previous registers?
 push {r4-r12}
-mov r4, #0
-mov r5, #0
 
+// Setting all elements of t to zero
+mov r4, #0	// r4: i = 0
+mov r5, #0
+mov r6, r3, lsl #1
+t_loop:
+	str r5, [r2, r4, lsl #2]	// r5: t[i]
+	add r4, r4, #1
+	cmp r4, r6
+	blt t_loop
+
+// Actual multiplication
+mov r4, #0
 outer_loop:
 	mov r6, #0
 	mov r5, #0
 	inner_loop:
 		ldr r8, [r0, r5, lsl #2]	// r8: a[j]
-		ldr r9, [r0, r4, lsl #2]	// r9: b[i]
+		ldr r9, [r1, r4, lsl #2]	// r9: b[i]
 		add r12, r4, r5				// r12: i + j
 		ldr r10, [r2, r12, lsl #2]	// r10: t[i+j]
 		mov r11, #0					// upper register = 0
