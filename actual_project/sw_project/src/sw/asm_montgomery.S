@@ -34,13 +34,13 @@ outer_loop:
 		ldr r8, [r0, r5, lsl #2]	// r8: a[j]
 		ldr r9, [r1, r4, lsl #2]	// r9: b[i]
 		add r12, r4, r5				// r12: i + j
-		// ldr r10, [r2, r12, lsl #2]	// r10: t[i+j]
-		// mov r11, #0					// upper register = 0
-		// umlal r10, r11, r8, r9
-		umull r10, r11, r8, r9		// [r11, r10] = a[j] * b[i]
-		ldr r8, [r2, r12, lsl #2]	// r8: t[i+j]
-		adds r10, r10, r8			// r10: (a[j]*b[i])lsb + t[i+j]
-		adc r11, r11, #0
+		ldr r10, [r2, r12, lsl #2]	// r10: t[i+j]
+		mov r11, #0					// upper register = 0
+		umlal r10, r11, r8, r9
+		//umull r10, r11, r8, r9		// [r11, r10] = a[j] * b[i]
+		//ldr r8, [r2, r12, lsl #2]	// r8: t[i+j]
+		//adds r10, r10, r8			// r10: (a[j]*b[i])lsb + t[i+j]
+		//adc r11, r11, #0
 		adds r10, r10, r6
 		adc r6, r11, #0				// r6: update c
 		str r10, [r2, r12, lsl #2]  // t[i+j] = s

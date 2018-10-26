@@ -11,11 +11,10 @@ void mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, ui
 	uint32_t i;
 	uint32_t j;
 	uint32_t t[2*SIZE+1];
-	for(i=0;i<2*SIZE+1;i++) {
-		t[i] = 0;
-	}
-
-	
+//	for(i=0;i<2*SIZE+1;i++) {
+//		t[i] = 0;
+//	}
+//
 //	for(i=0; i<SIZE; i++)
 //	{
 //		uint32_t c = 0;
@@ -24,7 +23,8 @@ void mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, ui
 //			uint32_t s = (uint32_t)sum;
 //			c = (uint32_t)(sum >> 32);
 //			t[i+j] = s;
-//		}
+//		}//	asm_mont_mul_loop(a, b, t, SIZE);
+//
 //		t[i+SIZE] = c;
 //	}
 	asm_mont_mul_loop(a, b, t, SIZE);
@@ -39,7 +39,7 @@ void mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, ui
 			c = (uint32_t)(sum >> 32);
 			t[i+j]=s;
 		}
-		mont_add(t,i+SIZE,c);
+		asm_mont_add(t,i+SIZE,c);
 		for(j=0;j<=SIZE;j++)
 		{
 			res[j] = t[j+SIZE];
