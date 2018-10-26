@@ -26,10 +26,10 @@ t_loop:
 	blt t_loop
 
 // Actual multiplication
-mov r4, #0							// r4: i = 0
+mov r4, #0							// R4: i = 0
 outer_loop:
 	mov r6, #0						// r6: c = 0
-	mov r5, #0						// r5: j = 0
+	mov r5, #0						// R5: J = 0
 	inner_loop:
 		ldr r8, [r0, r5, lsl #2]	// r8: a[j]
 		ldr r9, [r1, r4, lsl #2]	// r9: b[i]
@@ -50,7 +50,7 @@ outer_loop:
 		blt inner_loop
 
 	add r12, r3, r4
-	str r6, [r2, r12, lsl #2]  // t[i+size] = c
+	str r10, [r2, r12, lsl #2]  // t[i+size] = c
 	add r4, r4, #1
 	cmp r4, r3
 	blt outer_loop
@@ -59,13 +59,16 @@ pop {r4-r12}
 bx lr
 .endfunc
 
-
-//			uint64_t sum = (uint64_t)t[i+j] + (uint64_t)a[j] * (uint64_t)b[i] + (uint64_t)c;
-//			uint32_t s = (uint32_t)sum;
-//			c = (uint32_t)(sum >> 32);
-//			t[i+j] = s;
-//		}
-//		t[i+SIZE] = c;
-
+	for(i=0; i<SIZE; i++)
+	{
+		uint32_t c = 0;
+		for(j=0;j<SIZE;j++){
+			uint64_t sum = (uint64_t)t[i+j] + (uint64_t)a[j] * (uint64_t)b[i] + (uint64_t)c;
+			uint32_t s = (uint32_t)sum;
+			c = (uint32_t)(sum >> 32);
+			t[i+j] = s;
+		}
+		t[i+SIZE] = c;
+	}
 
 

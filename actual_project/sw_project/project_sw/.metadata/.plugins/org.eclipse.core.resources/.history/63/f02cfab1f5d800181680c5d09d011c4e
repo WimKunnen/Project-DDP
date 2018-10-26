@@ -50,7 +50,7 @@ outer_loop:
 		blt inner_loop
 
 	add r12, r3, r4
-	str r6, [r2, r12, lsl #2]  // t[i+size] = c
+	str r10, [r2, r12, lsl #2]  // t[i+size] = c
 	add r4, r4, #1
 	cmp r4, r3
 	blt outer_loop
@@ -60,12 +60,12 @@ bx lr
 .endfunc
 
 
-//			uint64_t sum = (uint64_t)t[i+j] + (uint64_t)a[j] * (uint64_t)b[i] + (uint64_t)c;
-//			uint32_t s = (uint32_t)sum;
-//			c = (uint32_t)(sum >> 32);
-//			t[i+j] = s;
-//		}
-//		t[i+SIZE] = c;
+			uint64_t sum = (uint64_t)t[i+j] + (uint64_t)a[j] * (uint64_t)b[i] + (uint64_t)c;
+			uint32_t s = (uint32_t)sum;
+			c = (uint32_t)(sum >> 32);
+			t[i+j] = s;
+		}
+		t[i+SIZE] = c;
 
 
 

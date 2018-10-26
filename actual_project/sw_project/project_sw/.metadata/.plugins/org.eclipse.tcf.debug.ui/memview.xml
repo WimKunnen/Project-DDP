@@ -3,4 +3,10 @@
 <Block Addr="0x0010fd80" Context="JTAG-jsn-Zybo-210279785167A-4ba00477-0.0" Size="-1">
 <Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
 </Block>
+<Block Addr="0x0010fd70" Context="JTAG-jsn-Zybo-210279785167A-4ba00477-0.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x0010fd60" Context="JTAG-jsn-Zybo-210279785167A-4ba00477-0.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
 </Memory>

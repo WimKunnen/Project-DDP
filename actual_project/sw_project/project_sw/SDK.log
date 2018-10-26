@@ -1808,3 +1808,541 @@ con
 
 00:14:25 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
 00:15:27 INFO  : Disconnected from the channel tcfchan#44.
+09:39:32 INFO  : Launching XSDB server: xsdb -n -interactive /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/temp_xsdb_launch_script.tcl
+09:39:34 INFO  : XSDB server has started successfully.
+09:48:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+09:48:56 INFO  : 'fpga -state' command is executed.
+09:49:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:49:08 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+09:49:08 INFO  : 'jtag frequency' command is executed.
+09:49:08 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+09:49:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:49:08 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+09:49:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:49:08 INFO  : 'stop' command is executed.
+09:49:08 INFO  : 'ps7_init' command is executed.
+09:49:08 INFO  : 'ps7_post_config' command is executed.
+09:49:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:49:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:49:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:49:08 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:49:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+09:49:08 INFO  : Memory regions updated for context APU
+09:49:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:49:08 INFO  : 'con' command is executed.
+09:49:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+09:49:08 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+09:49:29 INFO  : Disconnected from the channel tcfchan#1.
+09:49:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+09:49:29 INFO  : 'fpga -state' command is executed.
+09:49:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:49:30 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+09:49:30 INFO  : 'jtag frequency' command is executed.
+09:49:30 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+09:49:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:49:32 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+09:49:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:49:32 INFO  : 'stop' command is executed.
+09:49:33 INFO  : 'ps7_init' command is executed.
+09:49:33 INFO  : 'ps7_post_config' command is executed.
+09:49:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:49:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:49:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:49:33 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:49:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+09:49:33 INFO  : Memory regions updated for context APU
+09:49:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:49:33 INFO  : 'con' command is executed.
+09:49:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+09:49:33 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+09:50:09 INFO  : Disconnected from the channel tcfchan#2.
+09:50:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+09:50:09 INFO  : 'fpga -state' command is executed.
+09:50:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:09 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+09:50:09 INFO  : 'jtag frequency' command is executed.
+09:50:09 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+09:50:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:50:12 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+09:50:12 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:50:12 INFO  : 'stop' command is executed.
+09:50:12 INFO  : 'ps7_init' command is executed.
+09:50:12 INFO  : 'ps7_post_config' command is executed.
+09:50:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:50:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:13 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:50:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+09:50:13 INFO  : Memory regions updated for context APU
+09:50:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:13 INFO  : 'con' command is executed.
+09:50:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+09:50:13 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+09:50:35 INFO  : Disconnected from the channel tcfchan#3.
+09:50:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+09:50:35 INFO  : 'fpga -state' command is executed.
+09:50:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:36 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+09:50:36 INFO  : 'jtag frequency' command is executed.
+09:50:36 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+09:50:36 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:50:38 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+09:50:38 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:50:38 INFO  : 'stop' command is executed.
+09:50:39 INFO  : 'ps7_init' command is executed.
+09:50:39 INFO  : 'ps7_post_config' command is executed.
+09:50:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:39 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:50:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:39 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:50:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+09:50:39 INFO  : Memory regions updated for context APU
+09:50:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:39 INFO  : 'con' command is executed.
+09:50:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+09:50:39 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+09:53:09 INFO  : Launching XSDB server: xsdb -n -interactive /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/temp_xsdb_launch_script.tcl
+09:53:10 INFO  : XSDB server has started successfully.
+09:53:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+09:53:46 INFO  : 'fpga -state' command is executed.
+09:53:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:53:47 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+09:53:47 INFO  : 'jtag frequency' command is executed.
+09:53:47 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+09:53:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:53:47 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+09:53:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:53:47 INFO  : 'stop' command is executed.
+09:53:48 INFO  : 'ps7_init' command is executed.
+09:53:48 INFO  : 'ps7_post_config' command is executed.
+09:53:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:53:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:53:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:53:49 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:53:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+09:53:49 INFO  : Memory regions updated for context APU
+09:53:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:53:49 INFO  : 'con' command is executed.
+09:53:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+09:53:49 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+09:54:01 INFO  : Disconnected from the channel tcfchan#1.
+09:54:09 INFO  : Launching XSDB server: xsdb -n -interactive /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/temp_xsdb_launch_script.tcl
+09:54:11 INFO  : XSDB server has started successfully.
+09:54:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+09:54:16 INFO  : 'fpga -state' command is executed.
+09:54:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:54:18 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+09:54:18 INFO  : 'jtag frequency' command is executed.
+09:54:18 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+09:54:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:54:18 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+09:54:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+09:54:18 INFO  : 'stop' command is executed.
+09:54:19 INFO  : 'ps7_init' command is executed.
+09:54:19 INFO  : 'ps7_post_config' command is executed.
+09:54:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:54:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:54:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:54:19 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:54:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+09:54:19 INFO  : Memory regions updated for context APU
+09:54:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:54:19 INFO  : 'con' command is executed.
+09:54:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+09:54:19 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+10:03:43 INFO  : Disconnected from the channel tcfchan#1.
+10:03:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+10:03:43 INFO  : 'fpga -state' command is executed.
+10:03:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:03:44 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+10:03:44 INFO  : 'jtag frequency' command is executed.
+10:03:44 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+10:03:44 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:03:46 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+10:03:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:03:46 INFO  : 'stop' command is executed.
+10:03:46 ERROR : Invalid DAP ACK value: 0
+10:03:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+----------------End of Script----------------
+
+10:04:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+10:04:03 INFO  : 'fpga -state' command is executed.
+10:04:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:04:04 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+10:04:04 INFO  : 'jtag frequency' command is executed.
+10:04:04 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+10:04:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:04:04 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+10:04:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:04:04 INFO  : 'stop' command is executed.
+10:04:04 ERROR : Invalid DAP ACK value: 0
+10:04:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+----------------End of Script----------------
+
+10:04:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+10:04:11 INFO  : 'fpga -state' command is executed.
+10:04:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:04:13 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+10:04:13 INFO  : 'jtag frequency' command is executed.
+10:04:13 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+10:04:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:04:13 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+10:04:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:04:13 INFO  : 'stop' command is executed.
+10:04:14 INFO  : 'ps7_init' command is executed.
+10:04:14 INFO  : 'ps7_post_config' command is executed.
+10:04:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:04:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:14 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:04:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+10:04:14 INFO  : Memory regions updated for context APU
+10:04:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:14 INFO  : 'con' command is executed.
+10:04:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+10:04:14 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+10:09:03 INFO  : Disconnected from the channel tcfchan#2.
+10:09:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+10:09:03 INFO  : 'fpga -state' command is executed.
+10:09:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:09:04 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+10:09:04 INFO  : 'jtag frequency' command is executed.
+10:09:04 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+10:09:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:09:06 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+10:09:06 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:09:06 INFO  : 'stop' command is executed.
+10:09:07 INFO  : 'ps7_init' command is executed.
+10:09:07 INFO  : 'ps7_post_config' command is executed.
+10:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:08 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:09:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+10:09:08 INFO  : Memory regions updated for context APU
+10:09:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:08 INFO  : 'con' command is executed.
+10:09:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+10:09:08 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+10:10:57 INFO  : Disconnected from the channel tcfchan#3.
+10:10:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+10:10:57 INFO  : 'fpga -state' command is executed.
+10:10:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:10:58 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+10:10:58 INFO  : 'jtag frequency' command is executed.
+10:10:58 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+10:10:58 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:11:00 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+10:11:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:11:00 INFO  : 'stop' command is executed.
+10:11:01 INFO  : 'ps7_init' command is executed.
+10:11:01 INFO  : 'ps7_post_config' command is executed.
+10:11:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:11:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:01 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:11:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+10:11:01 INFO  : Memory regions updated for context APU
+10:11:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:01 INFO  : 'con' command is executed.
+10:11:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+10:11:01 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+10:11:10 INFO  : Disconnected from the channel tcfchan#4.
+10:11:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+10:11:10 INFO  : 'fpga -state' command is executed.
+10:11:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:11:11 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+10:11:11 INFO  : 'jtag frequency' command is executed.
+10:11:11 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+10:11:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:11:13 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+10:11:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:11:13 INFO  : 'stop' command is executed.
+10:11:14 INFO  : 'ps7_init' command is executed.
+10:11:14 INFO  : 'ps7_post_config' command is executed.
+10:11:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:11:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:14 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:11:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+10:11:14 INFO  : Memory regions updated for context APU
+10:11:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:14 INFO  : 'con' command is executed.
+10:11:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+10:11:14 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+10:15:06 INFO  : Disconnected from the channel tcfchan#5.
+10:15:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+10:15:07 INFO  : 'fpga -state' command is executed.
+10:15:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:15:07 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+10:15:07 INFO  : 'jtag frequency' command is executed.
+10:15:07 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+10:15:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:15:10 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+10:15:10 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:15:10 INFO  : 'stop' command is executed.
+10:15:10 INFO  : 'ps7_init' command is executed.
+10:15:10 INFO  : 'ps7_post_config' command is executed.
+10:15:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:15:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:11 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:15:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+10:15:11 INFO  : Memory regions updated for context APU
+10:15:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:11 INFO  : 'con' command is executed.
+10:15:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+10:15:11 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
+10:15:30 INFO  : Disconnected from the channel tcfchan#6.
+10:15:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785167A" && level==0} -index 1' command is executed.
+10:15:30 INFO  : 'fpga -state' command is executed.
+10:15:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:15:32 INFO  : Jtag cable 'Digilent Zybo 210279785167A' is selected.
+10:15:32 INFO  : 'jtag frequency' command is executed.
+10:15:32 INFO  : Sourcing of '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl' is done.
+10:15:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:15:33 INFO  : Hardware design information is loaded from '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf'.
+10:15:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0' command is executed.
+10:15:34 INFO  : 'stop' command is executed.
+10:15:34 INFO  : 'ps7_init' command is executed.
+10:15:34 INFO  : 'ps7_post_config' command is executed.
+10:15:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:15:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:35 INFO  : The application '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:15:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+loadhw /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/hw_platform/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+dow /users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/sw_design/Debug/sw_design.elf
+----------------End of Script----------------
+
+10:15:35 INFO  : Memory regions updated for context APU
+10:15:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:35 INFO  : 'con' command is executed.
+10:15:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279785167A"} -index 0
+con
+----------------End of Script----------------
+
+10:15:35 INFO  : Launch script is exported to file '/users/start2017/r0634161/Git/Project-DDP/actual_project/sw_project/project_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_sw_design.elf.tcl'
