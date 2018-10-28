@@ -30,16 +30,16 @@ int main()
 
     xil_printf("Begin\n\r");
 
-    test_montgomery();
+
     // Test assembly multiplication.
-    if (test_asm_mul() != 0) {
-    	xil_printf("Assembly multiplication tests failed.\r\n");
-    }
+//    if (test_asm_mul() != 0) {
+//    	xil_printf("Assembly multiplication tests failed.\r\n");
+//    }
     	
     // Test Montgomery algorithm.
-//    if (test_montgomery() != 0) {
-//    	xil_printf("Montgomery algorithm tests failed.\r\n");
-//    }
+    if (test_montgomery() != 0) {
+    	xil_printf("Montgomery algorithm tests failed.\r\n");
+    }
 
 	xil_printf("\r\nEnd\n\r");
 

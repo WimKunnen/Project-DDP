@@ -12,7 +12,6 @@
 // r5: j
 // r6: c
 asm_mont_mul_loop:
-// Push previous registers?
 push {r4-r12}
 
 // Setting all elements of t to zero
@@ -30,28 +29,24 @@ mov r4, #0							// r4: i = 0
 outer_loop:
 	mov r6, #0						// r6: c = 0
 	mov r5, #0						// r5: j = 0
+	ldr r9, [r1, r4, lsl #2]		// r9: b[i]
 	inner_loop:
 		ldr r8, [r0, r5, lsl #2]	// r8: a[j]
-		ldr r9, [r1, r4, lsl #2]	// r9: b[i]
 		add r12, r4, r5				// r12: i + j
 		ldr r10, [r2, r12, lsl #2]	// r10: t[i+j]
 		mov r11, #0					// upper register = 0
-		umlal r10, r11, r8, r9
-		//umull r10, r11, r8, r9		// [r11, r10] = a[j] * b[i]
-		//ldr r8, [r2, r12, lsl #2]	// r8: t[i+j]
-		//adds r10, r10, r8			// r10: (a[j]*b[i])lsb + t[i+j]
-		//adc r11, r11, #0
+		umlal r10, r11, r8, r9		// [r11, r10] = [r11, r10] + r8 * r9
 		adds r10, r10, r6
 		adc r6, r11, #0				// r6: update c
 		str r10, [r2, r12, lsl #2]  // t[i+j] = s
 
-		add r5, r5, #1
+		add r5, r5, #1				// j++
 		cmp r5, r3
 		blt inner_loop
 
 	add r12, r3, r4
-	str r6, [r2, r12, lsl #2]  // t[i+size] = c
-	add r4, r4, #1
+	str r6, [r2, r12, lsl #2]  		// t[i+size] = c
+	add r4, r4, #1					// i++
 	cmp r4, r3
 	blt outer_loop
 
@@ -60,12 +55,78 @@ bx lr
 .endfunc
 
 
-//			uint64_t sum = (uint64_t)t[i+j] + (uint64_t)a[j] * (uint64_t)b[i] + (uint64_t)c;
-//			uint32_t s = (uint32_t)sum;
-//			c = (uint32_t)(sum >> 32);
-//			t[i+j] = s;
-//		}
-//		t[i+SIZE] = c;
+.text
+
+.global asm_mont_reduce_loop
+.func asm_mont_reduce_loop, asm_mont_reduce_loop
+.type asm_mont_reduce_loop, %function
 
 
+// r0: t
+// r1: res
+// r2: n0
+// r3: n
+// r4: SIZE
 
+asm_mont_reduce_loop:
+// Save registers
+push {r4-r12, lr}
+ldr r4, [sp, #40]				// pop SIZE from stack
+
+// r5: i
+// r2: n0[0]
+mov r5, #0
+ldr r2, [r2]
+reduce_outer_loop:
+	// r6: j
+	// r7: c
+	// r8: t[i]
+	ldr r8, [r0, r5, lsl #2]
+	mov r6, #0
+	mov r7, #0
+	// r8: m
+	umull r8, r9, r2, r8
+	reduce_inner_loop:
+		add r9, r5, r6				// r9: i + j
+		ldr r10, [r0, r9, lsl #2]	// r10: t[i+j]
+		ldr r12, [r3, r6, lsl #2]	// r12: n[j]
+		mov r11, #0
+		umlal r10, r11, r8, r12		// [r11, r10] = m*n[j] + t[i+j]
+		adds r10, r10, r7			// r10: s
+		adc r7, r11, #0				// r7: c
+		str r10, [r0, r9, lsl #2]	// t[i+j] = s
+
+		// Increment inner loop counter (j)
+		add r6, r6, #1
+		cmp r6, r4
+		blt reduce_inner_loop
+
+	// Call asm_mont_add
+	push {r1-r3}
+	add r1, r5, r4
+	mov r2, r7
+	bl asm_mont_add
+	pop {r1-r3}
+
+	// Increment outer loop counter (i)
+	add r5, r5, #1
+	cmp r5, r4// res[0:size] = t [size:2*size]
+	blt reduce_outer_loop
+
+// Copy result from t to res
+// r1: res -> 33 elements
+// r4: size
+add r0, r0, r4, lsl #2	// r0: &t[SIZE]
+// Copy t[32-42] to res
+ldmia r0!, {r2-r12}
+stmia r1!, {r2-r12}
+// copy t[43-53] to res
+ldmia r0!, {r2-r12}
+stmia r1!, {r2-r12}
+// copy t[54-64]
+ldmia r0!, {r2-r12}
+stmia r1!, {r2-r12}
+
+pop {r4-r12, lr}
+bx lr
+.endfunc
