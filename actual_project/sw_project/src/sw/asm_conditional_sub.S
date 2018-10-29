@@ -7,54 +7,59 @@
 // initial params
 // r0: u
 // r1: n
-// r2: size
-// r3: t
-// r4: index
-// r5: u[index]
-// r6: n[index]
-// r7: b
+// r2: SIZE
 asm_cond_sub:
+// Store saved registers
+push {r4-r12, lr}
 
-push {r4,r5,r6,r7,r8}
+// r3: i
+// r4: b
+// r7: SIZE
+mov r3, #0
 mov r4, #0
-mov r7, #0
-cmp r4, r2
-bge end
+mov r7, r2
 
-// r5: &t + offset
-mov r5, #0
-init_loop:
-	str	r4, [r3,r5]
-	add r5, r5, #4
-	cmp r5, r2
-	blt init_loop
+// Allocate t[33] on stack
+// r2: t
+sub sp, sp, #132
+mov r2, sp
 
 sub_loop:
-	ldr r5, [r0, r4]
-	ldr r6, [r1, r4]
-	sub r8, r5, r6
-	sub r8, r8, r7
-	mov r7, #0
-	movcc r7, #1
-
-	str r8, [r3, r4, lsl #2]
-	add r4, #1
-	cmp r4, r2
+	// r5: u[i]
+	// r6: n[i]
+	ldr r5, [r0, r3, lsl #2]
+	ldr r6, [r1, r3, lsl #2]
+	subs r5, r5, r4
+	movcs r4, #0
+	movcc r4, #1
+	// r5: sub
+	subs r5, r5, r6
+	movcc r4, #1
+	// t[i] = sub
+	str r5, [r2, r3, lsl #2]
+	add r3, #1
+	cmp r3, r7
 	blt sub_loop
 
+// r5: u[size]
+ldr r5, [r0, r3, lsl #2]
+subs r5, r5, r4
+str r5, [r2, r3, lsl #2]
+bcc end_cond_sub
 
-	cmp r7, #0
-	bne end
-	mov r4, #0
+// Move result from t to u
+mov r3, #0
+copy_loop:
+	ldr r5, [r2, r3, lsl #2]
+	str r5, [r0, r3, lsl #2]
+	add r3, #1
+	cmp r3, r7
+	ble copy_loop
 
-	final_loop:
-		ldr r5, [r3, r4]
-		str r5, [r0, r4, lsl #2]
-		add r4, #1
-		cmp r4, r2
-		ble final_loop
-
-end:
-pop {r4,r5,r6,r7,r8}
+end_cond_sub:
+add sp, sp, #132
+// Restore saved registers
+pop {r4-r12, lr}
 bx lr
 .endfunc
+

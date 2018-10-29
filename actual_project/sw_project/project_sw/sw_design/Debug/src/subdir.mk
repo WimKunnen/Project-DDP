@@ -17,12 +17,14 @@ C_SRCS += \
 S_UPPER_SRCS += \
 ../src/asm_conditional_sub.S \
 ../src/asm_func.S \
+../src/asm_mont.S \
 ../src/asm_mont_add.S \
 ../src/asm_montgomery.S 
 
 OBJS += \
 ./src/asm_conditional_sub.o \
 ./src/asm_func.o \
+./src/asm_mont.o \
 ./src/asm_mont_add.o \
 ./src/asm_montgomery.o \
 ./src/hw_accelerator.o \
@@ -35,6 +37,7 @@ OBJS += \
 S_UPPER_DEPS += \
 ./src/asm_conditional_sub.d \
 ./src/asm_func.d \
+./src/asm_mont.d \
 ./src/asm_mont_add.d \
 ./src/asm_montgomery.d 
 

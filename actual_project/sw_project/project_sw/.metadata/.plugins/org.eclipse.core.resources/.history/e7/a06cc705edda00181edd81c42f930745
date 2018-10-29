@@ -1,0 +1,94 @@
+// Complete montgomery algorithm in assembly
+.text
+
+.global asm_mont
+.func asm_mont, asm_mont
+.type asm_mont, %function
+
+// void asm_mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, uint32_t SIZE);
+// r0: &a
+// r1: &b
+// r2: &n
+// r3: &n0
+// stack: res, SIZE
+// SIZE will always be 32
+asm_mont:
+// Store saved registers
+push {r4-r12, lr}
+// Load stack parameters and swap around registers
+// uint32_t* a 		-> r0
+// uint32_t* b 		-> r1
+// uint32_t* n 		-> r2, move to stack
+// uint32_t* n0 	-> r3, move to stack
+// uint32_t* res 	-> copy from stack, push back on stack for later
+// uint32_t SIZE	-> ignore, it will always be 32
+mov r4, r2		// r4: n
+ldr r5, [sp, #40]	// r5: res
+
+// Allocate t[65] on stack
+sub sp, sp, #260
+mov r2, sp		// r2: t
+
+// Store function arguments (n, n0, res) on stack for later
+push {r3-r5}
+
+// Make t contain only zeros
+mov r3, r2
+mov r4, #0
+mov r5, #0
+mov r6, #0
+mov r7, #0
+mov r8, #0
+mov r9, #0
+mov r10, #0
+mov r11, #0
+mov r12, #0
+stmia r3!, {r4-r12}
+stmia r3!, {r4-r12}
+stmia r3!, {r4-r12}
+stmia r3!, {r4-r12}
+stmia r3!, {r4-r12}
+stmia r3!, {r4-r12}
+stmia r3!, {r4-r12}
+stmia r3!, {r4-r5}
+
+// Multiplication loop:
+// r0: a
+// r1: b
+// r2: t
+// r3: SIZEuint32_t N1[32] = {0x4aeeb107, 0x5d78aa98, 0x6c55dd05, 0x6f5326c9, 0xf93f738c, 0xc10fa093, 0x20478120, 0x099d6d70, 0x833d9b82, 0x1248f3ed, 0xa43ed737, 0xc1c1da45, 0x9f23e5c7, 0xb17c3598, 0xe8938df6, 0x7ae59036, 0x9f84d87b, 0xc8710dc6, 0x249ee0f8, 0x46eeae2f, 0x66a3bb9b, 0xfeef4c6b, 0xc7b55eae, 0x7951dd0c, 0x0b4391e8, 0x141ad586, 0x1a568588, 0x908293dd, 0x472c0bea, 0x8d00abfe, 0xed17377f, 0x83a01efe};
+mov r3, #32
+bl asm_mont_mul_loop
+// Load n, n0 and res from stack
+pop {r3-r5}
+
+// Reduction loop
+// a and b are no longer needed
+// r0: t
+// r1: res
+// r2: n0
+// r3: n
+// stack: SIZE
+mov r0, r2
+mov r1, r5
+mov r2, r4
+mov r4, #32
+push {r4}
+bl asm_mont_reduce_loop
+pop {r4}
+// Set stack pointer to original value (before allocating t)
+add sp, sp, #260
+
+// Conditional subtraction
+// r0: res
+// r1: n
+// r2: SIZE
+mov r0, r1
+mov r1, r3
+mov r2, #32
+bl asm_cond_sub
+// Restore saved registers
+pop {r4-r12, lr}
+
+bx lr
+.endfunc

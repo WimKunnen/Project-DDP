@@ -1,0 +1,123 @@
+// Complete montgomery algorithm in assembly
+.text
+
+.global asm_mont
+.func asm_mont, asm_mont
+.type asm_mont, %function
+
+// void asm_mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, uint32_t SIZE);
+// r0: &a
+// r1: &b
+// r2: &n
+// r3: &n0
+// stack: res, SIZE
+// SIZE will always be 32
+asm_mont:
+	// Store saved registers
+	push {r4-r12, lr}
+	// Load stack parameters and swap around registers
+	mov r4, r2			// r4: n
+	ldr r5, [sp, #40]	// r5: res
+
+	// Allocate t[65] on stack
+	sub sp, sp, #260
+	mov r2, sp		// r2: t
+
+	// Store function arguments (n, n0, res) on stack for later
+	push {r3-r5}
+
+	// Make t contain only zeros
+	mov r3, r2
+	mov r4, #0
+	mov r5, #0
+	mov r6, #0
+	mov r7, #0
+	mov r8, #0
+	mov r9, #0
+	mov r10, #0
+	mov r11, #0
+	mov r12, #0
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r5}
+
+
+	// Multiplication loop:
+	// asm_mont_mul_loop(uint32_t *a, uint32_t *b, uint32_t *t, uint32_t SIZE);
+	// r0: &a
+	// r1: &b
+	// r2: &t
+	// r3: SIZE = 32
+	mov r3, #32
+	bl asm_multiplication
+
+	// Reduction loop
+	pop {r3-r5}
+	// TODO
+
+
+	// Conditional subtraction
+	// TODO
+
+
+	// Restore stach pointer (t[65] goes out of scope)
+	add sp, sp, #260
+	
+	// Restore saved registers
+	pop {r4-r12, lr}
+
+	bx lr
+.endfunc
+
+
+
+.text
+
+.global asm_multiplication
+.func asm_multiplication, asm_multiplication
+.type asm_multiplication, %function
+
+// r0: a	32 elements
+// r1: b	32 elements
+// r2: t	64 elements
+// r3: size
+// r4: i
+// r5: j
+// r6: c
+asm_multiplication:
+// Store saved registers
+push {r4-r12}
+
+mov r4, #0							// r4: i = 0
+outer_loop:
+	mov r6, #0						// r6: c = 0
+	mov r5, #0						// r5: j = 0
+	ldr r9, [r1, r4, lsl #2]		// r9: b[i]
+	inner_loop:
+		ldr r8, [r0, r5, lsl #2]	// r8: a[j]
+		add r12, r4, r5				// r12: i + j
+		ldr r10, [r2, r12, lsl #2]	// r10: t[i+j]
+		mov r11, #0					// upper register = 0
+		umlal r10, r11, r8, r9		// [r11, r10] = [r11, r10] + r8 * r9
+		adds r10, r10, r6
+		adc r6, r11, #0				// r6: update c
+		str r10, [r2, r12, lsl #2]  // t[i+j] = s
+
+		add r5, r5, #1				// j++
+		cmp r5, r3
+		blt inner_loop
+
+	add r12, r3, r4
+	str r6, [r2, r12, lsl #2]  		// t[i+size] = c
+	add r4, r4, #1					// i++
+	cmp r4, r3
+	blt outer_loop
+
+pop {r4-r12}
+bx lr
+.endfunc

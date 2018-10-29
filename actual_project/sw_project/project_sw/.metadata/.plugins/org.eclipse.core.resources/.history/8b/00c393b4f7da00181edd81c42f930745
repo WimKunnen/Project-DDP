@@ -1,0 +1,36 @@
+/******************************************************************
+ * This is the main file for the Software Sessions
+ *
+ */
+
+#include <stdint.h>
+#include <inttypes.h>
+
+#include "common.h"
+#include "mp_arith.h"
+#include "montgomery.h"
+#include "asm_func.h"
+#include "asm_montgomery.h"
+#include "tests.h"
+
+int main()
+{
+    init_platform();
+    init_performance_counters(1);
+
+    xil_printf("Begin\n\r");
+
+    	
+    // Test Montgomery algorithm.
+    if (test_montgomery() != 0) {
+    	xil_printf("Montgomery algorithm tests failed.\r\n");
+    } else {
+    	xil_printf("Montgomery algorithm tests passed.\r\n");
+    }
+
+	xil_printf("\r\nEnd\n\r");
+
+    cleanup_platform();
+
+    return 0;
+}

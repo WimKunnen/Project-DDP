@@ -1,0 +1,216 @@
+// Complete montgomery algorithm in assembly
+.text
+
+.global asm_mont
+.func asm_mont, asm_mont
+.type asm_mont, %function
+
+// void asm_mont(uint32_t *a, uint32_t *b, uint32_t *n, uint32_t *n0, uint32_t *res, uint32_t SIZE);
+// r0: &a
+// r1: &b
+// r2: &n
+// r3: &n0
+// stack: res, SIZE
+// SIZE will always be 32
+asm_mont:
+	// Store saved registers
+	push {r4-r12, lr}
+	// Load stack parameters and swap around registers
+	mov r4, r2			// r4: n
+	ldr r5, [sp, #40]	// r5: res
+
+	// Allocate t[65] on stack
+	sub sp, sp, #260
+	mov r2, sp		// r2: t
+
+	// Store function arguments (n, n0, res) on stack for later
+	push {r3-r5}
+
+	// Make t contain only zeros
+	mov r3, r2
+	mov r4, #0
+	mov r5, #0
+	mov r6, #0
+	mov r7, #0
+	mov r8, #0
+	mov r9, #0
+	mov r10, #0
+	mov r11, #0
+	mov r12, #0
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r12}
+	stmia r3!, {r4-r5}
+
+
+	// Multiplication loop:
+	// asm_mont_mul_loop(uint32_t *a, uint32_t *b, uint32_t *t, uint32_t SIZE);
+	// r0: &a
+	// r1: &b
+	// r2: &t
+	// r3: SIZE = 32
+	mov r3, #32
+	bl asm_multiplication
+
+
+	// Reduction loop
+	pop {r3-r5}
+	// Move registers around
+	// r0: &t
+	// r1: &res
+	// r2: &n0
+	// r3: &n
+	mov r0, r2
+	mov r1, r5
+	mov r2, r4
+	bl asm_mont_reduction
+
+	mov r0, r1
+	mov r1, #64
+	bl print_arr
+
+	// Conditional subtraction
+	// r0: res
+	// r1: n
+	// r2: SIZE = 32
+	mov r0, r1
+	mov r1, r3
+	mov r2, #32
+	bl asm_cond_sub
+
+	// Restore stach pointer (t[65] goes out of scope)
+	add sp, sp, #260
+	
+	// Restore saved registers
+	pop {r4-r12, lr}
+
+	bx lr
+.endfunc
+
+
+
+.text
+
+.global asm_multiplication
+.func asm_multiplication, asm_multiplication
+.type asm_multiplication, %function
+
+// r0: a	32 elements
+// r1: b	32 elements
+// r2: t	64 elements
+// r3: size
+// r4: i
+// r5: j
+// r6: c
+asm_multiplication:
+// Store saved registers
+push {r4-r12}
+
+mov r4, #0							// r4: i = 0
+outer_loop:
+	mov r6, #0						// r6: c = 0
+	mov r5, #0						// r5: j = 0
+	ldr r9, [r1, r4, lsl #2]		// r9: b[i]
+	inner_loop:
+		ldr r8, [r0, r5, lsl #2]	// r8: a[j]
+		add r12, r4, r5				// r12: i + j
+		ldr r10, [r2, r12, lsl #2]	// r10: t[i+j]
+		mov r11, #0					// upper register = 0
+		umlal r10, r11, r8, r9		// [r11, r10] = [r11, r10] + r8 * r9
+		adds r10, r10, r6
+		adc r6, r11, #0				// r6: update c
+		str r10, [r2, r12, lsl #2]  // t[i+j] = s
+
+		add r5, r5, #1				// j++
+		cmp r5, r3
+		blt inner_loop
+
+	add r12, r3, r4
+	str r6, [r2, r12, lsl #2]  		// t[i+size] = c
+	add r4, r4, #1					// i++
+	cmp r4, r3
+	blt outer_loop
+
+pop {r4-r12}
+bx lr
+.endfunc
+
+
+.text
+
+.global asm_mont_reduction
+.func asm_mont_reduction, asm_mont_reduction
+.type asm_mont_reduction, %function
+
+
+// r0: t
+// r1: res
+// r2: n0
+// r3: n
+// r4: SIZE = 32
+asm_mont_reduction:
+// Save registers
+push {r3-r12, lr}
+mov r4, #32
+
+// r5: i
+// r2: n0[0]
+mov r5, #0
+ldr r2, [r2]
+reduction_outer_loop:
+	// r6: j/
+	// r7: c
+	// r8: t[i]
+	ldr r8, [r0, r5, lsl #2]
+	mov r6, #0
+	mov r7, #0
+	// r8: m
+	umull r8, r9, r2, r8
+	reduction_inner_loop:
+		add r9, r5, r6				// r9: i + j
+		ldr r10, [r0, r9, lsl #2]	// r10: t[i+j]
+		ldr r12, [r3, r6, lsl #2]	// r12: n[j]
+		mov r11, #0
+		umlal r10, r11, r8, r12		// [r11, r10] = m*n[j] + t[i+j]
+		adds r10, r10, r7			// r10: s
+		adc r7, r11, #0				// r7: c
+		str r10, [r0, r9, lsl #2]	// t[i+j] = s
+
+		// Increment inner loop counter (j)
+		add r6, r6, #1
+		cmp r6, r4
+		blt reduction_inner_loop
+
+	// Call asm_mont_add
+	push {r1-r3}
+	add r1, r5, r4
+	mov r2, r7
+	bl asm_mont_add
+	pop {r1-r3}
+
+	// Increment outer loop counter (i)
+	add r5, r5, #1
+	cmp r5, r4// res[0:size] = t [size:2*size]
+	blt reduction_outer_loop
+
+// Copy result from t to res
+// r1: res -> 33 elements
+// r4: size
+add r0, r0, r4, lsl #2	// r0: &t[SIZE]
+// Copy t[32-42] to res
+ldmia r0!, {r2-r12}
+stmia r1!, {r2-r12}
+// copy t[43-53] to res
+ldmia r0!, {r2-r12}
+stmia r1!, {r2-r12}
+// copy t[54-64]
+ldmia r0!, {r2-r12}
+stmia r1!, {r2-r12}
+
+pop {r3-r12, lr}
+bx lr
+.endfunc

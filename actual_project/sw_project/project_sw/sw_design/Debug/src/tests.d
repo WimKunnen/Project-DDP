@@ -5,7 +5,8 @@ src/tests.o src/tests.o: ../src/tests.c ../src/common.h \
  ../../hw_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../hw_bsp/ps7_cortexa9_0/include/xparameters_ps.h \
  ../../hw_bsp/ps7_cortexa9_0/include/xil_cache.h ../src/asm_montgomery.h \
- ../src/asm_mont_add.h ../src/asm_conditional_sub.h ../src/montgomery.h
+ ../src/asm_mont_add.h ../src/asm_conditional_sub.h ../src/asm_mont.h \
+ ../src/montgomery.h
 
 ../src/common.h:
 
@@ -30,5 +31,7 @@ src/tests.o src/tests.o: ../src/tests.c ../src/common.h \
 ../src/asm_mont_add.h:
 
 ../src/asm_conditional_sub.h:
+
+../src/asm_mont.h:
 
 ../src/montgomery.h:

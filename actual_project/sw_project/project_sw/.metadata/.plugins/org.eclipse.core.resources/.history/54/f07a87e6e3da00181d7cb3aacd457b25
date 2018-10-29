@@ -1,0 +1,73 @@
+.text
+
+.global asm_cond_sub
+.func asm_cond_sub, asm_cond_sub
+.type asm_cond_sub, %function
+
+// initial params
+// r0: u
+// r1: n
+asm_cond_sub:
+// Store saved registers
+push {r4-r12}
+
+// r3: i
+// r4: b
+mov r3, #0
+mov r4, #0
+
+// Allocate t[33] on stack
+// r2: t
+sub sp, sp, #132
+mov r2, sp
+
+sub_loop:
+	// r5: u[i]
+	// r6: n[i]
+	ldr r5, [r0, r4]
+	ldr r6, [r1, r4]
+	subs r8, r5, r6
+	subs r8, r8, r7
+	mov r7, #0
+	movcc r7, #1
+
+	str r8, [r3, r4, lsl #2]
+	add r4, #1
+	cmp r4, r2
+	blt sub_loop
+
+
+	cmp r7, #0
+	bne end
+	mov r4, #0
+
+	final_loop:
+		ldr r5, [r3, r4]
+		str r5, [r0, r4, lsl #2]
+		add r4, #1
+		cmp r4, r2
+		ble final_loop
+
+end:
+// Restore saved registers
+pop {r4-r12}
+bx lr
+.endfunc
+
+// Subtracts n from u if u >= n, result is stored in u.
+	for(index=0;index<size;index++) {
+		uint32_t sub = u[index] - n[index] - b;
+		if (u[index] >= (uint64_t) n[index] + b) {
+			b = 0;
+		} else {
+			b = 1;
+		}
+		t[index] = sub;
+	}
+
+
+	if (b == 0) {
+		for(index=0;index<size;index++) {
+			u[index] = t[index];
+		}
+	}
