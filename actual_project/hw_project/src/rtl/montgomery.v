@@ -118,7 +118,7 @@ module montgomery(
     begin
     if(resetn == 0)
         done_reg <= 0;
-    else if (state == 4'd13)
+    else if (state == 4'd15)
         done_reg <= 1;
     else
         done_reg <= 0;
@@ -128,12 +128,12 @@ module montgomery(
 
     // Add cycle counter
     reg count_enable;
-    reg [3:0] counter;
+    reg [9:0] counter;
     always @(posedge clk)
     begin
         if (resetn == 0)
             counter <= 0;
-        else if (counter == 4'd13)
+        else if (state == 4'd15)
             counter <= 0;
         else if (count_enable == 1)
             counter <= counter + 1;
