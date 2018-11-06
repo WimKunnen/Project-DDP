@@ -128,12 +128,12 @@ module montgomery(
 
     // Add cycle counter
     reg count_enable;
-    reg [1:0] counter;
+    reg [3:0] counter;
     always @(posedge clk)
     begin
         if (resetn == 0)
             counter <= 0;
-        else if (state == 4'd13)
+        else if (counter == 4'd13)
             counter <= 0;
         else if (count_enable == 1)
             counter <= counter + 1;
@@ -141,7 +141,7 @@ module montgomery(
 
 
     // FSM
-    reg [1:0] state, nextstate;
+    reg [3:0] state, nextstate;
 
     always @(posedge clk)
     begin
@@ -497,7 +497,7 @@ module montgomery(
                         if (c[1027:1024] < 0)
                             nextstate <= 4'd13;
                         else
-                            nextstate <= 4'd11
+                            nextstate <= 4'd11;
                     else
                         nextstate = state;
                 end

@@ -1,0 +1,34 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mpadder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery
+WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
+WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
+WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:121]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

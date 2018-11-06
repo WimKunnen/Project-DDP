@@ -27,6 +27,25 @@ module tb_montgomery();
                                     .in_m   (in_m   ),
                                     .result (result ),
                                     .done   (done   ));
+                                    
+     // Intances of 1027 bit adder/subtracter module.
+     reg adder_resetn;
+     reg adder_start;
+     reg adder_subtract;
+     wire [1026:0] adder_input_a;
+     wire [1026:0] adder_input_b;
+     wire [1027:0] adder_result;
+     wire adder_done;
+                        
+     mpadder adder( .clk(clk),
+                    .resetn(resetn),
+                    .start(start),
+                    .subtract(adder_subtract),
+                    .in_a(in_a),
+                    .in_b(in_b),
+                    .result(adder_result),
+                    .done(adder_done)
+                    );                               
 
     //Generate a clock
     initial begin
