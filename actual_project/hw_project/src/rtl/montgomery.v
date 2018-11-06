@@ -22,14 +22,14 @@ module montgomery(
     wire adder_done;
 
     mpadder adder(
-         .clk(clk),
-         .resetn(adder_resetn),
-         .start(adder_start),
-         .subtract(adder_subtract),
-         .in_a(adder_input_a),
-         .in_b(adder_input_b),
-         .result(adder_result),
-         .done(adder_done)
+         .clk      (clk             ),
+         .resetn   (adder_resetn   ),
+         .start    (adder_start    ),
+         .subtract (adder_subtract ),
+         .in_a     (adder_input_a  ),
+         .in_b     (adder_input_b  ),
+         .result   (adder_result   ),
+         .done     (adder_done     )
          );
 
 
@@ -128,7 +128,7 @@ module montgomery(
 
     // Add cycle counter
     reg count_enable;
-    reg [9:0] counter;
+    reg [8:0] counter;
     always @(posedge clk)
     begin
         if (resetn == 0)
@@ -168,7 +168,7 @@ module montgomery(
                 zero_add       <= 1'b0;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b1;
+                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
@@ -184,7 +184,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b1;
-                adder_resetn   <= 1'b0;
+                adder_resetn   <= 1'b1;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
             end
@@ -200,7 +200,7 @@ module montgomery(
                 zero_add       <= 1'b0;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
@@ -216,7 +216,7 @@ module montgomery(
                 zero_add       <= 1'b0;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b1;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
             end
@@ -232,7 +232,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b1;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
             end
@@ -248,7 +248,7 @@ module montgomery(
                 zero_add       <= 1'b0;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
@@ -264,7 +264,7 @@ module montgomery(
                 zero_add       <= 1'b0;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b1;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
             end
@@ -280,7 +280,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b1;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
             end
@@ -296,7 +296,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
@@ -312,7 +312,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
             end
@@ -328,7 +328,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b1;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
@@ -344,7 +344,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b1;
             end
@@ -360,7 +360,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
@@ -376,7 +376,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
             end
@@ -392,7 +392,7 @@ module montgomery(
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
@@ -408,7 +408,7 @@ module montgomery(
                 zero_add       <= 1'b0;
                 shift_select   <= 1'b0;
                 count_enable   <= 1'b0;
-                adder_resetn   <= 1'b0;
+//                adder_resetn   <= 1'b0;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
@@ -452,7 +452,10 @@ module montgomery(
                 4'd5: begin
                     if (adder_done == 1)
                         if (counter == 6)
+                            begin
                             nextstate <= 4'd6;
+                            counter <= 9'b0;
+                            end
                         else
                             nextstate <= 4'd4;
                     else
@@ -480,7 +483,7 @@ module montgomery(
             // Done M-mux state
                 4'd10: begin
                     if (adder_done == 1)
-                        if (counter == 518)
+                        if (counter == 511)
                             nextstate <= 4'd11;
                         else
                             nextstate <= 4'd7;
