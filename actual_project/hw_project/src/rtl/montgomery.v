@@ -128,7 +128,7 @@ module montgomery(
 
     // Add cycle counter
     reg count_enable;
-    reg [8:0] counter;
+    reg [9:0] counter;
     always @(posedge clk)
     begin
         if (resetn == 0)
@@ -454,7 +454,6 @@ module montgomery(
                         if (counter == 6)
                             begin
                             nextstate <= 4'd6;
-                            counter <= 9'b0;
                             end
                         else
                             nextstate <= 4'd4;
@@ -483,7 +482,7 @@ module montgomery(
             // Done M-mux state
                 4'd10: begin
                     if (adder_done == 1)
-                        if (counter == 511)
+                        if (counter == 518)
                             nextstate <= 4'd11;
                         else
                             nextstate <= 4'd7;
@@ -497,7 +496,8 @@ module montgomery(
             // Check Done M-subtract state
                 4'd12: begin
                     if (adder_done == 1)
-                        if (c[1027:1024] < 0)
+                        // TODO: fix if statement for correct result
+                        if (c_mux[1027] == 0)
                             nextstate <= 4'd13;
                         else
                             nextstate <= 4'd11;

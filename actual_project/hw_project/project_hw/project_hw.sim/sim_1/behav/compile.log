@@ -28,6 +28,7 @@ WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start
 WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
 WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
 WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:121]
+WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:136]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_montgomery
 INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
