@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log hweval_adder.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_adder.tcl
+    with args -log hweval_montgomery.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_montgomery.tcl
 
 
 ****** Vivado v2016.2 (64-bit)
@@ -8,23 +8,27 @@
   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source hweval_adder.tcl -notrace
-Command: synth_design -top hweval_adder -part xc7z010clg400-1
+source hweval_montgomery.tcl -notrace
+Command: synth_design -top hweval_montgomery -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12177 
+INFO: Helper process launched with PID 11818 
+WARNING: [Synth 8-2292] literal value truncated to fit in 1024 bits [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_montgomery.v:32]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1152.430 ; gain = 165.137 ; free physical = 10960 ; free virtual = 45782
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1161.609 ; gain = 174.324 ; free physical = 8882 ; free virtual = 43990
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'hweval_adder' [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:3]
-INFO: [Synth 8-638] synthesizing module 'mpadder' [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:3]
-INFO: [Synth 8-226] default block is never used [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:153]
-INFO: [Synth 8-256] done synthesizing module 'mpadder' (1#1) [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:3]
-INFO: [Synth 8-256] done synthesizing module 'hweval_adder' (2#1) [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:3]
+INFO: [Synth 8-638] synthesizing module 'hweval_montgomery' [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_montgomery.v:3]
+INFO: [Synth 8-638] synthesizing module 'montgomery' [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:3]
+INFO: [Synth 8-638] synthesizing module 'mpadder' [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:3]
+INFO: [Synth 8-226] default block is never used [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:153]
+INFO: [Synth 8-256] done synthesizing module 'mpadder' (1#1) [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:3]
+INFO: [Synth 8-226] default block is never used [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:425]
+INFO: [Synth 8-256] done synthesizing module 'montgomery' (2#1) [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:3]
+INFO: [Synth 8-256] done synthesizing module 'hweval_montgomery' (3#1) [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_montgomery.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1192.875 ; gain = 205.582 ; free physical = 10920 ; free virtual = 45744
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1202.867 ; gain = 215.582 ; free physical = 8841 ; free virtual = 43950
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -34,47 +38,89 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1192.875 ; gain = 205.582 ; free physical = 10919 ; free virtual = 45744
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1202.867 ; gain = 215.582 ; free physical = 8841 ; free virtual = 43949
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Sourcing Tcl File [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
+Sourcing Tcl File [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
 Constraints for hw_evals
-INFO: [Vivado 12-1808] Property 'PACKAGE_PIN' is not supported for elaborated designs for objects of type 'port'. [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/tcl/constraints.tcl:7]
-Finished Sourcing Tcl File [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
+INFO: [Vivado 12-1808] Property 'PACKAGE_PIN' is not supported for elaborated designs for objects of type 'port'. [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/tcl/constraints.tcl:7]
+Finished Sourcing Tcl File [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1578.875 ; gain = 0.008 ; free physical = 10691 ; free virtual = 45551
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1609.859 ; gain = 1.000 ; free physical = 8628 ; free virtual = 43736
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10688 ; free virtual = 45549
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1609.859 ; gain = 622.574 ; free physical = 8627 ; free virtual = 43735
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10688 ; free virtual = 45549
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1609.859 ; gain = 622.574 ; free physical = 8627 ; free virtual = 43735
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10688 ; free virtual = 45549
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1609.859 ; gain = 622.574 ; free physical = 8627 ; free virtual = 43735
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "done_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "in_a" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-3936] Found unconnected internal register 'c_reg' and it is trimmed from '1028' to '1027' bits. [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'montgomery'
+INFO: [Synth 8-5544] ROM "shift_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_resetn" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_start" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adder_subtract" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "zero_add" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "while_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "add_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "a_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "m_select" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "count_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done_reg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "nextstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextstate" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "start" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0000 |                             0000
+                 iSTATE0 |                             0001 |                             0001
+                 iSTATE1 |                             0010 |                             0010
+                 iSTATE2 |                             0011 |                             0011
+                 iSTATE4 |                             0100 |                             0101
+                 iSTATE5 |                             0101 |                             0110
+                 iSTATE7 |                             0110 |                             1000
+                 iSTATE8 |                             0111 |                             1001
+                 iSTATE9 |                             1000 |                             1010
+                iSTATE10 |                             1001 |                             1011
+                iSTATE11 |                             1010 |                             1100
+                iSTATE12 |                             1011 |                             1101
+                iSTATE13 |                             1100 |                             1110
+                iSTATE14 |                             1101 |                             1111
+                 iSTATE6 |                             1110 |                             0111
+                 iSTATE3 |                             1111 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'montgomery'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10686 ; free virtual = 45547
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1609.859 ; gain = 622.574 ; free physical = 8622 ; free virtual = 43730
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -85,50 +131,61 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3538] Detected potentially large (wide) register b_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:31]
-INFO: [Synth 8-3538] Detected potentially large (wide) register a_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:25]
-INFO: [Synth 8-3538] Detected potentially large (wide) register in_b_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:22]
-INFO: [Synth 8-3538] Detected potentially large (wide) register in_a_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:21]
+INFO: [Synth 8-3538] Detected potentially large (wide) register b_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:31]
+INFO: [Synth 8-3538] Detected potentially large (wide) register a_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:25]
+INFO: [Synth 8-3538] Detected potentially large (wide) register c_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+INFO: [Synth 8-3538] Detected potentially large (wide) register m3_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+INFO: [Synth 8-3538] Detected potentially large (wide) register b3_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:51]
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input    173 Bit       Adders := 2     
 	   3 Input    173 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
-	   2 Input   1027 Bit         XORs := 1     
+	   2 Input   1024 Bit         XORs := 1     
 +---Registers : 
 	             1032 Bit    Registers := 2     
-	             1027 Bit    Registers := 2     
+	             1027 Bit    Registers := 1     
+	             1026 Bit    Registers := 2     
+	             1024 Bit    Registers := 6     
+	               10 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 4     
 +---Muxes : 
 	   4 Input   1032 Bit        Muxes := 1     
 	   2 Input   1032 Bit        Muxes := 3     
+	   2 Input   1027 Bit        Muxes := 12    
+	   2 Input   1026 Bit        Muxes := 1     
+	   2 Input   1024 Bit        Muxes := 6     
 	   2 Input    172 Bit        Muxes := 1     
+	  27 Input      4 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 10    
+	  16 Input      1 Bit        Muxes := 13    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3538] Detected potentially large (wide) register b_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:31]
-INFO: [Synth 8-3538] Detected potentially large (wide) register a_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:25]
-INFO: [Synth 8-3538] Detected potentially large (wide) register in_b_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:22]
-INFO: [Synth 8-3538] Detected potentially large (wide) register in_a_reg [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:21]
+INFO: [Synth 8-3538] Detected potentially large (wide) register b_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:31]
+INFO: [Synth 8-3538] Detected potentially large (wide) register a_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:25]
+INFO: [Synth 8-3538] Detected potentially large (wide) register c_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+INFO: [Synth 8-3538] Detected potentially large (wide) register m3_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+INFO: [Synth 8-3538] Detected potentially large (wide) register b3_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:51]
 Hierarchical RTL Component report 
-Module hweval_adder 
+Module hweval_montgomery 
 Detailed RTL Component Info : 
 +---XORs : 
-	   2 Input   1027 Bit         XORs := 1     
+	   2 Input   1024 Bit         XORs := 1     
 +---Registers : 
-	             1027 Bit    Registers := 2     
+	             1024 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
@@ -150,6 +207,23 @@ Detailed RTL Component Info :
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 5     
 	   2 Input      1 Bit        Muxes := 4     
+Module montgomery 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	             1027 Bit    Registers := 1     
+	             1026 Bit    Registers := 2     
+	             1024 Bit    Registers := 3     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   1027 Bit        Muxes := 12    
+	   2 Input   1026 Bit        Muxes := 1     
+	   2 Input   1024 Bit        Muxes := 6     
+	  27 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  16 Input      1 Bit        Muxes := 13    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -162,14 +236,14 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10686 ; free virtual = 45547
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1609.859 ; gain = 622.574 ; free physical = 8622 ; free virtual = 43730
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10678 ; free virtual = 45539
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1609.859 ; gain = 622.574 ; free physical = 8609 ; free virtual = 43717
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10678 ; free virtual = 45539
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1609.859 ; gain = 622.574 ; free physical = 8609 ; free virtual = 43717
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -179,19 +253,214 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'dut/b_reg[1027]' (FDRE) to 'dut/b_reg[1028]'
-INFO: [Synth 8-3886] merging instance 'dut/b_reg[1028]' (FDRE) to 'dut/b_reg[1029]'
-INFO: [Synth 8-3886] merging instance 'in_b_reg[1026]' (FDRE) to 'subtract_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[860] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[861] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[862] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[863] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[864] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[865] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[866] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[867] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[868] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[869] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[870] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[871] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[872] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[873] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[874] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[875] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[876] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[877] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[878] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[879] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[880] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[881] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[882] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[883] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[884] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[885] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[886] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[887] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[888] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[889] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[890] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[891] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[892] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[893] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[894] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[895] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[896] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[897] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[898] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[899] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[900] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[901] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[902] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[903] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[904] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[905] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[906] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[907] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[908] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[909] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[910] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[911] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[912] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[913] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[914] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[915] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[916] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[917] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[918] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[919] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[920] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[921] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[922] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[923] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[924] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[925] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[926] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[927] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[928] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[929] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[930] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[931] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[932] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[933] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[934] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[935] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[936] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[937] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[938] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[939] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[940] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[941] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[942] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[943] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[944] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[945] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[946] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[947] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[948] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[949] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[950] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[951] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[952] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[953] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[954] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[955] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[956] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[957] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\in_m_reg[958] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\in_m_reg[959] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'montgomery_instance/adder/b_reg[1027]' (FDRE) to 'montgomery_instance/adder/b_reg[1028]'
+INFO: [Synth 8-3886] merging instance 'montgomery_instance/adder/b_reg[1028]' (FDRE) to 'montgomery_instance/adder/b_reg[1029]'
 WARNING: [Synth 8-3332] Sequential element (b_reg[1031]) is unused and will be removed from module mpadder.
 WARNING: [Synth 8-3332] Sequential element (b_reg[1030]) is unused and will be removed from module mpadder.
 WARNING: [Synth 8-3332] Sequential element (b_reg[1028]) is unused and will be removed from module mpadder.
 WARNING: [Synth 8-3332] Sequential element (b_reg[1027]) is unused and will be removed from module mpadder.
-WARNING: [Synth 8-3332] Sequential element (b_reg[1026]) is unused and will be removed from module mpadder.
-WARNING: [Synth 8-3332] Sequential element (in_b_reg[1026]) is unused and will be removed from module hweval_adder.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1018]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1015]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1011]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1010]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1007]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1005]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1004]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1002]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1001]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[1000]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[999]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[998]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[995]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[993]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[992]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[991]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[990]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[987]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[983]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[981]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[977]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[976]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[975]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[974]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[973]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[971]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[970]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[969]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[968]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[965]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[964]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[963]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[962]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[959]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[957]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[953]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[952]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[949]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[946]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[945]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[944]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[942]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[939]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[937]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[934]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[933]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[932]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[930]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[926]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[924]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[920]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[917]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[916]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[913]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[910]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[909]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[908]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[907]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[906]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[900]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[899]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[898]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[895]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[894]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[892]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[890]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[888]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[887]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[885]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[883]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[882]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[880]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[879]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[877]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[876]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[874]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[873]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[869]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[867]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[865]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[864]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[863]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[860]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[855]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[853]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[843]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[840]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[837]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[832]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[827]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[826]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[825]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[824]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[823]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[822]) is unused and will be removed from module montgomery.
+WARNING: [Synth 8-3332] Sequential element (m_reg[820]) is unused and will be removed from module montgomery.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10601 ; free virtual = 45462
+Finished Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1645.648 ; gain = 658.363 ; free physical = 8481 ; free virtual = 43589
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10601 ; free virtual = 45462
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1645.648 ; gain = 658.363 ; free physical = 8481 ; free virtual = 43589
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -204,12 +473,12 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-Reading /tmp/.Xil_r0629332/Vivado-12160-pc-klas2-10.esat.kuleuven.be/realtime/hweval_adder_synth.xdc
+Reading /tmp/.Xil_r0634161/Vivado-11801-pc-klas2-6.esat.kuleuven.be/realtime/hweval_montgomery_synth.xdc
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1578.875 ; gain = 591.582 ; free physical = 10582 ; free virtual = 45450
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1668.656 ; gain = 681.371 ; free physical = 8459 ; free virtual = 43568
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10463 ; free virtual = 45339
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1791.180 ; gain = 803.895 ; free physical = 8334 ; free virtual = 43442
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -221,16 +490,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10470 ; free virtual = 45338
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8303 ; free virtual = 43412
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10470 ; free virtual = 45338
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8303 ; free virtual = 43412
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10470 ; free virtual = 45338
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8303 ; free virtual = 43412
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -247,7 +516,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10470 ; free virtual = 45338
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8301 ; free virtual = 43412
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -260,7 +529,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10470 ; free virtual = 45338
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8301 ; free virtual = 43412
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -272,25 +541,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10470 ; free virtual = 45338
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8303 ; free virtual = 43412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10470 ; free virtual = 45338
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8303 ; free virtual = 43412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10463 ; free virtual = 45331
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8303 ; free virtual = 43412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10463 ; free virtual = 45331
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8303 ; free virtual = 43412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -308,31 +577,32 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |   131|
-|3     |LUT1   |   173|
-|4     |LUT2   |  1375|
-|5     |LUT3   |     4|
-|6     |LUT4   |  1203|
-|7     |LUT5   |   711|
-|8     |LUT6   |   166|
-|9     |FDRE   |  4146|
+|3     |LUT1   |   174|
+|4     |LUT2   |  1746|
+|5     |LUT3   |  1562|
+|6     |LUT4   |  2480|
+|7     |LUT5   |  1235|
+|8     |LUT6   |  2563|
+|9     |FDRE   |  9813|
 |10    |FDSE   |     2|
 |11    |IBUF   |     2|
 |12    |OBUF   |     1|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------+--------+------+
-|      |Instance |Module  |Cells |
-+------+---------+--------+------+
-|1     |top      |        |  7915|
-|2     |  dut    |mpadder |  5629|
-+------+---------+--------+------+
++------+----------------------+-----------+------+
+|      |Instance              |Module     |Cells |
++------+----------------------+-----------+------+
+|1     |top                   |           | 19710|
+|2     |  montgomery_instance |montgomery | 17439|
+|3     |    adder             |mpadder    |  9610|
++------+----------------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1683.383 ; gain = 696.090 ; free physical = 10463 ; free virtual = 45331
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1822.055 ; gain = 834.770 ; free physical = 8303 ; free virtual = 43412
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1683.383 ; gain = 217.945 ; free physical = 10463 ; free virtual = 45331
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1683.391 ; gain = 696.098 ; free physical = 10465 ; free virtual = 45333
+Synthesis finished with 0 errors, 0 critical warnings and 1553 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1822.055 ; gain = 335.633 ; free physical = 8303 ; free virtual = 43412
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1822.062 ; gain = 834.777 ; free physical = 8304 ; free virtual = 43413
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -342,8 +612,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-34 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+161 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1699.398 ; gain = 632.551 ; free physical = 10466 ; free virtual = 45334
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1731.414 ; gain = 0.000 ; free physical = 10464 ; free virtual = 45333
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  7 11:20:53 2018...
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1838.070 ; gain = 771.230 ; free physical = 8304 ; free virtual = 43413
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1870.086 ; gain = 0.000 ; free physical = 8302 ; free virtual = 43412
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  7 16:43:47 2018...

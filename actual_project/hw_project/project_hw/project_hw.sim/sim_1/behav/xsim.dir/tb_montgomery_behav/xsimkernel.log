@@ -1,7 +1,4 @@
-Running: xsim.dir/tb_montgomery_behav/xsimk -simmode gui -wdb tb_montgomery_behav.wdb -simrunnum 0 -socket 37367
+Running: xsim.dir/tb_montgomery_behav/xsimk -simmode gui -wdb tb_montgomery_behav.wdb -simrunnum 0 -socket 41660
 Design successfully loaded
-Design Loading Memory Usage: 53124 KB (Peak: 53208 KB)
-Design Loading CPU Usage: 10 ms
-Simulation completed
-Simulation Memory Usage: 138964 KB (Peak: 200400 KB)
-Simulation CPU Usage: 310 ms
+Design Loading Memory Usage: 53132 KB (Peak: 53220 KB)
+Design Loading CPU Usage: 20 ms

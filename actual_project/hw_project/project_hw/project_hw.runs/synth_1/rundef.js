@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log hweval_adder.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_adder.tcl" );
+         "-log hweval_montgomery.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_montgomery.tcl" );
 
 
 
