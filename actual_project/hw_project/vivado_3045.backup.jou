@@ -1,0 +1,82 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Nov  7 10:38:23 2018
+# Process ID: 3045
+# Current directory: /users/start2016/r0629332/Project-DDP/actual_project/hw_project
+# Command line: vivado project_hw/project_hw.xpr -tempDir /tmp
+# Log file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.log
+# Journal file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_hw/project_hw.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_montgomery.tcl
+relaunch_sim
+relaunch_sim
+run 10 us
+run 100 us
+run 10000 us
+run 10 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 500 us
+run 500 us
+run 10 us
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_1]
+relaunch_sim
+close_sim
+launch_simulation
+source tb_montgomery.tcl
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {30000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_montgomery.tcl
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {40000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_montgomery.tcl
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {60000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_montgomery.tcl
+relaunch_sim
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+close_sim
+launch_simulation
+source tb_montgomery.tcl
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {52000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_montgomery.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim

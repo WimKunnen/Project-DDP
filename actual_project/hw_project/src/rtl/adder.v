@@ -11,24 +11,32 @@ module mpadder(
     output wire          done    
     );
 
-    wire [172:0] adder_result;
-    // [1] is with carry = 1, [0] is with catty = 0
-    wire [172:0] predicted_adder_result[1:0];
-
+    wire [127:0] adder_result;
+    wire [129:0] pre_adder_result[1:0];
+    wire [129:0] sec_pre_adder_result[1:0];
+    wire [129:0] thr_pre_adder_result[1:0];
+    
     // in_a mux
     reg input_mux_sel;
-    reg [1031:0] a;
+    reg [1027:0] a;
     
-    wire [172:0] predicted_mux;
-    wire [1031:0] a_mux;
-    assign predicted_mux = adder_result[172] == 1 ? predicted_adder_result[1] : predicted_adder_result[0];
-    assign a_mux = (input_mux_sel == 1) ? {5'b0, in_a} : {predicted_mux[171:0], adder_result[171:0], a[1031:344]}; 
+    wire [129:0] predicted_mux;
+    wire [129:0] sec_predicted_mux;
+    wire [129:0] thr_predicted_mux;
+    wire [1027:0] a_mux;
+    assign predicted_mux = adder_result[127] == 1 ? pre_adder_result[1] : pre_adder_result[0];
+    assign sec_predicted_mux = (adder_result[127] == 1 ? (pre_adder_result[1][129]==1 ? sec_pre_adder_result[1] : sec_pre_adder_result[0]) :
+                                                         (pre_adder_result[0][129]==1 ? sec_pre_adder_result[1] : sec_pre_adder_result[0]) );
+    assign thr_predicted_mux = (adder_result[127] == 1 ? (pre_adder_result[1][129]==1 ? (sec_pre_adder_result[1][129]==1 ? thr_pre_adder_result[1] : thr_pre_adder_result[0]) : (sec_pre_adder_result[0][129]==1 ? thr_pre_adder_result[1] : thr_pre_adder_result[0]) ):
+                                                         (pre_adder_result[0][129]==1 ? (sec_pre_adder_result[1][129]==1 ? thr_pre_adder_result[1] : thr_pre_adder_result[0]) : (sec_pre_adder_result[0][129]==1 ? thr_pre_adder_result[1] : thr_pre_adder_result[0]) ) );  
+
+    assign a_mux = (input_mux_sel == 1) ? {1'b0,in_a} : {thr_predicted_mux[128:0],sec_predicted_mux[128:0],predicted_mux[128:0],adder_result[126:0],a[1027:514]}; 
     
     // in_b mux
-    reg [1031:0] b;
-    wire [1031:0] b_mux;   
+    reg [1027:0] b;
+    wire [1027:0] b_mux;   
 
-    assign b_mux = (input_mux_sel == 1) ? ( subtract == 1 ? {5'b11111, ~in_b} : {5'b0, in_b}) : {344'b0, b[1029:344]};
+    assign b_mux = (input_mux_sel == 1) ? ( subtract == 1 ? {1'b1,~in_b} : {1'b0,in_b}) : {514'b0, b[1027:514]};
     
     // input registers
     reg input_enable;
@@ -37,8 +45,8 @@ module mpadder(
     begin
         if(resetn == 0)
         begin
-            a <= 1032'b0;
-            b <= 1032'b0;
+            a <= 1028'b0;
+            b <= 1028'b0;
         end
         else if(input_enable == 1)
         begin
@@ -63,12 +71,18 @@ module mpadder(
     reg carry_reg;
     
     assign carry_in = carry_reg;
-    assign adder_result = a[171:0] + b[171:0] + carry_in;
-    assign predicted_adder_result[0] = a[343:172] + b[343:172];
-    assign predicted_adder_result[1] = a[343:172] + b[343:172] + 1;
-        
+    assign adder_result = a[126:0] + b[126:0] + carry_in;
+    assign pre_adder_result[0] = a[255:127] + b[255:127];
+    assign pre_adder_result[1] = a[255:127] + b[255:127] + 1;
+    assign sec_pre_adder_result[0] = a[384:256] + b[384:256];
+    assign sec_pre_adder_result[1] = a[384:256] + b[384:256] + 1;   
+    assign thr_pre_adder_result[0] = a[513:385] + b[513:385];
+    assign thr_pre_adder_result[1] = a[513:385] + b[513:385] + 1;
+     
     // carry register
-    assign carry_mux = (start == 1) ? subtract : (adder_result[172] == 1 ? predicted_adder_result[1][172] : predicted_adder_result[0][172]);
+    assign carry_mux = (start==1) ? subtract : (adder_result[127]==1 ? (pre_adder_result[1][129]==1 ? (sec_pre_adder_result[1][129]==1 ? thr_pre_adder_result[1][129] : thr_pre_adder_result[0][129]) : (sec_pre_adder_result[0][129]==1 ? thr_pre_adder_result[1][129] : thr_pre_adder_result[0][129]) ) :
+                                                                       (pre_adder_result[0][129]==1 ? (sec_pre_adder_result[1][129]==1 ? thr_pre_adder_result[1][129] : thr_pre_adder_result[0][129]) : (sec_pre_adder_result[0][129]==1 ? thr_pre_adder_result[1][129] : thr_pre_adder_result[0][129]) ) );
+   
    
     always @(posedge clk)
     begin
@@ -80,6 +94,7 @@ module mpadder(
     
     // Assign output
     assign result = a[1027:0];
+    
     
     // FSM
     reg [1:0] state, nextstate;
@@ -141,7 +156,7 @@ module mpadder(
     begin
     if(resetn == 0)
         done_reg <= 0;
-    else if (counter == 2)
+    else if (counter == 1)
         done_reg <= 1;
     else 
         done_reg <= 0;
@@ -158,13 +173,13 @@ module mpadder(
                         nextstate <= 2'd0;
                     end
                 2'd1: begin
-                    if (counter == 2)
+                    if (counter == 1)
                         nextstate <= 2'd3;
                     else
                         nextstate <= state;
                 end
                 2'd2: begin
-                    if (counter == 2)
+                    if (counter == 1)
                         nextstate <= 2'd3;
                     else
                         nextstate <= state;

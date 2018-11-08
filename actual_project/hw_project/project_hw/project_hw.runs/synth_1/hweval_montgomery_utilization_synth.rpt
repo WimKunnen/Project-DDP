@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Nov  7 16:43:47 2018
-| Host         : pc-klas2-6.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
+| Date         : Thu Nov  8 16:57:21 2018
+| Host         : pc-klas6-5.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
 | Command      : report_utilization -file hweval_montgomery_utilization_synth.rpt -pb hweval_montgomery_utilization_synth.pb
 | Design       : hweval_montgomery
 | Device       : 7z010clg400-1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 8476 |     0 |     17600 | 48.16 |
-|   LUT as Logic          | 8476 |     0 |     17600 | 48.16 |
+| Slice LUTs*             | 8833 |     0 |     17600 | 50.19 |
+|   LUT as Logic          | 8833 |     0 |     17600 | 50.19 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         | 9815 |     0 |     35200 | 27.88 |
-|   Register as Flip Flop | 9815 |     0 |     35200 | 27.88 |
+| Slice Registers         | 9813 |     0 |     35200 | 27.88 |
+|   Register as Flip Flop | 9813 |     0 |     35200 | 27.88 |
 |   Register as Latch     |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 9813  |          Yes |       Reset |            - |
+| 9811  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,13 +146,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 9813 |        Flop & Latch |
-| LUT6     | 2563 |                 LUT |
-| LUT4     | 2480 |                 LUT |
-| LUT2     | 1746 |                 LUT |
-| LUT3     | 1562 |                 LUT |
-| LUT5     | 1235 |                 LUT |
-| CARRY4   |  131 |          CarryLogic |
+| FDRE     | 9811 |        Flop & Latch |
+| LUT6     | 2320 |                 LUT |
+| LUT4     | 2252 |                 LUT |
+| LUT3     | 1944 |                 LUT |
+| LUT5     | 1704 |                 LUT |
+| LUT2     | 1697 |                 LUT |
+| CARRY4   |  230 |          CarryLogic |
 | LUT1     |    2 |                 LUT |
 | IBUF     |    2 |                  IO |
 | FDSE     |    2 |        Flop & Latch |

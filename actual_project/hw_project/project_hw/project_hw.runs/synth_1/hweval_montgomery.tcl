@@ -20,26 +20,26 @@ create_project -in_memory -part xc7z010clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.cache/wt [current_project]
-set_property parent.project_path /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.xpr [current_project]
+set_property webtalk.parent_dir /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.cache/wt [current_project]
+set_property parent.project_path /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_ipcores
-  /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_ipcores
+  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores
+  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores
 } [current_project]
 read_verilog -library xil_defaultlib {
-  /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v
-  /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v
-  /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_montgomery.v
+  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v
+  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v
+  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/hweval_montgomery.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc -unmanaged /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/tcl/constraints.tcl
-set_property used_in_implementation false [get_files /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
+read_xdc -unmanaged /users/start2016/r0629332/Project-DDP/actual_project/hw_project/tcl/constraints.tcl
+set_property used_in_implementation false [get_files /users/start2016/r0629332/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
 
 
 synth_design -top hweval_montgomery -part xc7z010clg400-1

@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Nov  7 16:44:44 2018
-| Host         : pc-klas2-6.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
+| Date         : Thu Nov  8 17:04:11 2018
+| Host         : pc-klas6-5.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
 | Command      : report_io -file hweval_montgomery_io_placed.rpt
 | Design       : hweval_montgomery
 | Device       : xc7z010

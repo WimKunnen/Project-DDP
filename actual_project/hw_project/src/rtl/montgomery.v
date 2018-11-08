@@ -366,7 +366,7 @@ module montgomery(
                 count_enable   <= 1'b0;
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
-                adder_subtract <= 1'b0;
+                adder_subtract <= 1'b1;
             end
             // Start add M state
             4'd13: begin
@@ -501,8 +501,8 @@ module montgomery(
                 4'd12: begin
                     if (adder_done == 1)
                         // TODO: fix if statement for correct result
-                        //if (c_mux[1027] == 0)
-                        if (counter==522)
+                        if (c_mux[1027] == 1)
+                        //if (counter==520)
                             nextstate <= 4'd13;
                         else
                             nextstate <= 4'd11;

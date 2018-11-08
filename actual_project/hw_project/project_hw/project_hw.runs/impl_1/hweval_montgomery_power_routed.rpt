@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Wed Nov  7 16:45:02 2018
-| Host             : pc-klas2-6.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
+| Date             : Thu Nov  8 17:04:36 2018
+| Host             : pc-klas6-5.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
 | Command          : report_power -file hweval_montgomery_power_routed.rpt -pb hweval_montgomery_power_summary_routed.pb -rpx hweval_montgomery_power_routed.rpx
 | Design           : hweval_montgomery
 | Device           : xc7z010clg400-1
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.245  |
-| Dynamic (W)              | 0.140  |
+| Total On-Chip Power (W)  | 0.288  |
+| Dynamic (W)              | 0.183  |
 | Device Static (W)        | 0.105  |
 | Effective TJA (C/W)      | 11.5   |
-| Max Ambient (C)          | 82.2   |
-| Junction Temperature (C) | 27.8   |
+| Max Ambient (C)          | 81.7   |
+| Junction Temperature (C) | 28.3   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -50,15 +50,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.027 |        3 |       --- |             --- |
-| Slice Logic    |     0.050 |    19540 |       --- |             --- |
-|   LUT as Logic |     0.047 |     8470 |     17600 |           48.13 |
-|   Register     |     0.002 |     9815 |     35200 |           27.88 |
-|   CARRY4       |    <0.001 |      131 |      4400 |            2.98 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |     0.063 |    14493 |       --- |             --- |
+| Slice Logic    |     0.069 |    19967 |       --- |             --- |
+|   LUT as Logic |     0.064 |     8828 |     17600 |           50.16 |
+|   Register     |     0.003 |     9813 |     35200 |           27.88 |
+|   CARRY4       |     0.002 |      230 |      4400 |            5.23 |
+|   Others       |     0.000 |        5 |       --- |             --- |
+| Signals        |     0.087 |    15137 |       --- |             --- |
 | I/O            |    <0.001 |        3 |       100 |            3.00 |
 | Static Power   |     0.105 |          |           |                 |
-| Total          |     0.245 |          |           |                 |
+| Total          |     0.288 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,7 +68,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.144 |       0.140 |      0.004 |
+| Vccint    |       1.000 |     0.187 |       0.183 |      0.004 |
 | Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -144,9 +144,9 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| hweval_montgomery     |     0.140 |
-|   montgomery_instance |     0.133 |
-|     adder             |     0.082 |
+| hweval_montgomery     |     0.183 |
+|   montgomery_instance |     0.177 |
+|     adder             |     0.119 |
 +-----------------------+-----------+
 
 

@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Nov  7 16:43:57 2018">
+<application name="pa" timeStamp="Thu Nov  8 17:07:55 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="bf002c7689e14ef7bf849ece1413b140" type="ProjectID"/>
-<property name="ProjectIteration" value="5" type="ProjectIteration"/>
+<property name="ProjectIteration" value="9" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -19,22 +19,37 @@ This means code written to parse this file will need to be revisited each subseq
 <item name="Java Command Handlers">
 <property name="EditRedo" value="31" type="JavaHandler"/>
 <property name="EditUndo" value="1" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="8" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="9" type="JavaHandler"/>
 <property name="ProjectSummary" value="1" type="JavaHandler"/>
-<property name="ReportTimingSummary" value="1" type="JavaHandler"/>
-<property name="ReportUtilization" value="1" type="JavaHandler"/>
-<property name="RunImplementation" value="4" type="JavaHandler"/>
-<property name="RunSynthesis" value="6" type="JavaHandler"/>
+<property name="ReportTimingSummary" value="4" type="JavaHandler"/>
+<property name="ReportUtilization" value="2" type="JavaHandler"/>
+<property name="RunImplementation" value="8" type="JavaHandler"/>
+<property name="RunSynthesis" value="9" type="JavaHandler"/>
 <property name="SetTopNode" value="4" type="JavaHandler"/>
-<property name="ShowView" value="4" type="JavaHandler"/>
+<property name="ShowView" value="5" type="JavaHandler"/>
 <property name="SimulationBreak" value="1" type="JavaHandler"/>
-<property name="SimulationClose" value="14" type="JavaHandler"/>
-<property name="SimulationRelaunch" value="78" type="JavaHandler"/>
-<property name="SimulationRun" value="18" type="JavaHandler"/>
+<property name="SimulationClose" value="15" type="JavaHandler"/>
+<property name="SimulationRelaunch" value="86" type="JavaHandler"/>
+<property name="SimulationRun" value="22" type="JavaHandler"/>
 <property name="SimulationRunForTime" value="16" type="JavaHandler"/>
 <property name="ToggleViewNavigator" value="1" type="JavaHandler"/>
-<property name="ViewTaskImplementation" value="1" type="JavaHandler"/>
+<property name="ViewTaskImplementation" value="4" type="JavaHandler"/>
 <property name="ViewTaskProjectManager" value="2" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, 0.083 ns" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING_SUMMARY, Report Timing Summary" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 1 ; 0.08307488 ; 37 ; 129 ; montgomery_instance/adder/a_reg[128]/C ; montgomery_instance/adder/a_reg[775]/D ; 9.735269 ; 6.4720035 ; 3.2632744 ; 10.0 ; clk_gen ; clk_gen ; , 0, montgomery_instance/adder/a_reg[128]/C, 4" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 2 ; 0.13936763 ; 37 ; 129 ; montgomery_instance/adder/a_reg[128]/C ; montgomery_instance/adder/a_reg[802]/D ; 9.721676 ; 6.4720035 ; 3.249682 ; 10.0 ; clk_gen ; clk_gen ; , 1, montgomery_instance/adder/a_reg[128]/C, 4" value="2" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 3 ; 0.16799717 ; 36 ; 128 ; montgomery_instance/adder/a_reg[263]/C ; montgomery_instance/adder/a_reg[1017]/D ; 9.628347 ; 6.155 ; 3.4733536 ; 10.0 ; clk_gen ; clk_gen ; , 2, montgomery_instance/adder/a_reg[263]/C, 4" value="2" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="2" type="GuiResourceData"/>
+<property name="montgomery.v, 413, 128" value="1" type="GuiResourceData"/>
+<property name="montgomery.v, 530, 372" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="12" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="8" type="TclMode"/>
 </item>
 </section>
 </application>

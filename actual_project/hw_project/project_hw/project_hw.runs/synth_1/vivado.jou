@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Nov  7 16:42:43 2018
-# Process ID: 11801
-# Current directory: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1
+# Start of session at: Thu Nov  8 16:56:11 2018
+# Process ID: 14600
+# Current directory: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1
 # Command line: vivado -log hweval_montgomery.vds -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_montgomery.tcl
-# Log file: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/hweval_montgomery.vds
-# Journal file: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/vivado.jou
+# Log file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/hweval_montgomery.vds
+# Journal file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source hweval_montgomery.tcl -notrace
