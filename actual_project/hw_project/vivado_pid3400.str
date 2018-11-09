@@ -1301,3 +1301,221 @@ selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); //
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
 // HMemoryUtils.trashcanNow. Engine heap size: 6,392 MB. GUI used memory: 82 MB. Current time: 11/9/18 11:57:02 AM CET
 // HMemoryUtils.trashcanNow. Engine heap size: 6,392 MB. GUI used memory: 80 MB. Current time: 11/9/18 12:27:02 PM CET
+// Elapsed time: 4587 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // x:Y (w:G, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_CLOSE
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+// f:bL (cv:JFrame):  Run Simulation : addNotify
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_montgomery_behav -key {Behavioral:sim_1:Functional:tb_montgomery} -tclbatch {tb_montgomery.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2016.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: source tb_montgomery.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 350000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 350000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7467.723 ; gain = 0.000 ; free physical = 8844 ; free virtual = 44626 
+// 'e' command handler elapsed time: 7 seconds
+dismissDialog("Run Simulation"); // f:bL (cv:JFrame)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Nov  9 12:43:55 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_FAILED
+// ap:G (cv:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 68 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ap:G (cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, open_project project_hw/project_hw.xpr. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, open_project project_hw/project_hw.xpr. ]", 1); // al:k (JViewport:JComponent, cv:JFrame)
+// Elapsed time: 355 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, open_project project_hw/project_hw.xpr. , [BD 41-1661] One or more IPs have been locked in the design 'rsa_project.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.. List of locked IPs:. rsa_project_command_interface_0_0. . ]", 2, false); // al:k (JViewport:JComponent, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, open_project project_hw/project_hw.xpr. , [BD 41-1661] One or more IPs have been locked in the design 'rsa_project.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.. List of locked IPs:. rsa_project_command_interface_0_0. . ]", 2, false, false, false, false, false, true); // al:k (JViewport:JComponent, cv:JFrame) - Double Click
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Project Settings]", 1, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SETTINGS
+// TclEventType: FILE_SET_CHANGE
+// Project Settings: addNotify
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Nov  9 12:51:34 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_FAILED
+// ap:G (cv:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 66 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ap:G (cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-327] inferring latch for variable 'input_enable_reg' [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:166]. ]", 1, true); // al:k (JViewport:JComponent, cv:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v;-;;-;16;-;line;-;166;-;;-;16;-;"); // al:k (JViewport:JComponent, cv:JFrame)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-327] inferring latch for variable 'input_enable_reg' [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:166]. ]", 1); // al:k (JViewport:JComponent, cv:JFrame)
+// Elapsed time: 37 seconds
+selectCodeEditor("montgomery.v", 130, 309); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("montgomery.v", 153, 456); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("montgomery.v", 129, 266); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 133, 439); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 127, 275); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "montgomery.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 151, 406); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "montgomery.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// aV:y (cv:JFrame): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a:JButton (JPanel:JComponent, aV:y)
+// bL:g (cv:JFrame):  Save Constraints : addNotify
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+dismissDialog("Save Project"); // aV:y (cv:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Nov  9 12:54:23 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs impl_1 
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Nov  9 12:55:33 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+// Elapsed time: 69 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,415 MB. GUI used memory: 75 MB. Current time: 11/9/18 12:56:41 PM CET
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,415 MB. GUI used memory: 75 MB. Current time: 11/9/18 12:56:41 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,389 MB. GUI used memory: 50 MB. Current time: 11/9/18 12:56:43 PM CET
+// Device: addNotify
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.43 . Memory (MB): peak = 7477.801 ; gain = 0.000 ; free physical = 8529 ; free virtual = 44608 
+// Tcl Message: Restored from archive | CPU: 0.440000 secs | Memory: 14.510208 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.43 . Memory (MB): peak = 7477.801 ; gain = 0.000 ; free physical = 8529 ; free virtual = 44608 
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.2s
+// Elapsed time: 37 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+// Elapsed time: 10 seconds
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING_SUMMARY, "Report Timing Summary"); // i:l (JPanel:JComponent, cv:JFrame)
+// aA:a (cv:JFrame): Report Timing Summary: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aA:a)
+dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs 
+// bL:g (cv:JFrame):  Report Timing Summary : addNotify
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
