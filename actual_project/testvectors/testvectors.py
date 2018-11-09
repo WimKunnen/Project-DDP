@@ -9,12 +9,13 @@ seed = "random"
 
 print "TEST VECTOR GENERATOR FOR DDP\n"
 
-if len(sys.argv) == 2 or len(sys.argv) == 3:
+if len(sys.argv) == 2 or len(sys.argv) == 3 or len(sys.argv) == 4:
   if str(sys.argv[1]) == "adder":           operation = 1;
   if str(sys.argv[1]) == "subtractor":      operation = 2;
   if str(sys.argv[1]) == "multiplication":  operation = 3;
   if str(sys.argv[1]) == "exponentiation":  operation = 4;
   if str(sys.argv[1]) == "rsa":             operation = 5;
+  if str(sys.argv[1]) == "mul_custom":      operation = 6;
 
 if len(sys.argv) == 3:
   print "Seed is: ", sys.argv[2], "\n"
@@ -156,3 +157,25 @@ if operation == 5:
   # Decrypt
   Pt = HW.MontExp(Ct, d, N)                     # 1024-bit exponentiation
   print "Plaintext    = ", hex(Pt)              # 1024-bits
+#####################################################
+
+if operation == 6:
+
+  print "Test Vector for Windoed Montgomery Multiplication\n"
+
+  M = helpers.getModulus(1024)
+  A = int(sys.argv[2]) % M
+  B = int(sys.argv[3]) % M
+    
+  C = SW.MontMul(A, B, M)
+  # D = HW.MontMul(A, B, M)
+  D = HW.MontMul_2bW(A, B, M)
+  
+  e = (C - D)
+  
+  print "A                = ", hex(A)           # 1024-bits
+  print "B                = ", hex(B)           # 1024-bits
+  print "M                = ", hex(M)           # 1024-bits
+  print "(A*B*R^-1) mod M = ", hex(C)           # 1024-bits
+  print "(A*B*R^-1) mod M = ", hex(D)           # 1024-bits
+  print "error            = ", hex(e)  
