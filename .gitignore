@@ -1,0 +1,8 @@
+*.btree
+*.log
+*.jou
+*.zip
+
+~/actual_project/hw_project/project_hw
+~/actual_project/hw_project/project_ipcores
+~/actual_project/Makerfile
