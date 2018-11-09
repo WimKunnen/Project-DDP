@@ -100,6 +100,7 @@ module montgomery(
             begin
                 b <= in_b;
                 m <= in_m;
+                c <= 1028'b0;
             end
         end
         if(a_select == 1)
@@ -122,7 +123,7 @@ module montgomery(
     begin
     if(resetn == 0)
         done_reg <= 0;
-    else if (state == 4'd15)
+    else if (state == 5'd15)
         done_reg <= 1;
     else
         done_reg <= 0;
@@ -137,7 +138,7 @@ module montgomery(
     begin
         if (resetn == 0)
             counter <= 0;
-        else if (state == 4'd15)
+        else if (state == 5'd15)
             counter <= 0;
         else if (count_enable == 1)
             counter <= counter + 1;
@@ -145,12 +146,12 @@ module montgomery(
 
 
     // FSM
-    reg [3:0] state, nextstate;
+    reg [4:0] state, nextstate;
 
     always @(posedge clk)
     begin
         if(resetn==0)
-            state <= 4'd0;
+            state <= 5'd0;
         else
             state <= nextstate;
     end
@@ -161,7 +162,7 @@ module montgomery(
     begin
       case(state)
             // Idle state
-            4'd0: begin
+            5'd0: begin
                 input_enable   <= 1'b1;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -177,7 +178,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Start 3B add state
-            4'd1: begin
+            5'd1: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b1;
@@ -193,7 +194,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Done 3B add state
-            4'd2: begin
+            5'd2: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -209,7 +210,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // First 3M add state
-            4'd3: begin
+            5'd3: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b1;
@@ -225,7 +226,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Start 3M add state
-            4'd4: begin
+            5'd4: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -241,7 +242,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Done 3M add state
-            4'd5: begin
+            5'd5: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -257,7 +258,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // First B-mux state
-            4'd6: begin
+            5'd6: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b1;
                 b_select       <= 1'b0;
@@ -273,7 +274,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Start B-mux state
-            4'd7: begin
+            5'd7: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b1;
                 b_select       <= 1'b0;
@@ -289,7 +290,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Done B-mux state
-            4'd8: begin
+            5'd8: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -305,7 +306,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Start M-mux state
-            4'd9: begin
+            5'd9: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -321,7 +322,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Done M-mux state
-            4'd10: begin
+            5'd10: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -337,7 +338,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Start M-subtract state
-            4'd11: begin
+            5'd11: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -353,7 +354,7 @@ module montgomery(
                 adder_subtract <= 1'b1;
             end
             // Done M-subtract state
-            4'd12: begin
+            5'd12: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -369,7 +370,7 @@ module montgomery(
                 adder_subtract <= 1'b1;
             end
             // Start add M state
-            4'd13: begin
+            5'd13: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -385,7 +386,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Done add M state
-            4'd14: begin
+            5'd14: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -401,7 +402,7 @@ module montgomery(
                 adder_subtract <= 1'b0;
             end
             // Done state
-            4'd15: begin
+            5'd15: begin
                 input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
@@ -424,125 +425,125 @@ module montgomery(
         begin
             case(state)
             // Idle state
-                4'd0: begin
+                5'd0: begin
                     if(start)
-                        nextstate <= 4'd1;
+                        nextstate <= 5'd1;
                     else
-                        nextstate <= 4'd0;
+                        nextstate <= 5'd0;
                 end
             // Start 3B add state
-                4'd1: begin
-                        nextstate <= 4'd2;
+                5'd1: begin
+                        nextstate <= 5'd2;
                 end
             // Done 3B add state
-                4'd2: begin
+                5'd2: begin
                     if (adder_done == 1)
                         if (counter == 3)
-                            nextstate <= 4'd3;
+                            nextstate <= 5'd3;
                         else
-                            nextstate <= 4'd1;
+                            nextstate <= 5'd1;
                     else
                         nextstate <= state;
                 end
             // First 3M add state
-                4'd3: begin
-                        nextstate <= 4'd5;
+                5'd3: begin
+                        nextstate <= 5'd5;
                 end
             // Start 3M add state
-                4'd4: begin
-                        nextstate <= 4'd5;
+                5'd4: begin
+                        nextstate <= 5'd5;
                 end
             // Start 3M add state
-                4'd5: begin
+                5'd5: begin
                     if (adder_done == 1)
                         if (counter == 6)
                             begin
-                            nextstate <= 4'd6;
+                            nextstate <= 5'd6;
                             end
                         else
-                            nextstate <= 4'd4;
+                            nextstate <= 5'd4;
                     else
                         nextstate <= state;
                 end
             // First B-mux add add state
-                4'd6: begin
-                        nextstate <= 4'd8;
+                5'd6: begin
+                        nextstate <= 5'd8;
                 end
             // Start B-mux state
-                4'd7: begin
-                        nextstate <= 4'd8;
+                5'd7: begin
+                        nextstate <= 5'd8;
                 end
             // Done B-mux state
-                4'd8: begin
+                5'd8: begin
                     if (adder_done == 1)
-                        nextstate <= 4'd9;
+                        nextstate <= 5'd9;
                     else
                         nextstate <= state;
                 end
             // Start M-mux state
-                4'd9: begin
-                        nextstate <= 4'd10;
+                5'd9: begin
+                        nextstate <= 5'd10;
                 end
             // Done M-mux state
-                4'd10: begin
+                5'd10: begin
                     if (adder_done == 1)
                         if (counter == 518)
-                            nextstate <= 4'd11;
+                            nextstate <= 5'd11;
                         else
-                            nextstate <= 4'd7;
+                            nextstate <= 5'd7;
                     else
                         nextstate <= state;
                 end
             // Start M-subtract state
-                4'd11: begin
-                        nextstate <= 4'd12;
+                5'd11: begin
+                        nextstate <= 5'd12;
                 end
             // Check Done M-subtract state
-                4'd12: begin
+                5'd12: begin
                     if (adder_done == 1)
                         // TODO: fix if statement for correct result
                         if (c_mux[1027] == 1)
                         //if (counter==520)
-                            nextstate <= 4'd13;
+                            nextstate <= 5'd13;
                         else
-                            nextstate <= 4'd11;
+                            nextstate <= 5'd11;
                     else
                         nextstate <= state;
                 end
 
             // Start add M state
-                4'd13: begin
-                        nextstate <= 4'd14;
+                5'd13: begin
+                        nextstate <= 5'd14;
                 end
             // Done add M state
-                4'd14: begin
+                5'd14: begin
                     if (adder_done == 1)
-                        nextstate <= 4'd15;
+                        nextstate <= 5'd15;
                     else
                         nextstate <= state;
                 end
             // Done state
-                4'd15: begin
-                        nextstate <= 4'd0;
+                5'd15: begin
+                        nextstate <= 5'd0;
                 end
 
-                default: nextstate <= 4'd0;
+                default: nextstate <= 5'd0;
             endcase
         end
 /*        // ideetje om alle done states te combineren, of alleszins meer
           // in principe vooral wachten tot optellig klaar is en dan c-Mux inladen
           // kijken naar hoe signalen verschillen tussen de states
           // Done_wait state
-            4'd1: begin
+            5'd1: begin
             if (adder_done == 1)begin
-                if (state == 4'd3)
-                    nextstate <= 4'd2;
-                if (state == 4'd5)
-                    nextstate <= 4'd4;
-                if (state == 4'd7)
-                    nextstate <= 4'd6;
-                if (state == 4'd8)
-                    nextstate <= 4'd7;
+                if (state == 5'd3)
+                    nextstate <= 5'd2;
+                if (state == 5'd5)
+                    nextstate <= 5'd4;
+                if (state == 5'd7)
+                    nextstate <= 5'd6;
+                if (state == 5'd8)
+                    nextstate <= 5'd7;
                 end
             else
                 nextstate <= state;

@@ -45,7 +45,7 @@ module tb_montgomery();
 
         #`RESET_TIME
 
-        $display("\nFirst Montgomery Multiplication test")
+        $display("\nFirst Montgomery Multiplication test");
         // You can generate your own with test vector generator python script
         in_a     <= 1024'h8e328b92e9180b446fb7739d3f567ef301e992679c089b20eba45a7c83484997c68b2f484fc3bb95cd783958fcabac9fd55265dc61ec5d10c78cc4172c1e0260b23da69a1de10c16bb78418a93d10569f241273446ca2879e8ccbe98ad5b42befa7d60ce94225174b5f4ac0c77d18fe5f6c2d8aa3fe12021ff95cab0cb8d22da;
         in_b     <= 1024'ha31e9037659fd5251c917ee329b30020e2ef2b55fab203ee8dba6fea2d396cfa97fd70d5d063e5a7b2d8caa1fecd147dd0b81e1f0431efbd1d764a8d5fba443c0f6f9ce5ed658dbae8ad4bf63f87a0d457d7a218953e363c9c004181d46a91d5de206a7254fc0370017f37b79a2ecdb925e2c971cdd959d288d67ae6ff8bcb66;
@@ -64,7 +64,7 @@ module tb_montgomery();
         result_ok = (expected==result);
         #`CLK_PERIOD;
 
-        $display("\nMontgomery Multiplication test 2")
+        $display("\nMontgomery Multiplication test 2");
 
         // Test addition with large test vectors.
         // You can generate your own vectors with testvector generator python script.
@@ -84,7 +84,7 @@ module tb_montgomery();
         result_ok = (expected==result);
         #`CLK_PERIOD;
 
-        $display("\nMontgomery Multiplication test 3")
+        $display("\nMontgomery Multiplication test 3");
 
         // Test addition with large test vectors.
         // You can generate your own vectors with testvector generator python script.
@@ -104,7 +104,7 @@ module tb_montgomery();
         result_ok = (expected==result);
         #`CLK_PERIOD;
 
-        $display("\nMontgomery Multiplication test 4")
+        $display("\nMontgomery Multiplication test 4");
 
         // Test addition with large test vectors.
         // You can generate your own vectors with testvector generator python script.
@@ -124,7 +124,7 @@ module tb_montgomery();
         result_ok = (expected==result);
         #`CLK_PERIOD;
 
-        $display("\nMontgomery Multiplication test 5")
+        $display("\nMontgomery Multiplication test 5");
 
         // Test addition with large test vectors.
         // You can generate your own vectors with testvector generator python script.
@@ -144,7 +144,7 @@ module tb_montgomery();
         result_ok = (expected==result);
         #`CLK_PERIOD;
 
-        $display("\nMontgomery Multiplication test 6")
+        $display("\nMontgomery Multiplication test 6");
 
         // Test addition with large test vectors.
         // You can generate your own vectors with testvector generator python script.
@@ -164,7 +164,7 @@ module tb_montgomery();
         result_ok = (expected==result);
         #`CLK_PERIOD;
 
-        $display("\nMontgomery Multiplication test 7")
+        $display("\nMontgomery Multiplication test 7");
 
         // Test addition with large test vectors.
         // You can generate your own vectors with testvector generator python script.
@@ -184,7 +184,7 @@ module tb_montgomery();
         result_ok = (expected==result);
         #`CLK_PERIOD;
 
-        $display("\nMontgomery Multiplication test 8")
+        $display("\nMontgomery Multiplication test 8");
 
         // Test addition with large test vectors.
         // You can generate your own vectors with testvector generator python script.
