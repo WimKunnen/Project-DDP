@@ -1519,3 +1519,35 @@ dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
 // TclEventType: TIMING_RESULTS_STALE
 // TclEventType: TIMING_SUMMARY_UPDATED
 dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
+// Elapsed time: 147 seconds
+selectCodeEditor("montgomery.v", 152, 275); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 84 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 21 seconds
+selectCodeEditor("montgomery.v", 118, 398); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 126, 400); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "montgomery.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 6,434 MB. GUI used memory: 78 MB. Current time: 11/9/18 1:01:17 PM CET
+selectCodeEditor("montgomery.v", 122, 403); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "montgomery.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "montgomery.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 121, 75); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("montgomery.v", 122, 63); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 122, 63, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("montgomery.v", 118, 303); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("montgomery.v", 118, 303, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH

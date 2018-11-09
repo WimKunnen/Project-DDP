@@ -417,21 +417,53 @@ module montgomery(
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
-            default:  begin
-                            input_enable   <= 1'b1;
-                            a_select       <= 1'b0;
-                            b_select       <= 1'b0;
-                            c_select       <= 1'b0;
-                            m_select       <= 1'b0;
-                            add_select     <= 1'b0;
-                            while_select   <= 1'b0;
-                            zero_add       <= 1'b0;
-                            shift_select   <= 1'b0;
-                            count_enable   <= 1'b0;
-                            adder_resetn   <= 1'b0;
-                            adder_start    <= 1'b0;
-                            adder_subtract <= 1'b0;
-                        end  
+            // First 3B add state
+            5'd16: begin
+                input_enable   <= 1'b0;
+                a_select       <= 1'b0;
+                b_select       <= 1'b0;
+                c_select       <= 1'b0;
+                m_select       <= 1'b0;
+                add_select     <= 1'b0;
+                while_select   <= 1'b0;
+                zero_add       <= 1'b0;
+                shift_select   <= 1'b0;
+                count_enable   <= 1'b0;
+                adder_resetn   <= 1'b1;
+                adder_start    <= 1'b0;
+                adder_subtract <= 1'b0;
+            end
+            // Add zero, time  state
+            5'd17: begin
+                input_enable   <= 1'b0;
+                a_select       <= 1'b0;
+                b_select       <= 1'b0;
+                c_select       <= 1'b0;
+                m_select       <= 1'b0;
+                add_select     <= 1'b0;
+                while_select   <= 1'b0;
+                zero_add       <= 1'b0;
+                shift_select   <= 1'b0;
+                count_enable   <= 1'b0;
+                adder_resetn   <= 1'b1;
+                adder_start    <= 1'b0;
+                adder_subtract <= 1'b0;
+            end
+            default: begin
+                     input_enable   <= 1'b1;
+                     a_select       <= 1'b0;
+                     b_select       <= 1'b0;
+                     c_select       <= 1'b0;
+                     m_select       <= 1'b0;
+                     add_select     <= 1'b0;
+                     while_select   <= 1'b0;
+                     zero_add       <= 1'b0;
+                     shift_select   <= 1'b0;
+                     count_enable   <= 1'b0;
+                     adder_resetn   <= 1'b0;
+                     adder_start    <= 1'b0;
+                     adder_subtract <= 1'b0;
+            end  
             
         endcase
      end
