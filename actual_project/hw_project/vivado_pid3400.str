@@ -1551,3 +1551,687 @@ selectCodeEditor("montgomery.v", 118, 303, false, false, false, false, true); //
 // TclEventType: DG_UPDATE_GRAPH
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 165 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Nov  9 13:04:28 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 120 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// G:be (cv:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:be)
+// 'c' command handler elapsed time: 4 seconds
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:be (cv:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Nov  9 13:06:35 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log [Fri Nov  9 13:06:35 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 6,456 MB. GUI used memory: 78 MB. Current time: 11/9/18 1:06:37 PM CET
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,461 MB. GUI used memory: 72 MB. Current time: 11/9/18 1:08:54 PM CET
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,461 MB. GUI used memory: 73 MB. Current time: 11/9/18 1:08:54 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,435 MB. GUI used memory: 51 MB. Current time: 11/9/18 1:08:56 PM CET
+// Device: addNotify
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7524.504 ; gain = 0.000 ; free physical = 8647 ; free virtual = 44683 
+// Tcl Message: Restored from archive | CPU: 0.430000 secs | Memory: 14.521538 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7524.504 ; gain = 0.000 ; free physical = 8647 ; free virtual = 44683 
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.2s
+// Elapsed time: 141 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+// Elapsed time: 36 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Implemented Design, Report Timing Summary]", 25, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+// aA:a (cv:JFrame): Report Timing Summary: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aA:a)
+dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
+// bL:g (cv:JFrame):  Report Timing Summary : addNotify
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs 
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Simulation Settings]", 10, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_SETTINGS
+// Project Settings: addNotify
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Elaboration Settings]", 13, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ELABORATION_SETTINGS
+selectButton("Synthesis", "Synthesis"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// 'm' command handler elapsed time: 3 seconds
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_Cancel", "Cancel"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+selectButton(PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, "-0.081 ns"); // i:l (JPanel:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_montgomery.v", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Device view-level: 0.0
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "montgomery.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 6,484 MB. GUI used memory: 85 MB. Current time: 11/9/18 1:10:07 PM CET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 21, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_COMPLETED_IMPLEMENTATION_RUN_EXISTS_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Nov  9 13:10:11 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Elapsed time: 116 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,489 MB. GUI used memory: 74 MB. Current time: 11/9/18 1:12:08 PM CET
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,489 MB. GUI used memory: 75 MB. Current time: 11/9/18 1:12:08 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,463 MB. GUI used memory: 53 MB. Current time: 11/9/18 1:12:09 PM CET
+// Device: addNotify
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8676 ; free virtual = 44707 
+// Tcl Message: Restored from archive | CPU: 0.430000 secs | Memory: 14.491486 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8676 ; free virtual = 44707 
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.2s
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+// Elapsed time: 39 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+// Elapsed time: 18 seconds
+selectButton("Implementation", "Implementation"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+// Elapsed time: 13 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// G:be (cv:JFrame): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_NO, "No"); // a:JButton (JPanel:JComponent, G:be)
+dismissDialog("Create New Run"); // G:be (cv:JFrame)
+// Elapsed time: 13 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// Elapsed time: 11 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// Elapsed time: 69 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+selectButton("Synthesis", "Synthesis"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:aP)
+// Elapsed time: 29 seconds
+selectTree("PAResourceOtoP.ProgramOptionsPanel_STRATEGY", "[Strategies, Vivado Strategies, Flow_PerfOptimized_high]", 7, false); // TreeChooserPanel:JTree (JViewport:JComponent, ResizableWindow:JWindow)
+selectButton("PAResourceQtoS.StrategyTreeComboBox_YOU_ABOUT_TO_APPLY_NEW_STRATEGY_Overwrite Changes", "Overwrite Changes"); // JButton:AbstractButton (JPanel:JComponent, U:JDialog)
+// Elapsed time: 20 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property strategy Flow_PerfOptimized_high [get_runs synth_1] 
+// Tcl Message: set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 100403 [get_runs synth_1] 
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// G:be (cv:JFrame): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:be)
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // G:be (cv:JFrame)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Nov  9 13:16:08 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 71 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Nov  9 13:17:21 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,455 MB. GUI used memory: 76 MB. Current time: 11/9/18 1:18:41 PM CET
+// Engine heap size: 6,455 MB. GUI used memory: 76 MB. Current time: 11/9/18 1:18:41 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,455 MB. GUI used memory: 54 MB. Current time: 11/9/18 1:18:43 PM CET
+// Device: addNotify
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8685 ; free virtual = 44713 
+// Tcl Message: Restored from archive | CPU: 0.510000 secs | Memory: 16.529854 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8685 ; free virtual = 44713 
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.3s
+// Elapsed time: 83 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_CHECK_TIMING, "Check Timing"); // i:l (JPanel:JComponent, cv:JFrame)
+// d:a (cv:JFrame): Check Timing: addNotify
+dismissDialog("Check Timing"); // d:a (cv:JFrame)
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING_SUMMARY, "Report Timing Summary"); // i:l (JPanel:JComponent, cv:JFrame)
+// aA:a (cv:JFrame): Report Timing Summary: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aA:a)
+dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs 
+// bL:g (cv:JFrame):  Report Timing Summary : addNotify
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Implementation Settings]", 20, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_IMPL_SETTINGS
+// Project Settings: addNotify
+// Elapsed time: 14 seconds
+selectTree("PAResourceOtoP.ProgramOptionsPanel_STRATEGY", "[Strategies, Vivado Strategies, Performance_NetDelay_low]", 8, false); // TreeChooserPanel:JTree (JViewport:JComponent, ResizableWindow:JWindow)
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// G:be (cv:JFrame): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_NO, "No"); // a:JButton (JPanel:JComponent, G:be)
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property strategy Performance_NetDelay_low [get_runs impl_1] 
+dismissDialog("Create New Run"); // G:be (cv:JFrame)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 21, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// j:G (cv:JFrame): Reset and Re-run: addNotify
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Reset and Re-run"); // j:G (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Nov  9 13:19:40 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+// 'm' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 72 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Fri Nov  9 13:20:53 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Elapsed time: 99 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,489 MB. GUI used memory: 76 MB. Current time: 11/9/18 1:22:33 PM CET
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,489 MB. GUI used memory: 77 MB. Current time: 11/9/18 1:22:33 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,463 MB. GUI used memory: 55 MB. Current time: 11/9/18 1:22:35 PM CET
+// Device: addNotify
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8674 ; free virtual = 44706 
+// Tcl Message: Restored from archive | CPU: 0.500000 secs | Memory: 13.495003 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8674 ; free virtual = 44706 
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.4s
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING_SUMMARY, "Report Timing Summary"); // i:l (JPanel:JComponent, cv:JFrame)
+// aA:a (cv:JFrame): Report Timing Summary: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aA:a)
+dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
+// bL:g (cv:JFrame):  Report Timing Summary : addNotify
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs 
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Implementation Settings]", 20, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_IMPL_SETTINGS
+// Project Settings: addNotify
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectButton(PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, "-0.210 ns"); // i:l (JPanel:JComponent, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Implementation Settings]", 20, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_IMPL_SETTINGS
+// Project Settings: addNotify
+// Elapsed time: 10 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// G:be (cv:JFrame): Create New Run: addNotify
+dismissDialog("Create New Run"); // G:be (cv:JFrame)
+// Elapsed time: 17 seconds
+selectTree("PAResourceOtoP.ProgramOptionsPanel_STRATEGY", "[Strategies, Vivado Strategies, Performance_NetDelay_high]", 7, false); // TreeChooserPanel:JTree (JViewport:JComponent, ResizableWindow:JWindow)
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// G:be (cv:JFrame): Create New Run: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // h:JCheckBox (JPanel:JComponent, G:be): TRUE
+selectButton(RDIResource.BaseDialog_NO, "No"); // a:JButton (JPanel:JComponent, G:be)
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property strategy Performance_NetDelay_high [get_runs impl_1] 
+dismissDialog("Create New Run"); // G:be (cv:JFrame)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 21, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Nov  9 13:23:42 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Elapsed time: 136 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,489 MB. GUI used memory: 80 MB. Current time: 11/9/18 1:25:59 PM CET
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,489 MB. GUI used memory: 81 MB. Current time: 11/9/18 1:25:59 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,463 MB. GUI used memory: 58 MB. Current time: 11/9/18 1:26:01 PM CET
+// Device: addNotify
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7553.562 ; gain = 0.000 ; free physical = 8676 ; free virtual = 44699 
+// Tcl Message: Restored from archive | CPU: 0.510000 secs | Memory: 16.322594 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7553.562 ; gain = 0.000 ; free physical = 8676 ; free virtual = 44699 
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.4s
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING_SUMMARY, "Report Timing Summary"); // i:l (JPanel:JComponent, cv:JFrame)
+// aA:a (cv:JFrame): Report Timing Summary: addNotify
+applyEnter(PAResourceTtoZ.TimingDialogUtils_RESULTS_NAME, "timing_1"); // ao:JTextField (JPanel:JComponent, aA:a)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aA:a)
+dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
+// bL:g (cv:JFrame):  Report Timing Summary : addNotify
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs 
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+// Elapsed time: 28 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 400 [get_runs synth_1] 
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// G:be (cv:JFrame): Run Synthesis: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // h:JCheckBox (JPanel:JComponent, G:be): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:be)
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // G:be (cv:JFrame)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Nov  9 13:26:50 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+// 'm' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// Elapsed time: 61 seconds
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[hweval_montgomery, Leaf Cells (2057)]", 2); // ba:bm (JViewport:JComponent, cv:JFrame)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[hweval_montgomery, Leaf Cells (2057)]", 2); // ba:bm (JViewport:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Fri Nov  9 13:28:03 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, hweval_montgomery (hweval_montgomery.v)]", 11, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, hweval_montgomery (hweval_montgomery.v)]", 11, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 65 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Device view-level: 0.0
+closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // L:z
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+// Elapsed time: 27 seconds
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1] 
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Elapsed time: 15 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,494 MB. GUI used memory: 80 MB. Current time: 11/9/18 1:30:13 PM CET
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,494 MB. GUI used memory: 81 MB. Current time: 11/9/18 1:30:13 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,468 MB. GUI used memory: 59 MB. Current time: 11/9/18 1:30:15 PM CET
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.1s
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7558.566 ; gain = 0.000 ; free physical = 8653 ; free virtual = 44687 
+// Tcl Message: Restored from archive | CPU: 0.510000 secs | Memory: 2.068947 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7558.566 ; gain = 0.000 ; free physical = 8653 ; free virtual = 44687 
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING_SUMMARY, "Report Timing Summary"); // i:l (JPanel:JComponent, cv:JFrame)
+// aA:a (cv:JFrame): Report Timing Summary: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aA:a)
+dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
+// bL:g (cv:JFrame):  Report Timing Summary : addNotify
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs 
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
+selectButton(PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, "-0.156 ns"); // i:l (JPanel:JComponent, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+// Elapsed time: 12 seconds
+selectTree("PAResourceOtoP.ProgramOptionsPanel_STRATEGY", "[Strategies, Vivado Strategies, Flow_PerfOptimized_high]", 7, false); // TreeChooserPanel:JTree (JViewport:JComponent, ResizableWindow:JWindow)
+// Elapsed time: 30 seconds
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property strategy Flow_PerfOptimized_high [get_runs synth_1] 
+// Tcl Message: set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 100 [get_runs synth_1] 
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Fri Nov  9 13:31:33 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// Elapsed time: 33 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Design Timing Summary]", 2, false); // a:F (JViewport:JComponent, cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 48 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Nov  9 13:32:57 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 77 seconds
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[hweval_montgomery, montgomery_instance (montgomery), adder (mpadder), Leaf Cells (10147)]", 8); // ba:bm (JViewport:JComponent, cv:JFrame)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[hweval_montgomery, montgomery_instance (montgomery)]", 3); // ba:bm (JViewport:JComponent, cv:JFrame)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,499 MB. GUI used memory: 82 MB. Current time: 11/9/18 1:35:01 PM CET
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,499 MB. GUI used memory: 83 MB. Current time: 11/9/18 1:35:01 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,473 MB. GUI used memory: 61 MB. Current time: 11/9/18 1:35:03 PM CET
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.1s
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7562.973 ; gain = 0.000 ; free physical = 8638 ; free virtual = 44673 
+// Tcl Message: Restored from archive | CPU: 0.500000 secs | Memory: 16.387657 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7562.973 ; gain = 0.000 ; free physical = 8638 ; free virtual = 44673 
+// Elapsed time: 48 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING_SUMMARY, "Report Timing Summary"); // i:l (JPanel:JComponent, cv:JFrame)
+// aA:a (cv:JFrame): Report Timing Summary: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aA:a)
+dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs 
+// bL:g (cv:JFrame):  Report Timing Summary : addNotify
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectButton(PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, "-0.087 ns"); // i:l (JPanel:JComponent, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Synthesis Settings]", 16, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+// Project Settings: addNotify
+selectButton("APPLY", "Apply"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 60 [get_runs synth_1] 
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:aP)
+dismissDialog("Project Settings"); // k:aP (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Nov  9 13:35:44 2018] Launched synth_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 74 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Fri Nov  9 13:37:00 2018] Launched impl_1... Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Implementation Completed: addNotify
+// Elapsed time: 88 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bL:g (cv:JFrame):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,499 MB. GUI used memory: 83 MB. Current time: 11/9/18 1:38:30 PM CET
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 6,499 MB. GUI used memory: 83 MB. Current time: 11/9/18 1:38:30 PM CET
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,473 MB. GUI used memory: 61 MB. Current time: 11/9/18 1:38:32 PM CET
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.1s
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7562.973 ; gain = 0.000 ; free physical = 8630 ; free virtual = 44664 
+// Tcl Message: Restored from archive | CPU: 0.510000 secs | Memory: 16.470108 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7562.973 ; gain = 0.000 ; free physical = 8630 ; free virtual = 44664 
+dismissDialog("Reloading"); // bL:g (cv:JFrame)
+selectButton(PAResourceTtoZ.TimingGettingStartedPanel_REPORT_TIMING_SUMMARY, "Report Timing Summary"); // i:l (JPanel:JComponent, cv:JFrame)
+// aA:a (cv:JFrame): Report Timing Summary: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aA:a)
+dismissDialog("Report Timing Summary"); // aA:a (cv:JFrame)
+// bL:g (cv:JFrame):  Report Timing Summary : addNotify
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs 
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Report Timing Summary"); // bL:g (cv:JFrame)
+// Elapsed time: 31 seconds
+selectButton(PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, "0.034 ns"); // i:l (JPanel:JComponent, cv:JFrame)

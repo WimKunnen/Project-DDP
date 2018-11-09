@@ -1340,3 +1340,202 @@ report_timing_summary -delay_type min_max -report_unconstrained -check_timing_ve
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:1]
+[Fri Nov  9 13:04:28 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+[Fri Nov  9 13:06:35 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+[Fri Nov  9 13:06:35 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7524.504 ; gain = 0.000 ; free physical = 8647 ; free virtual = 44683
+Restored from archive | CPU: 0.430000 secs | Memory: 14.521538 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7524.504 ; gain = 0.000 ; free physical = 8647 ; free virtual = 44683
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+reset_run impl_1
+launch_runs impl_1
+[Fri Nov  9 13:10:11 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8676 ; free virtual = 44707
+Restored from archive | CPU: 0.430000 secs | Memory: 14.491486 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8676 ; free virtual = 44707
+set_property strategy Flow_PerfOptimized_high [get_runs synth_1]
+set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 100403 [get_runs synth_1]
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:1]
+[Fri Nov  9 13:16:08 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+launch_runs impl_1
+[Fri Nov  9 13:17:21 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8685 ; free virtual = 44713
+Restored from archive | CPU: 0.510000 secs | Memory: 16.529854 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8685 ; free virtual = 44713
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+set_property strategy Performance_NetDelay_low [get_runs impl_1]
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:1]
+[Fri Nov  9 13:19:40 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+launch_runs impl_1
+[Fri Nov  9 13:20:53 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8674 ; free virtual = 44706
+Restored from archive | CPU: 0.500000 secs | Memory: 13.495003 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7553.555 ; gain = 0.000 ; free physical = 8674 ; free virtual = 44706
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+set_property strategy Performance_NetDelay_high [get_runs impl_1]
+reset_run impl_1
+launch_runs impl_1
+[Fri Nov  9 13:23:42 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7553.562 ; gain = 0.000 ; free physical = 8676 ; free virtual = 44699
+Restored from archive | CPU: 0.510000 secs | Memory: 16.322594 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7553.562 ; gain = 0.000 ; free physical = 8676 ; free virtual = 44699
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 400 [get_runs synth_1]
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:1]
+[Fri Nov  9 13:26:50 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+launch_runs impl_1
+[Fri Nov  9 13:28:03 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
+refresh_design
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7558.566 ; gain = 0.000 ; free physical = 8653 ; free virtual = 44687
+Restored from archive | CPU: 0.510000 secs | Memory: 2.068947 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7558.566 ; gain = 0.000 ; free physical = 8653 ; free virtual = 44687
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+set_property strategy Flow_PerfOptimized_high [get_runs synth_1]
+set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 100 [get_runs synth_1]
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:1]
+[Fri Nov  9 13:31:33 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+launch_runs impl_1
+[Fri Nov  9 13:32:57 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7562.973 ; gain = 0.000 ; free physical = 8638 ; free virtual = 44673
+Restored from archive | CPU: 0.500000 secs | Memory: 16.387657 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.49 . Memory (MB): peak = 7562.973 ; gain = 0.000 ; free physical = 8638 ; free virtual = 44673
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+set_property STEPS.SYNTH_DESIGN.ARGS.FANOUT_LIMIT 60 [get_runs synth_1]
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:1]
+[Fri Nov  9 13:35:44 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+launch_runs impl_1
+[Fri Nov  9 13:37:00 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3400-pc-klas1-3.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7562.973 ; gain = 0.000 ; free physical = 8630 ; free virtual = 44664
+Restored from archive | CPU: 0.510000 secs | Memory: 16.470108 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 7562.973 ; gain = 0.000 ; free physical = 8630 ; free virtual = 44664
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
