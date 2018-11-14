@@ -1,7 +1,7 @@
+hw_project/project_hw/project_hw.cache/
+hw_project/project_hw/project_hw.sim/
+
+*.zip
+*.str
 *.log
 *.jou
-*.str
-actual_project/hw_project/.nfs*
-
-actual_project/hw_project/project_hw/project_hw.runs/
-actual_project/hw_project/project_hw/project_hw.sim
