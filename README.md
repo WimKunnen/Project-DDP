@@ -14,3 +14,6 @@ http://infocenter.arm.com/help/topic/com.arm.doc.ddi0409h/DDI0409H_cortex_a9_neo
 
 ## ARM Assembly cheat sheet
 http://ozark.hendrix.edu/%7Eburch/cs/230/arm-ref.pdf
+
+## Side channel safety
+https://www.esat.kuleuven.be/cosic/publications/thesis-300.pdf
