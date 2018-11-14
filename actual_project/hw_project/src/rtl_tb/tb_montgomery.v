@@ -208,7 +208,7 @@ module tb_montgomery();
         
                 // Test addition with large test vectors.
                 // You can generate your own vectors with testvector generator python script.
-                in_a     <= 1024'h0;
+                in_a     <= 1024'h2;
                 in_b     <= 1024'h0;
                 in_m     <= 1024'hb80d40b257d618199fbc6b7988559c44eddb9fad428840087b1a3b199ecb5d371b10913e4bcd31d353f2563ebde9ab623ba6dc98a4d98a9782ec620564aa52d5bc4eb11e7b530ce26e34c1eec78e6880d22b63f56af46de4a21709d2c07a13e5e7d870195a051b22c586043e5a00ee5445a843f3c7429b32076bdb79cac49095;
                 expected <= 1024'h0;

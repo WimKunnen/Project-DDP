@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu Nov  8 16:12:54 2018
-# Process ID: 3215
+# Start of session at: Wed Nov 14 14:16:21 2018
+# Process ID: 18217
 # Current directory: /users/start2016/r0629332/Project-DDP/actual_project/hw_project
 # Command line: vivado project_hw/project_hw.xpr -tempDir /tmp
 # Log file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.log
@@ -11,7 +11,6 @@
 #-----------------------------------------------------------
 start_gui
 open_project project_hw/project_hw.xpr
-INFO: [Project 1-313] Project file moved from '/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -19,12 +18,379 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0629332/Pro
 INFO: [IP_Flow 19-2207] Repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores' already exists; ignoring attempt to add it again.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'.
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'rsa_project.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-rsa_project_command_interface_0_0
-
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 6000.988 ; gain = 160.215 ; free physical = 4860 ; free virtual = 39127
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 6007.738 ; gain = 161.984 ; free physical = 10570 ; free virtual = 45918
 update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+open_bd_design {/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- user.org:module_ref:rsa_wrapper:1.0 - rsa_wrapper_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - ARCACHE
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - ARUSER
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_0
+Adding cell -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_1
+Adding cell -- cosic:fturan:command_interface:1.0 - command_interface_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Excluding </processing_system7_0/S_AXI_ACP/ACP_IOP> from </Interface_Cell/axi_dma_0/Data_MM2S>
+Excluding </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> from </Interface_Cell/axi_dma_0/Data_MM2S>
+Excluding </processing_system7_0/S_AXI_ACP/ACP_IOP> from </Interface_Cell/axi_dma_0/Data_S2MM>
+Excluding </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> from </Interface_Cell/axi_dma_0/Data_S2MM>
+Successfully read diagram <rsa_project> from BD file </users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd>
+ipx::edit_ip_in_project -upgrade true -name command_interface_v1_0_v1_0_project -directory /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.tmp/command_interface_v1_0_v1_0_project /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores/accelerator_interface/component.xml
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 3 for port or parameter 'r_state'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 3 for port or parameter 'next_state'
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'resetn' as interface 'resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores'.
+INFO: [IP_Flow 19-2207] Repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores'.
+WARNING: [IP_Flow 19-2207] Repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-792] Syncing company URL meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+close_project
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.tmp/command_interface_v1_0_v1_0_project/command_interface_v1_0_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 14 14:17:07 2018...
+launch_runs synth_1
+[Wed Nov 14 14:17:11 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+launch_runs impl_1
+[Wed Nov 14 14:18:01 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-18217-pc-klas2-4.esat.kuleuven.be/dcp/hweval_adder.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-18217-pc-klas2-4.esat.kuleuven.be/dcp/hweval_adder.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.17 . Memory (MB): peak = 6360.668 ; gain = 4.000 ; free physical = 10072 ; free virtual = 45429
+Restored from archive | CPU: 0.180000 secs | Memory: 6.129486 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.17 . Memory (MB): peak = 6360.668 ; gain = 4.000 ; free physical = 10072 ; free virtual = 45429
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 6477.215 ; gain = 306.859 ; free physical = 9959 ; free virtual = 45309
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 14 14:19:15 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+reset_run synth_1
+launch_runs synth_1
+[Wed Nov 14 14:22:46 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+launch_runs impl_1
+[Wed Nov 14 14:23:36 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 14 14:24:23 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Wed Nov 14 14:26:19 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+close_design
+set_property is_global_include true [get_files  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/imports/hdl/rsa_project_wrapper.v]
+update_compile_order -fileset sources_1
+set_property is_global_include false [get_files  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/imports/hdl/rsa_project_wrapper.v]
+update_compile_order -fileset sources_1
+set_property top rsa_project_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+open_hw
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+INFO: [BD 41-1662] The design 'rsa_project.bd' is already validated. Therefore parameter propagation will not be re-run.
+INFO: [BD 41-1629] </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> is excluded from all addressable master spaces.
+INFO: [BD 41-1629] </processing_system7_0/S_AXI_ACP/ACP_IOP> is excluded from all addressable master spaces.
+WARNING: [BD 41-1271] The connection to the pin: /processing_system7_0/S_AXI_ACP_ARCACHE has been overridden by the user. This pin will not be connected as a part of the interface connection: Interface_Cell_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /processing_system7_0/S_AXI_ACP_AWCACHE has been overridden by the user. This pin will not be connected as a part of the interface connection: Interface_Cell_M00_AXI 
+Verilog Output written to : /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/hdl/rsa_project.v
+Verilog Output written to : /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v
+Wrote  : </users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/ARCACHE .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/ARUSER .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axis_dwidth_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axis_dwidth_converter_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/command_interface_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/xlconstant_0 .
+WARNING: [xilinx.com:ip:processing_system7:5.5-1] rsa_project_processing_system7_0_0: The Zynq BFM requires an AXI BFM license to run. Please ensure that you have purchased and setup the AXI BFM license prior to running simulation with this block. Please contact your Xilinx sales office for more information on purchasing this license
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rsa_wrapper_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axi_interconnect_0/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axi_mem_intercon/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axi_mem_intercon/s00_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Interface_Cell/axi_mem_intercon/s01_couplers/auto_us .
+Exporting to file /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project.hwh
+Generated Block Design Tcl file /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/hw_handoff/rsa_project_bd.tcl
+Generated Hardware Definition File /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/hdl/rsa_project.hwdef
+[Wed Nov 14 14:29:11 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+[Wed Nov 14 14:29:11 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 6809.141 ; gain = 6.578 ; free physical = 9464 ; free virtual = 44865
+set_property top tb_rsa_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+file mkdir /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sdk
+file copy -force /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/rsa_project_wrapper.sysdef /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sdk/rsa_project_wrapper.hdf
+
+set_property top hweval_montgomery [current_fileset]
+update_compile_order -fileset sources_1
+set_property top tb_montgomery [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+reset_run synth_1
+update_module_reference rsa_project_rsa_wrapper_0_0
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 3 for port or parameter 'r_state'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'STATE_BITS' by 3 for port or parameter 'next_state'
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'resetn' as interface 'resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores'.
+INFO: [IP_Flow 19-2207] Repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_ipcores'.
+Upgrading '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd'
+INFO: [IP_Flow 19-1972] Upgraded rsa_project_rsa_wrapper_0_0 from rsa_wrapper_v1_0 1.0 to rsa_wrapper_v1_0 1.0
+Wrote  : </users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd> 
+launch_runs impl_1
+[Wed Nov 14 14:55:20 2018] Launched synth_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
+[Wed Nov 14 14:55:20 2018] Launched impl_1...
+Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
+close_bd_design [get_bd_designs rsa_project]
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/tmp/.Xil_r0629332/Vivado-18217-pc-klas2-4.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-18217-pc-klas2-4.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.48 . Memory (MB): peak = 6824.281 ; gain = 14.000 ; free physical = 8575 ; free virtual = 44362
+Restored from archive | CPU: 0.480000 secs | Memory: 16.038872 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.48 . Memory (MB): peak = 6824.281 ; gain = 14.000 ; free physical = 8575 ; free virtual = 44362
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 6969.914 ; gain = 0.000 ; free physical = 8450 ; free virtual = 44233
+launch_simulation
+INFO: [Vivado 12-4705] 'export_ip_user_files' task aborted
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:51 . Memory (MB): peak = 6969.914 ; gain = 0.000 ; free physical = 8198 ; free virtual = 43980
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_montgomery_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mpadder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery
+WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
+WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
+WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
+WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto eeed9ebff2fa45a49b0fca7f71d3682a --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mpadder
+Compiling module xil_defaultlib.montgomery
+Compiling module xil_defaultlib.tb_montgomery
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_montgomery_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/xsim.dir/tb_montgomery_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 14 15:16:33 2018...
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_montgomery_behav -key {Behavioral:sim_1:Functional:tb_montgomery} -tclbatch {tb_montgomery.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+source tb_montgomery.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+First Montgomery Multiplication test
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:01:07 . Memory (MB): peak = 7121.391 ; gain = 151.477 ; free physical = 8084 ; free virtual = 43897
+set_property -name {xsim.simulate.runtime} -value {100000000ns} -objects [get_filesets sim_1]
+relaunch_sim
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_montgomery_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mpadder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery
+WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
+WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
+WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
+WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:01:02 . Memory (MB): peak = 7142.309 ; gain = 0.000 ; free physical = 8034 ; free virtual = 43838
+INFO: [Vivado 12-4705] 'export_ip_user_files' task aborted
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:27 . Memory (MB): peak = 7142.309 ; gain = 0.000 ; free physical = 8087 ; free virtual = 43891
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+reset_run impl_1
+reset_run synth_1
+reset_target all [get_files  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd]
+export_ip_user_files -of_objects  [get_files  /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd] -sync -no_script -force -quiet
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 INFO: [USF-XSim-27] Simulation object is 'sim_1'
 INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
@@ -75,7 +441,7 @@ INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
 Vivado Simulator 2016.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto eeed9ebff2fa45a49b0fca7f71d3682a --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -94,7 +460,176 @@ Built simulation snapshot tb_montgomery_behav
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
 source /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/xsim.dir/tb_montgomery_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Thu Nov  8 16:13:44 2018...
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 14 15:19:00 2018...
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_montgomery_behav -key {Behavioral:sim_1:Functional:tb_montgomery} -tclbatch {tb_montgomery.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+source tb_montgomery.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000000ns
+
+First Montgomery Multiplication test
+result calculated=3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
+result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 2
+result calculated=283dee8717d63f531fb6c8c5f9f8f43e830af2cb0d78d836b711e884f7c4c63626f733c66e916a7d1a6fef8cf4aa1ce2571715f0cacbbfacb9cf8e7779e2c6fcbb269e321fba2619e12b2770a95dbe53f731144050368c94931b75f039c5eb119c8163be93325608d92ed178b38f62541e2b1a04ea43c24e366897f778665408
+result expected  =283dee8717d63f531fb6c8c5f9f8f43e830af2cb0d78d836b711e884f7c4c63626f733c66e916a7d1a6fef8cf4aa1ce2571715f0cacbbfacb9cf8e7779e2c6fcbb269e321fba2619e12b2770a95dbe53f731144050368c94931b75f039c5eb119c8163be93325608d92ed178b38f62541e2b1a04ea43c24e366897f778665408
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 3
+result calculated=0dfc882283b4f316a0d43fa8cdcd1c66f2f22d4d9c11b29a9c536d18a9ba8b2ee79e884546757cdf092904fc43a33793a6e11f0004f8ce5e48a9172e2df61722d6ae4d4e1a1dbd8d759379132c36587d5fe3e51553ee7bca4fdfb44d13ba7b2fc44ca8f9e9e1b538291642eaaed5bec0afd7cfd6c235046f8172aadeb1317cf1
+result expected  =0dfc882283b4f316a0d43fa8cdcd1c66f2f22d4d9c11b29a9c536d18a9ba8b2ee79e884546757cdf092904fc43a33793a6e11f0004f8ce5e48a9172e2df61722d6ae4d4e1a1dbd8d759379132c36587d5fe3e51553ee7bca4fdfb44d13ba7b2fc44ca8f9e9e1b538291642eaaed5bec0afd7cfd6c235046f8172aadeb1317cf1
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 4
+result calculated=68e59ed7545e71802dde555b570a49c1577c0262368713c632b16183728a6abd232ef0dc8103f5c7ed4a59d8ba74b50a8ceb64954a019abf0cc91e443f5d4097ef5242f7bb412f11ba2bee0583c8cca0f2776f46b3b8b2ae650f04d853fa2d663b4958942809b7d50eb1dce3799d62e37e86ef4975dca85fa162ea80720bcc0d
+result expected  =68e59ed7545e71802dde555b570a49c1577c0262368713c632b16183728a6abd232ef0dc8103f5c7ed4a59d8ba74b50a8ceb64954a019abf0cc91e443f5d4097ef5242f7bb412f11ba2bee0583c8cca0f2776f46b3b8b2ae650f04d853fa2d663b4958942809b7d50eb1dce3799d62e37e86ef4975dca85fa162ea80720bcc0d
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 5
+result calculated=54fc1e9c690796f05d3733faa239b579f58c9013e78f31d72fc360195abd9d4fbe4509b3f3848c7f7e233759608ef8a442448361ffe39204b1a12356f557ba4a30d30914cf986bb8e3de1f644bf378d54531828b3cd7c18b2127b82427dd6b5ae3db688e795c58c9f7916471e846b4fdf444f2d160dc028445493c65bb034873
+result expected  =54fc1e9c690796f05d3733faa239b579f58c9013e78f31d72fc360195abd9d4fbe4509b3f3848c7f7e233759608ef8a442448361ffe39204b1a12356f557ba4a30d30914cf986bb8e3de1f644bf378d54531828b3cd7c18b2127b82427dd6b5ae3db688e795c58c9f7916471e846b4fdf444f2d160dc028445493c65bb034873
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 6
+result calculated=91d809e9a8039e9326081507f6ff0953cb2a0d718ee94187e1019ea1e454b0e5981dc8f0265ffecfaea0fa8577c5bcf991880cdd8c2973f2f114990517b2c5b3d0f7554ee0546302a21b16c2ee34a2fa3eb839e8c3e0ea745f42349beb1f00e827b2f09671de135a53d235fffb4e7412ed402d259b42d10858c0d8fb357e8341
+result expected  =91d809e9a8039e9326081507f6ff0953cb2a0d718ee94187e1019ea1e454b0e5981dc8f0265ffecfaea0fa8577c5bcf991880cdd8c2973f2f114990517b2c5b3d0f7554ee0546302a21b16c2ee34a2fa3eb839e8c3e0ea745f42349beb1f00e827b2f09671de135a53d235fffb4e7412ed402d259b42d10858c0d8fb357e8341
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 7
+result calculated=2b097072e313d15be6f25b60458bd4d1ac6fbb7175ec228eb2cea00018fb55f18a4bd91e5fe9174c2fb265fc4a63751cc377a7affaae3cf7f98a4f46b1a59d1d791b99c2fee6b0bc87627908d161ec2304dc07eacb62a510c6fd4c5e7e73fa3bff2df8a79d880d822efef9e7e5b43ae0fe576c4f64683ea3c81640b7ffc2e087
+result expected  =2b097072e313d15be6f25b60458bd4d1ac6fbb7175ec228eb2cea00018fb55f18a4bd91e5fe9174c2fb265fc4a63751cc377a7affaae3cf7f98a4f46b1a59d1d791b99c2fee6b0bc87627908d161ec2304dc07eacb62a510c6fd4c5e7e73fa3bff2df8a79d880d822efef9e7e5b43ae0fe576c4f64683ea3c81640b7ffc2e087
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 8
+result calculated=0b3cafba72bc1c60498fe5b5ce60f7747d16420443e8cb3c7b785be9364c5e8c824db7b1a816f71d5d52c3e0b6761bcc2efed27d0043c22d5f1bcb22fb69f65fca23269d42cecc904dfefae4b67465948ac18c39ba0d7dc3f859e2636dcc374ea5e9992b203525dd9f7c399b482f9036e43da6c2752b0e1c3a3ae39a8bd39d74
+result expected  =0b3cafba72bc1c60498fe5b5ce60f7747d16420443e8cb3c7b785be9364c5e8c824db7b1a816f71d5d52c3e0b6761bcc2efed27d0043c22d5f1bcb22fb69f65fca23269d42cecc904dfefae4b67465948ac18c39ba0d7dc3f859e2636dcc374ea5e9992b203525dd9f7c399b482f9036e43da6c2752b0e1c3a3ae39a8bd39d74
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication zeroes test
+result calculated=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+result expected  =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+$finish called at time : 372145 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 226
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7143.090 ; gain = 0.781 ; free physical = 7923 ; free virtual = 43797
+open_bd_design {/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- user.org:module_ref:rsa_wrapper:1.0 - rsa_wrapper_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - ARCACHE
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - ARUSER
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /Interface_Cell/axi_dma_0/M_AXIS_MM2S. Setting parameter on /Interface_Cell/axi_dma_0/M_AXIS_MM2S failed
+Adding cell -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_0
+Adding cell -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_1
+Adding cell -- cosic:fturan:command_interface:1.0 - command_interface_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Excluding </processing_system7_0/S_AXI_ACP/ACP_IOP> from </Interface_Cell/axi_dma_0/Data_MM2S>
+Excluding </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> from </Interface_Cell/axi_dma_0/Data_MM2S>
+Excluding </processing_system7_0/S_AXI_ACP/ACP_IOP> from </Interface_Cell/axi_dma_0/Data_S2MM>
+Excluding </processing_system7_0/S_AXI_ACP/ACP_M_AXI_GP0> from </Interface_Cell/axi_dma_0/Data_S2MM>
+Successfully read diagram <rsa_project> from BD file </users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/bd/rsa_project/rsa_project.bd>
+file mkdir /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/new
+close [ open /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/new/exponentiation.v w ]
+add_files /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.srcs/sources_1/new/exponentiation.v
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_montgomery_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mpadder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery
+WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
+WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
+WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
+WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
+WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto eeed9ebff2fa45a49b0fca7f71d3682a --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mpadder
+Compiling module xil_defaultlib.montgomery
+Compiling module xil_defaultlib.tb_montgomery
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_montgomery_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/xsim.dir/tb_montgomery_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 14 16:51:34 2018...
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
@@ -113,389 +648,56 @@ source tb_montgomery.tcl
 #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
 #   }
 # }
-# run 60000ns
-result calculated=e62fa71293456e0f5d8bcbef46c4268929fb6bfe8be2c683088664043cdc3df5c8c36fe6d1531e35abe5c5dae9825d9ff32ad67a52466213a74a03fd73872a595e9535f48be9027ef1e087783c49e225f065aee989caeddeb949f1cc9b8b0797b1da71a264969161f69a9495cb6367a037abaa53df876c2b42935b4742a9f1fb
-result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-error            =553e2956c32f1e284dc07e1d0ffa5bc8ad5f9a80e02f4b12cdb17e639935d7ebaab0daf3785d053e54d7460434a1ee21a2eb7731eb6f2fe68bfaa07765420af91170404b514369e093a89c4b24ddf1cd4cc1d53522002da721e345d8aca0b9cf564294aee523d96bb926213b374eabb7d91c45b13c8e66a0b8ac9843859f9a62
-$finish called at time : 51825 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 60000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 6219.016 ; gain = 197.406 ; free physical = 4600 ; free virtual = 39023
-relaunch_sim
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_montgomery_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mpadder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module montgomery
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
-WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mpadder
-Compiling module xil_defaultlib.montgomery
-Compiling module xil_defaultlib.tb_montgomery
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_montgomery_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-result calculated=e62fa71293456e0f5d8bcbef46c4268929fb6bfe8be2c683088664043cdc3df5c8c36fe6d1531e35abe5c5dae9825d9ff32ad67a52466213a74a03fd73872a595e9535f48be9027ef1e087783c49e225f065aee989caeddeb949f1cc9b8b0797b1da71a264969161f69a9495cb6367a037abaa53df876c2b42935b4742a9f1fb
-result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-error            =553e2956c32f1e284dc07e1d0ffa5bc8ad5f9a80e02f4b12cdb17e639935d7ebaab0daf3785d053e54d7460434a1ee21a2eb7731eb6f2fe68bfaa07765420af91170404b514369e093a89c4b24ddf1cd4cc1d53522002da721e345d8aca0b9cf564294aee523d96bb926213b374eabb7d91c45b13c8e66a0b8ac9843859f9a62
-$finish called at time : 51825 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-relaunch_sim
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_montgomery_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mpadder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module montgomery
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
-WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mpadder
-Compiling module xil_defaultlib.montgomery
-Compiling module xil_defaultlib.tb_montgomery
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_montgomery_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-result calculated=e62fa71293456e0f5d8bcbef46c4268929fb6bfe8be2c683088664043cdc3df5c8c36fe6d1531e35abe5c5dae9825d9ff32ad67a52466213a74a03fd73872a595e9535f48be9027ef1e087783c49e225f065aee989caeddeb949f1cc9b8b0797b1da71a264969161f69a9495cb6367a037abaa53df876c2b42935b4742a9f1fb
-result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-error            =553e2956c32f1e284dc07e1d0ffa5bc8ad5f9a80e02f4b12cdb17e639935d7ebaab0daf3785d053e54d7460434a1ee21a2eb7731eb6f2fe68bfaa07765420af91170404b514369e093a89c4b24ddf1cd4cc1d53522002da721e345d8aca0b9cf564294aee523d96bb926213b374eabb7d91c45b13c8e66a0b8ac9843859f9a62
-$finish called at time : 51825 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-relaunch_sim
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_montgomery_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mpadder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module montgomery
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
-WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mpadder
-Compiling module xil_defaultlib.montgomery
-Compiling module xil_defaultlib.tb_montgomery
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_montgomery_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-result calculated=e62fa71293456e0f5d8bcbef46c4268929fb6bfe8be2c683088664043cdc3df5c8c36fe6d1531e35abe5c5dae9825d9ff32ad67a52466213a74a03fd73872a595e9535f48be9027ef1e087783c49e225f065aee989caeddeb949f1cc9b8b0797b1da71a264969161f69a9495cb6367a037abaa53df876c2b42935b4742a9f1fb
-result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-error            =553e2956c32f1e284dc07e1d0ffa5bc8ad5f9a80e02f4b12cdb17e639935d7ebaab0daf3785d053e54d7460434a1ee21a2eb7731eb6f2fe68bfaa07765420af91170404b514369e093a89c4b24ddf1cd4cc1d53522002da721e345d8aca0b9cf564294aee523d96bb926213b374eabb7d91c45b13c8e66a0b8ac9843859f9a62
-$finish called at time : 51825 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-relaunch_sim
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_montgomery_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mpadder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module montgomery
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
-WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mpadder
-Compiling module xil_defaultlib.montgomery
-Compiling module xil_defaultlib.tb_montgomery
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_montgomery_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-result calculated=e60ce514b80c1b4bd22c891adebbb0362e0ad3bfdc29b71f3d10a199a2ad01d748ccb85405dea6132b28aee1387542d2678c0945336d29ed7941f4b08b6a3acef8bd966585ce214fcf5d71e8f396ccd9e3886eb93ccb32596c1eda919e7c1e4eb33e50a8bc4c57838c53c66e9e596933fd5612ddba5d061c57963fac8b19598e
-result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-error            =5560eb549e6870ebd91fc0f17802d21ba95032bf8fe85a76992740ce3365140a2aa7928643d17d60d5945cfde5af08ef2e8a44670a48680cba02afc44d5efa837747dfda575e4b0fb62bb1da6d910719599f15656effe92c6f0e5d13a9afa31854deb5a88d6e134a236cef626458aa241371dd2761b8ccafa3a9b3de3d3032cf
-$finish called at time : 51675 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-relaunch_sim
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_montgomery_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mpadder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module montgomery
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
-WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mpadder
-Compiling module xil_defaultlib.montgomery
-Compiling module xil_defaultlib.tb_montgomery
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_montgomery_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2016.2
-Time resolution is 1 ps
+# run 100000000ns
+
+First Montgomery Multiplication test
 result calculated=3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
 result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
 error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-$finish called at time : 51725 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-reset_run synth_1
-launch_runs synth_1
-INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:1]
-[Thu Nov  8 16:21:09 2018] Launched synth_1...
-Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
-launch_runs impl_1
-[Thu Nov  8 16:22:24 2018] Launched impl_1...
-Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
-open_run impl_1
-INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.2
-INFO: [Device 21-403] Loading part xc7z010clg400-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3215-pc-klas6-5.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
-Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3215-pc-klas6-5.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.49 . Memory (MB): peak = 6613.039 ; gain = 14.000 ; free physical = 4037 ; free virtual = 38548
-Restored from archive | CPU: 0.500000 secs | Memory: 15.448204 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.49 . Memory (MB): peak = 6613.039 ; gain = 14.000 ; free physical = 4037 ; free virtual = 38548
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 6759.418 ; gain = 367.074 ; free physical = 3919 ; free virtual = 38421
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Montgomery Multiplication test 2
+result calculated=283dee8717d63f531fb6c8c5f9f8f43e830af2cb0d78d836b711e884f7c4c63626f733c66e916a7d1a6fef8cf4aa1ce2571715f0cacbbfacb9cf8e7779e2c6fcbb269e321fba2619e12b2770a95dbe53f731144050368c94931b75f039c5eb119c8163be93325608d92ed178b38f62541e2b1a04ea43c24e366897f778665408
+result expected  =283dee8717d63f531fb6c8c5f9f8f43e830af2cb0d78d836b711e884f7c4c63626f733c66e916a7d1a6fef8cf4aa1ce2571715f0cacbbfacb9cf8e7779e2c6fcbb269e321fba2619e12b2770a95dbe53f731144050368c94931b75f039c5eb119c8163be93325608d92ed178b38f62541e2b1a04ea43c24e366897f778665408
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 3
+result calculated=0dfc882283b4f316a0d43fa8cdcd1c66f2f22d4d9c11b29a9c536d18a9ba8b2ee79e884546757cdf092904fc43a33793a6e11f0004f8ce5e48a9172e2df61722d6ae4d4e1a1dbd8d759379132c36587d5fe3e51553ee7bca4fdfb44d13ba7b2fc44ca8f9e9e1b538291642eaaed5bec0afd7cfd6c235046f8172aadeb1317cf1
+result expected  =0dfc882283b4f316a0d43fa8cdcd1c66f2f22d4d9c11b29a9c536d18a9ba8b2ee79e884546757cdf092904fc43a33793a6e11f0004f8ce5e48a9172e2df61722d6ae4d4e1a1dbd8d759379132c36587d5fe3e51553ee7bca4fdfb44d13ba7b2fc44ca8f9e9e1b538291642eaaed5bec0afd7cfd6c235046f8172aadeb1317cf1
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 4
+result calculated=68e59ed7545e71802dde555b570a49c1577c0262368713c632b16183728a6abd232ef0dc8103f5c7ed4a59d8ba74b50a8ceb64954a019abf0cc91e443f5d4097ef5242f7bb412f11ba2bee0583c8cca0f2776f46b3b8b2ae650f04d853fa2d663b4958942809b7d50eb1dce3799d62e37e86ef4975dca85fa162ea80720bcc0d
+result expected  =68e59ed7545e71802dde555b570a49c1577c0262368713c632b16183728a6abd232ef0dc8103f5c7ed4a59d8ba74b50a8ceb64954a019abf0cc91e443f5d4097ef5242f7bb412f11ba2bee0583c8cca0f2776f46b3b8b2ae650f04d853fa2d663b4958942809b7d50eb1dce3799d62e37e86ef4975dca85fa162ea80720bcc0d
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 5
+result calculated=54fc1e9c690796f05d3733faa239b579f58c9013e78f31d72fc360195abd9d4fbe4509b3f3848c7f7e233759608ef8a442448361ffe39204b1a12356f557ba4a30d30914cf986bb8e3de1f644bf378d54531828b3cd7c18b2127b82427dd6b5ae3db688e795c58c9f7916471e846b4fdf444f2d160dc028445493c65bb034873
+result expected  =54fc1e9c690796f05d3733faa239b579f58c9013e78f31d72fc360195abd9d4fbe4509b3f3848c7f7e233759608ef8a442448361ffe39204b1a12356f557ba4a30d30914cf986bb8e3de1f644bf378d54531828b3cd7c18b2127b82427dd6b5ae3db688e795c58c9f7916471e846b4fdf444f2d160dc028445493c65bb034873
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 6
+result calculated=91d809e9a8039e9326081507f6ff0953cb2a0d718ee94187e1019ea1e454b0e5981dc8f0265ffecfaea0fa8577c5bcf991880cdd8c2973f2f114990517b2c5b3d0f7554ee0546302a21b16c2ee34a2fa3eb839e8c3e0ea745f42349beb1f00e827b2f09671de135a53d235fffb4e7412ed402d259b42d10858c0d8fb357e8341
+result expected  =91d809e9a8039e9326081507f6ff0953cb2a0d718ee94187e1019ea1e454b0e5981dc8f0265ffecfaea0fa8577c5bcf991880cdd8c2973f2f114990517b2c5b3d0f7554ee0546302a21b16c2ee34a2fa3eb839e8c3e0ea745f42349beb1f00e827b2f09671de135a53d235fffb4e7412ed402d259b42d10858c0d8fb357e8341
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 7
+result calculated=2b097072e313d15be6f25b60458bd4d1ac6fbb7175ec228eb2cea00018fb55f18a4bd91e5fe9174c2fb265fc4a63751cc377a7affaae3cf7f98a4f46b1a59d1d791b99c2fee6b0bc87627908d161ec2304dc07eacb62a510c6fd4c5e7e73fa3bff2df8a79d880d822efef9e7e5b43ae0fe576c4f64683ea3c81640b7ffc2e087
+result expected  =2b097072e313d15be6f25b60458bd4d1ac6fbb7175ec228eb2cea00018fb55f18a4bd91e5fe9174c2fb265fc4a63751cc377a7affaae3cf7f98a4f46b1a59d1d791b99c2fee6b0bc87627908d161ec2304dc07eacb62a510c6fd4c5e7e73fa3bff2df8a79d880d822efef9e7e5b43ae0fe576c4f64683ea3c81640b7ffc2e087
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 8
+result calculated=0b3cafba72bc1c60498fe5b5ce60f7747d16420443e8cb3c7b785be9364c5e8c824db7b1a816f71d5d52c3e0b6761bcc2efed27d0043c22d5f1bcb22fb69f65fca23269d42cecc904dfefae4b67465948ac18c39ba0d7dc3f859e2636dcc374ea5e9992b203525dd9f7c399b482f9036e43da6c2752b0e1c3a3ae39a8bd39d74
+result expected  =0b3cafba72bc1c60498fe5b5ce60f7747d16420443e8cb3c7b785be9364c5e8c824db7b1a816f71d5d52c3e0b6761bcc2efed27d0043c22d5f1bcb22fb69f65fca23269d42cecc904dfefae4b67465948ac18c39ba0d7dc3f859e2636dcc374ea5e9992b203525dd9f7c399b482f9036e43da6c2752b0e1c3a3ae39a8bd39d74
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication zeroes test
+result calculated=3349328ac2997599989c5eb574be7d99e3bbdb1d0b4299f33875ef698c7d6bfc357f2a9c845909caf6e250d1b1dc4da913aa384ea722de08adbbd28144b9514f568a4d34ee39068e336c692a782ca63a096582e929ae4544047c394afd5f0d0219550bf38c74c9606a6256e4b6d4e952df7d6cefa4279c80b99e9f8d92235be9
+result expected  =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+error            =ccb6cd753d668a666763a14a8b4182661c4424e2f4bd660cc78a109673829403ca80d5637ba6f635091daf2e4e23b256ec55c7b158dd21f752442d7ebb46aeb0a975b2cb11c6f971cc9396d587d359c5f69a7d16d651babbfb83c6b502a0f2fde6aaf40c738b369f959da91b492b16ad208293105bd8637f466160726ddca417
+$finish called at time : 372145 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 226
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 7188.055 ; gain = 0.000 ; free physical = 8439 ; free virtual = 44420
 relaunch_sim
 INFO: [USF-XSim-27] Simulation object is 'sim_1'
 INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
@@ -546,7 +748,7 @@ INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
 Vivado Simulator 2016.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
+Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto eeed9ebff2fa45a49b0fca7f71d3682a --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -558,323 +760,56 @@ Compiling module xil_defaultlib.montgomery
 Compiling module xil_defaultlib.tb_montgomery
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_montgomery_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-result calculated=3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-$finish called at time : 41395 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-reset_run synth_1
-launch_runs synth_1
-INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v:1]
-[Thu Nov  8 16:29:15 2018] Launched synth_1...
-Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
-launch_runs impl_1
-[Thu Nov  8 16:30:36 2018] Launched impl_1...
-Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
-refresh_design
-INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3215-pc-klas6-5.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
-Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3215-pc-klas6-5.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.52 . Memory (MB): peak = 7234.434 ; gain = 0.000 ; free physical = 3298 ; free virtual = 37875
-Restored from archive | CPU: 0.540000 secs | Memory: 16.022446 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.52 . Memory (MB): peak = 7234.434 ; gain = 0.000 ; free physical = 3298 ; free virtual = 37875
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
-report_utilization -name utilization_1
-report_utilization: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 7235.523 ; gain = 1.090 ; free physical = 3273 ; free virtual = 37832
-reset_run impl_1
-launch_runs impl_1
-[Thu Nov  8 16:44:12 2018] Launched impl_1...
-Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
-refresh_design
-INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3215-pc-klas6-5.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
-Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3215-pc-klas6-5.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.51 . Memory (MB): peak = 7261.730 ; gain = 0.000 ; free physical = 3197 ; free virtual = 37769
-Restored from archive | CPU: 0.530000 secs | Memory: 16.023567 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.51 . Memory (MB): peak = 7261.730 ; gain = 0.000 ; free physical = 3197 ; free virtual = 37769
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
-relaunch_sim
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_montgomery_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mpadder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module montgomery
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
-WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mpadder
-Compiling module xil_defaultlib.montgomery
-Compiling module xil_defaultlib.tb_montgomery
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_montgomery_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-result calculated=3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-$finish called at time : 41395 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_montgomery_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mpadder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module montgomery
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
-WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mpadder
-Compiling module xil_defaultlib.montgomery
-Compiling module xil_defaultlib.tb_montgomery
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_montgomery_behav
-
-****** Webtalk v2016.2 (64-bit)
-  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
-  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
-
-source /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/xsim.dir/tb_montgomery_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Thu Nov  8 16:49:13 2018...
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_montgomery_behav -key {Behavioral:sim_1:Functional:tb_montgomery} -tclbatch {tb_montgomery.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2016.2
 Time resolution is 1 ps
-source tb_montgomery.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 60000ns
+
+First Montgomery Multiplication test
 result calculated=3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
 result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
 error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-$finish called at time : 41395 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 60000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7261.730 ; gain = 0.000 ; free physical = 3203 ; free virtual = 37766
-relaunch_sim
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_montgomery' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-xvlog -m64 --relax -prj tb_montgomery_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_cdc_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
-INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
-INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
-INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
-INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
-INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_base
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_spram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mpadder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module montgomery
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:60]
-WARNING: [VRFC 10-756] identifier c is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:61]
-WARNING: [VRFC 10-756] identifier c_out is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:68]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:125]
-WARNING: [VRFC 10-756] identifier state is used before its declaration [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:140]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery
-INFO: [VRFC 10-2263] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl -m64 --relax -prj tb_montgomery_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sim/sim_1/behav'
-Vivado Simulator 2016.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /esat/micas-data/software/xilinx_vivado_2016.2/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto c8f5df3dc7054b629f2485132eb8558b --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_montgomery_behav xil_defaultlib.tb_montgomery xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mpadder
-Compiling module xil_defaultlib.montgomery
-Compiling module xil_defaultlib.tb_montgomery
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_montgomery_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
-Vivado Simulator 2016.2
-Time resolution is 1 ps
-result calculated=3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
-result expected  =3b6dd06956748c37ab4c4a0c56be8251d75b067f6c121195d637e267d61215e173744ada49b0237400bd0bdf1e244bc196164dac3db591fa3344a474d8c935527005763fdd2c6c5f858923c36127d3f33d27841eabcb1b85db2d37a5482bc167081d065149ba6acdafc0b5d102b2135810c7f0051c15d2cbfb3ff38ac8498c5d
+
+Montgomery Multiplication test 2
+result calculated=283dee8717d63f531fb6c8c5f9f8f43e830af2cb0d78d836b711e884f7c4c63626f733c66e916a7d1a6fef8cf4aa1ce2571715f0cacbbfacb9cf8e7779e2c6fcbb269e321fba2619e12b2770a95dbe53f731144050368c94931b75f039c5eb119c8163be93325608d92ed178b38f62541e2b1a04ea43c24e366897f778665408
+result expected  =283dee8717d63f531fb6c8c5f9f8f43e830af2cb0d78d836b711e884f7c4c63626f733c66e916a7d1a6fef8cf4aa1ce2571715f0cacbbfacb9cf8e7779e2c6fcbb269e321fba2619e12b2770a95dbe53f731144050368c94931b75f039c5eb119c8163be93325608d92ed178b38f62541e2b1a04ea43c24e366897f778665408
 error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-$finish called at time : 41395 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 67
-reset_run synth_1
-launch_runs synth_1
-INFO: [HDL 9-2216] Analyzing Verilog file "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v" into library work [/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl/montgomery.v:1]
-[Thu Nov  8 16:56:11 2018] Launched synth_1...
-Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1/runme.log
-launch_runs impl_1
-[Thu Nov  8 17:03:20 2018] Launched impl_1...
-Run output will be captured here: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/runme.log
-refresh_design
-INFO: [Netlist 29-17] Analyzing 232 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3215-pc-klas6-5.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
-Finished Parsing XDC File [/tmp/.Xil_r0629332/Vivado-3215-pc-klas6-5.esat.kuleuven.be/dcp/hweval_montgomery.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.52 . Memory (MB): peak = 7261.730 ; gain = 0.000 ; free physical = 3150 ; free virtual = 37762
-Restored from archive | CPU: 0.510000 secs | Memory: 15.986992 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.52 . Memory (MB): peak = 7261.730 ; gain = 0.000 ; free physical = 3150 ; free virtual = 37762
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+
+Montgomery Multiplication test 3
+result calculated=0dfc882283b4f316a0d43fa8cdcd1c66f2f22d4d9c11b29a9c536d18a9ba8b2ee79e884546757cdf092904fc43a33793a6e11f0004f8ce5e48a9172e2df61722d6ae4d4e1a1dbd8d759379132c36587d5fe3e51553ee7bca4fdfb44d13ba7b2fc44ca8f9e9e1b538291642eaaed5bec0afd7cfd6c235046f8172aadeb1317cf1
+result expected  =0dfc882283b4f316a0d43fa8cdcd1c66f2f22d4d9c11b29a9c536d18a9ba8b2ee79e884546757cdf092904fc43a33793a6e11f0004f8ce5e48a9172e2df61722d6ae4d4e1a1dbd8d759379132c36587d5fe3e51553ee7bca4fdfb44d13ba7b2fc44ca8f9e9e1b538291642eaaed5bec0afd7cfd6c235046f8172aadeb1317cf1
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 4
+result calculated=68e59ed7545e71802dde555b570a49c1577c0262368713c632b16183728a6abd232ef0dc8103f5c7ed4a59d8ba74b50a8ceb64954a019abf0cc91e443f5d4097ef5242f7bb412f11ba2bee0583c8cca0f2776f46b3b8b2ae650f04d853fa2d663b4958942809b7d50eb1dce3799d62e37e86ef4975dca85fa162ea80720bcc0d
+result expected  =68e59ed7545e71802dde555b570a49c1577c0262368713c632b16183728a6abd232ef0dc8103f5c7ed4a59d8ba74b50a8ceb64954a019abf0cc91e443f5d4097ef5242f7bb412f11ba2bee0583c8cca0f2776f46b3b8b2ae650f04d853fa2d663b4958942809b7d50eb1dce3799d62e37e86ef4975dca85fa162ea80720bcc0d
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 5
+result calculated=54fc1e9c690796f05d3733faa239b579f58c9013e78f31d72fc360195abd9d4fbe4509b3f3848c7f7e233759608ef8a442448361ffe39204b1a12356f557ba4a30d30914cf986bb8e3de1f644bf378d54531828b3cd7c18b2127b82427dd6b5ae3db688e795c58c9f7916471e846b4fdf444f2d160dc028445493c65bb034873
+result expected  =54fc1e9c690796f05d3733faa239b579f58c9013e78f31d72fc360195abd9d4fbe4509b3f3848c7f7e233759608ef8a442448361ffe39204b1a12356f557ba4a30d30914cf986bb8e3de1f644bf378d54531828b3cd7c18b2127b82427dd6b5ae3db688e795c58c9f7916471e846b4fdf444f2d160dc028445493c65bb034873
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 6
+result calculated=91d809e9a8039e9326081507f6ff0953cb2a0d718ee94187e1019ea1e454b0e5981dc8f0265ffecfaea0fa8577c5bcf991880cdd8c2973f2f114990517b2c5b3d0f7554ee0546302a21b16c2ee34a2fa3eb839e8c3e0ea745f42349beb1f00e827b2f09671de135a53d235fffb4e7412ed402d259b42d10858c0d8fb357e8341
+result expected  =91d809e9a8039e9326081507f6ff0953cb2a0d718ee94187e1019ea1e454b0e5981dc8f0265ffecfaea0fa8577c5bcf991880cdd8c2973f2f114990517b2c5b3d0f7554ee0546302a21b16c2ee34a2fa3eb839e8c3e0ea745f42349beb1f00e827b2f09671de135a53d235fffb4e7412ed402d259b42d10858c0d8fb357e8341
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 7
+result calculated=2b097072e313d15be6f25b60458bd4d1ac6fbb7175ec228eb2cea00018fb55f18a4bd91e5fe9174c2fb265fc4a63751cc377a7affaae3cf7f98a4f46b1a59d1d791b99c2fee6b0bc87627908d161ec2304dc07eacb62a510c6fd4c5e7e73fa3bff2df8a79d880d822efef9e7e5b43ae0fe576c4f64683ea3c81640b7ffc2e087
+result expected  =2b097072e313d15be6f25b60458bd4d1ac6fbb7175ec228eb2cea00018fb55f18a4bd91e5fe9174c2fb265fc4a63751cc377a7affaae3cf7f98a4f46b1a59d1d791b99c2fee6b0bc87627908d161ec2304dc07eacb62a510c6fd4c5e7e73fa3bff2df8a79d880d822efef9e7e5b43ae0fe576c4f64683ea3c81640b7ffc2e087
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication test 8
+result calculated=0b3cafba72bc1c60498fe5b5ce60f7747d16420443e8cb3c7b785be9364c5e8c824db7b1a816f71d5d52c3e0b6761bcc2efed27d0043c22d5f1bcb22fb69f65fca23269d42cecc904dfefae4b67465948ac18c39ba0d7dc3f859e2636dcc374ea5e9992b203525dd9f7c399b482f9036e43da6c2752b0e1c3a3ae39a8bd39d74
+result expected  =0b3cafba72bc1c60498fe5b5ce60f7747d16420443e8cb3c7b785be9364c5e8c824db7b1a816f71d5d52c3e0b6761bcc2efed27d0043c22d5f1bcb22fb69f65fca23269d42cecc904dfefae4b67465948ac18c39ba0d7dc3f859e2636dcc374ea5e9992b203525dd9f7c399b482f9036e43da6c2752b0e1c3a3ae39a8bd39d74
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+Montgomery Multiplication zeroes test
+result calculated=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+result expected  =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+error            =0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+$finish called at time : 372145 ns : File "/users/start2016/r0629332/Project-DDP/actual_project/hw_project/src/rtl_tb/tb_montgomery.v" Line 226
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  8 17:08:01 2018...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 14 17:20:25 2018...

@@ -12,32 +12,42 @@ module tb_rsa_wrapper();
     
     reg           clk;
     reg           resetn;
-    reg  [1023:0] bram_din;
-    reg           bram_din_valid;
-    wire [1023:0] bram_dout;
-    wire          bram_dout_valid;
-    reg           bram_dout_read;
-    reg    [31:0] port1_din;
-    reg           port1_valid;    
-    wire          port1_read;
-    wire          port2_valid;    
-    reg           port2_read;
-    wire   [3:0]  leds;
+    reg  [  31:0] arm_to_fpga_cmd;
+    reg           arm_to_fpga_cmd_valid;
+    wire          arm_to_fpga_done;
+    reg           arm_to_fpga_done_read;
+
+    reg           arm_to_fpga_data_valid;
+    wire          arm_to_fpga_data_ready;
+    reg  [1023:0] arm_to_fpga_data;
+
+    wire          fpga_to_arm_data_valid;
+    reg           fpga_to_arm_data_ready;
+    wire [1023:0] fpga_to_arm_data;
+
+    wire [   3:0] leds;
+
+    reg  [1023:0] input_data;
+    reg  [1023:0] output_data;
         
     rsa_wrapper rsa_wrapper(
-        .clk              (clk             ),
-        .resetn           (resetn          ),
-        .bram_din         (bram_din        ),
-        .bram_din_valid   (bram_din_valid  ),
-        .bram_dout        (bram_dout       ),
-        .bram_dout_valid  (bram_dout_valid ),
-        .bram_dout_read   (bram_dout_read  ),
-        .port1_din        (port1_din       ), 
-        .port1_valid      (port1_valid     ),
-        .port1_read       (port1_read      ),
-        .port2_valid      (port2_valid     ),
-        .port2_read       (port2_read      ),
-        .leds             (leds            )
+        .clk                    (clk                    ),
+        .resetn                 (resetn                 ),
+
+        .arm_to_fpga_cmd        (arm_to_fpga_cmd        ),
+        .arm_to_fpga_cmd_valid  (arm_to_fpga_cmd_valid  ),
+        .arm_to_fpga_done       (arm_to_fpga_done       ),
+        .arm_to_fpga_done_read  (arm_to_fpga_done_read  ),
+
+        .arm_to_fpga_data_valid (arm_to_fpga_data_valid ),
+        .arm_to_fpga_data_ready (arm_to_fpga_data_ready ), 
+        .arm_to_fpga_data       (arm_to_fpga_data       ),
+
+        .fpga_to_arm_data_valid (fpga_to_arm_data_valid ),
+        .fpga_to_arm_data_ready (fpga_to_arm_data_ready ),
+        .fpga_to_arm_data       (fpga_to_arm_data       ),
+
+        .leds                   (leds                   )
         );
         
     // Generate a clock
@@ -54,108 +64,119 @@ module tb_rsa_wrapper();
     
     // Initialise the values to zero
     initial begin
-            bram_din=0;
-            bram_din_valid=0;
-            bram_dout_read=0;
-            port1_din=0;
-            port1_valid=0;
-            port2_read=0;
+        arm_to_fpga_cmd         = 0;
+        arm_to_fpga_cmd_valid   = 0;
+        arm_to_fpga_done_read   = 0;
+        arm_to_fpga_data_valid  = 0;
+        arm_to_fpga_data        = 0;
+        fpga_to_arm_data_ready  = 0;
     end
 
-    task task_bram_read;
+    task send_cmd_to_hw;
+    input [31:0] command;
     begin
-        $display("Read BRAM : %x",bram_dout);
+        // Assert the command and valid
+        arm_to_fpga_cmd <= command;
+        arm_to_fpga_cmd_valid <= 1'b1;
+        #`CLK_PERIOD;
+        // Desassert the valid signal after one cycle
+        arm_to_fpga_cmd_valid <= 1'b0;
+        #`CLK_PERIOD;
     end
     endtask
-    
-    task task_bram_write;
+
+    task send_data_to_hw;
     input [1023:0] data;
     begin
-        bram_din_valid <= 1;
-        bram_din <= data;
-        $display("Write BRAM: %x",data);
+        // Assert data and valid
+        arm_to_fpga_data <= data;
+        arm_to_fpga_data_valid <= 1'b1;
         #`CLK_PERIOD;
-        bram_din_valid <= 0;
+        // Wait till accelerator is ready to read it
+        wait(arm_to_fpga_data_ready == 1'b1);
+        // It is read, do not continue asserting valid
+        arm_to_fpga_data_valid <= 1'b0;   
+        #`CLK_PERIOD;
     end
     endtask
 
-    task task_port1_write;
-    input [31:0] data;
+    task read_data_from_hw;
+    output [1023:0] odata;
     begin
-        $display("P1=%x",data);
-        port1_din=data;
-        port1_valid=1;
+        // Assert ready signal
+        fpga_to_arm_data_ready <= 1'b1;
         #`CLK_PERIOD;
-        wait (port1_read==1);        
-        port1_valid=0;
+        // Wait for valid signal
+        wait(fpga_to_arm_data_valid == 1'b1);
+        // If valid read the output data
+        odata = fpga_to_arm_data;
+        // Co not continue asserting ready
+        fpga_to_arm_data_ready <= 1'b0;
         #`CLK_PERIOD;
     end
     endtask
-    
-    task task_port2_read;
+
+    task waitdone;
     begin
-        port2_read=0;
-        wait (port2_valid==1);
-        port2_read=1;
+        // Wait for accelerator's done
+        wait(arm_to_fpga_done == 1'b1);
+        // Signal that is is read
+        arm_to_fpga_done_read <= 1'b1;
         #`CLK_PERIOD;
+        // Desassert the signal after one cycle
+        arm_to_fpga_done_read <= 1'b0;
         #`CLK_PERIOD;
-        port2_read=0;
-    end
+    end 
     endtask
-    
-    initial begin
-        forever
-        begin
-            bram_dout_read=0;
-            wait (bram_dout_valid==1);
-            bram_dout_read=1;
-            #`CLK_PERIOD;
-            #`CLK_PERIOD;
-        end
-    end
-    
+
+
+    localparam CMD_READ    = 32'h0;
+    localparam CMD_COMPUTE = 32'h1;    
+    localparam CMD_WRITE   = 32'h2;
     
     initial begin
 
         #`RESET_TIME
-        #1;
-
-        // Your task: 
-        // Design a testbench to test your accelerator 
-        // using the tasks defined above: port1_write, port2_read, 
-        // bram_write, and bram_read
         
+        // Your task: 
+        // Design a testbench to test your accelerator using the tasks defined above: send_cmd_to_hw, send_data_to_hw, read_data_from_hw, waitdone
+        
+        input_data  <= 1024'h00000000000000000123456789abcdef00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        output_data <= 1024'b0;
+
+        #`CLK_PERIOD;
+
         ///////////////////// START EXAMPLE  /////////////////////
         
-        // Perform CMD_READ
-        task_port1_write(32'h0); 
+        //// --- Send the read command and transfer input data to FPGA
 
-        // Put the values to bram to be read.
-        task_bram_write( 
-            1024'h00000000000000000123456789abcdef00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+        $display("Test for input %h", input_data);
         
-        // Wait for completion of the read operation
-        // by waiting for port2_valid to go high.
-        task_port2_read(); 
+        $display("Sending read command");
+        send_cmd_to_hw(CMD_READ);
+        send_data_to_hw(input_data);
+        waitdone();
 
-        // Perform CMD_COMPUTE
-        task_port1_write(32'h1); 
-        
-        // Wait for completion of the compute operation
-        // by waiting for port2_valid to go high.
-        task_port2_read(); 
-        
-        // Perform CMD_WRITE
-        task_port1_write(32'h2);
 
-        // Wait for completion of the write operation
-        // by waiting for port2_valid to go high.
-        task_port2_read(); 
-        
-        // Show the values written to the bram
-        task_bram_read();
+        //// --- Perform the compute operation
 
-        $display("\n\n");
+        $display("Sending compute command");
+        send_cmd_to_hw(CMD_COMPUTE);
+        waitdone();
+
+
+	    //// --- Send write command and transfer output data from FPGA
+        
+        $display("Sending write command");
+        send_cmd_to_hw(CMD_WRITE);
+        read_data_from_hw(output_data);
+        waitdone();
+
+
+        //// --- Print the array contents
+
+        $display("Output is      %h", output_data);
+                  
         ///////////////////// END EXAMPLE  /////////////////////  
         
         $finish;
