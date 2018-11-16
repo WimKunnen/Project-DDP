@@ -1,6 +1,6 @@
 hw_project/project_hw/project_hw.cache/
 hw_project/project_hw/project_hw.sim/
-
+sw_project/project_sw/
 *.zip
 *.str
 *.log
