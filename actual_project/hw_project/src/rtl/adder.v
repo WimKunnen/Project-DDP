@@ -186,10 +186,10 @@ module mpadder(
                 end
                 2'd3: begin
                     if (start == 1)
-                        nextstate <= 2'b1;
-                    else
+                        nextstate <= 2'd1;
+                    else    
                         nextstate <= 2'd0;
-                    end
+                end
                 default: nextstate <= 2'd0;
             endcase
         end
