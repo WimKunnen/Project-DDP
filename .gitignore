@@ -1,7 +1,5 @@
-hw_project/project_hw/project_hw.cache/
-hw_project/project_hw/project_hw.sim/
+# Ignore everything
+*
 
-*.zip
-*.str
-*.log
-*.jou
+# Except for source files
+!actual_project/hw_project/src/*
