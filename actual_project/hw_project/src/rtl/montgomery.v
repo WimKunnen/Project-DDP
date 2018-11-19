@@ -22,7 +22,7 @@ module montgomery(
     wire adder_done;
 
     mpadder adder(
-         .clk      (clk             ),
+         .clk      (clk            ),
          .resetn   (adder_resetn   ),
          .start    (adder_start    ),
          .subtract (adder_subtract ),
@@ -35,41 +35,36 @@ module montgomery(
 
     // a register
     reg a_select;
-    reg input_enable;
     reg [1023:0] a;
     wire [1023:0] a_mux;
 
-    assign a_mux = c_select==1 ? {c_mux[1023:0]} : (input_enable==1 ? {in_a} : {2'b0, a[1023:2]});
+    assign a_mux = (start==1 ? {in_a} : {2'b0, a[1023:2]});
 
     // b register
     reg b_select;
-    reg [1023:0] b;
     reg [1025:0] b3;
     wire [1026:0] b_mux;
 
-    assign b_mux = (a[1]==1 ? (a[0]==1 ? {1'b0,b3[1025:0]} : {2'b0,b[1023:0],1'b0}) : (a[0]==1 ? {3'b0,b[1023:0]} : {1027'b0}) );
-
-
+    assign b_mux = (a[1]==1 ? (a[0]==1 ? {1'b0,b3[1025:0]} : {2'b0,in_b,1'b0}) : (a[0]==1 ? {3'b0,in_b} : {1027'b0}) );
+    
     // m register
     reg m_select;
-    reg [1023:0] m;
     reg [1025:0] m3;
     wire [1026:0] m_mux;
 
-    assign m_mux = (m[1]==1 ? (c_mux[1]==1 ? (c_mux[0]==1 ? {1'b0,m3[1025:0]} : {2'b0,m[1023:0],1'b0}) : (c_mux[0]==1 ? {3'b0,m[1023:0]} : {1027'b0}) ) :
-                              (c_mux[1]==1 ? (c_mux[0]==1 ? {3'b0,m[1023:0]}  : {2'b0,m[1023:0],1'b0}) : (c_mux[0]==1 ? {1'b0,m3[1025:0]}: {1027'b0}) ) ) ;
 
+    assign m_mux = (c_mux[0]==1 ? (in_m[1]==c_mux[1] ? {1'b0,m3[1025:0]} : {3'b0,in_m}) :
+                                  (c_mux[1]==1 ? {2'b0,in_m,1'b0} : {1027'b0}) ) ;
 
     // input adder
     reg zero_add;
     reg add_select;
     reg while_select;
     assign adder_input_a = zero_add==1 ? {c_mux[1026:0]} : {1027'b0};
-    assign adder_input_b = while_select==1 ? (add_select==1 ? {3'b0,b[1023:0]} : {3'b0,m[1023:0]}) : (add_select==1 ? b_mux : m_mux ) ;
+    assign adder_input_b = while_select==1 ? (add_select==1 ? {3'b0,in_b} : {3'b0,in_m}) : (add_select==1 ? b_mux : m_mux ) ;
 
 
     // c register
-    reg c_select;
     reg shift_select;
     wire [1027:0] c_mux;
 
@@ -83,27 +78,21 @@ module montgomery(
         if(resetn == 0)
         begin
             a  <= 1024'b0;
-            b  <= 1024'b0;
             b3 <= 1026'b0;
-            m  <= 1024'b0;
             m3 <= 1026'b0;
         end
-        else if (start == 1)
-        begin
-            a <= a_mux;
-            b <= in_b;
-            m <= in_m;
-        end
+        else begin
         if(a_select == 1)
             a <= a_mux;
         if(b_select == 1)
             b3 <= c_mux[1025:0];
         if(m_select == 1)
             m3 <= c_mux[1025:0];
+        end
     end
 
 
-    assign result = a[1023:0];
+    assign result = b3[1023:0];
 
 
     // Done signal
@@ -152,10 +141,8 @@ module montgomery(
       case(state)
             // Idle state
             5'd0: begin
-                input_enable   <= 1'b1;
-                a_select       <= 1'b0;
+                a_select       <= 1'b1;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b0;
@@ -166,13 +153,11 @@ module montgomery(
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
-            
+
             // First 3B add state
             5'd1: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b1;
                 while_select   <= 1'b1;
@@ -182,13 +167,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
-            end            
+            end
             // Wait1 3B add state
             5'd2: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b1;
                 while_select   <= 1'b1;
@@ -201,10 +184,8 @@ module montgomery(
             end
             // Wait2 3B add state
             5'd3: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b1;
                 while_select   <= 1'b1;
@@ -217,10 +198,8 @@ module montgomery(
             end
             // Done 3B add state
             5'd4: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b1;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 while_select   <= 1'b1;
                 if (counter == 3) begin
@@ -237,13 +216,11 @@ module montgomery(
                 adder_start    <= 1'b1;
                 adder_subtract <= 1'b0;
             end
-            
+
             // Wait1 3M add state
             5'd5: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -256,10 +233,8 @@ module montgomery(
             end
             // Wait2 3M add state
             5'd6: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -272,11 +247,9 @@ module montgomery(
             end
             // Done 3M add state
             5'd7: begin
-                input_enable   <= 1'b0;
-                b_select       <= 1'b0;
-                c_select       <= 1'b0;
-                m_select       <= 1'b1;
                 a_select       <= 1'b0;
+                b_select       <= 1'b0;
+                m_select       <= 1'b1;
                 if (counter == 6) begin
                     zero_add       <= 1'b0;
                     add_select     <= 1'b1;
@@ -296,10 +269,8 @@ module montgomery(
 
             // Wait1 B-mux state
             5'd8: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b1;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b1;
                 while_select   <= 1'b0;
@@ -309,13 +280,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
-            end     
+            end
             // Wait2 B-mux state
             5'd9: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b1;
                 while_select   <= 1'b0;
@@ -325,13 +294,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
-            end  
+            end
             // Done B-mux state
             5'd10: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b0;
@@ -344,10 +311,8 @@ module montgomery(
             end
             // Wait1 M-mux state
             5'd11: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b0;
@@ -357,13 +322,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
-            end             
+            end
             // Wait2 M-mux state
             5'd12: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b0;
@@ -373,13 +336,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
-            end             
+            end
             // Done M-mux state
             5'd13: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 shift_select   <= 1'b1;
                 if (counter == 518) begin
@@ -397,13 +358,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b1;
             end
-            
+
             // Wait1 M-subtract state
             5'd14: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -413,13 +372,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b1;
-            end  
+            end
             // Wait2 M-subtract state
             5'd15: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -429,13 +386,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b1;
-            end             
+            end
             // Done M-subtract state
             5'd16: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -451,13 +406,11 @@ module montgomery(
                     adder_subtract <= 1'b1;
                 end
             end
-            
+
             // Wait1 add M state
             5'd17: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -467,13 +420,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
-            end  
+            end
             // Wait2 add M state
             5'd18: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -483,30 +434,32 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
-            end   
+            end
             // Done add M state
             5'd19: begin
-                input_enable   <= 1'b0;
-                a_select       <= 1'b1;
-                b_select       <= 1'b0;
-                c_select       <= 1'b1;
+                a_select       <= 1'b0;
+                b_select       <= 1'b1;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
                 zero_add       <= 1'b1;
                 shift_select   <= 1'b0;
-                count_enable   <= 1'b0;
+                if (counter[0] == 1) begin
+                    adder_start    <= 1'b0;
+                    count_enable   <= 1'b0;
+                    end
+                else begin
+                    adder_start    <= 1'b1;
+                    count_enable   <= 1'b1;
+                    end
                 adder_resetn   <= 1'b1;
-                adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
-            
+
             // Done all state
             5'd20: begin
-                input_enable   <= 1'b0;
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b0;
@@ -517,29 +470,11 @@ module montgomery(
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
-            
-            // Start add zero mindfuck state
-            5'd21: begin
-                input_enable   <= 1'b0;
-                a_select       <= 1'b0;
-                b_select       <= 1'b0;
-                c_select       <= 1'b0;
-                m_select       <= 1'b0;
-                add_select     <= 1'b0;
-                while_select   <= 1'b1;
-                zero_add       <= 1'b1;
-                shift_select   <= 1'b0;
-                count_enable   <= 1'b1;
-                adder_resetn   <= 1'b1;
-                adder_start    <= 1'b1;
-                adder_subtract <= 1'b0;
-            end
+
             // Wait1 add zero mindfuck state
-            5'd22: begin
-                input_enable   <= 1'b0;
+            5'd21: begin
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -549,13 +484,11 @@ module montgomery(
                 adder_resetn   <= 1'b1;
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
-            end  
+            end
             // Wait2 add zero mindfuck state
-            5'd23: begin
-                input_enable   <= 1'b0;
+            5'd22: begin
                 a_select       <= 1'b0;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b1;
@@ -566,28 +499,11 @@ module montgomery(
                 adder_start    <= 1'b0;
                 adder_subtract <= 1'b0;
             end
-            // Done add zero mindfuck state
-            5'd24: begin
-                input_enable   <= 1'b0;
-                a_select       <= 1'b0;
-                b_select       <= 1'b0;
-                c_select       <= 1'b0;
-                m_select       <= 1'b0;
-                add_select     <= 1'b0;
-                while_select   <= 1'b0;
-                zero_add       <= 1'b0;
-                shift_select   <= 1'b0;
-                count_enable   <= 1'b0;
-                adder_resetn   <= 1'b1;
-                adder_start    <= 1'b0;
-                adder_subtract <= 1'b0;
-            end
+
             // Default state
             default: begin
-                input_enable   <= 1'b1;
-                a_select       <= 1'b0;
+                a_select       <= 1'b1;
                 b_select       <= 1'b0;
-                c_select       <= 1'b0;
                 m_select       <= 1'b0;
                 add_select     <= 1'b0;
                 while_select   <= 1'b0;
@@ -615,15 +531,15 @@ module montgomery(
             // First 3B add state
                 5'd1: begin
                         nextstate <= 5'd2;
-                end     
+                end
             // Wait1 3B add state
                 5'd2: begin
                         nextstate <= 5'd3;
-                end   
+                end
             // Wait2 3B add state
                 5'd3: begin
                         nextstate <= 5'd4;
-                end              
+                end
             // Done 3B add state
                 5'd4: begin
                     if(counter == 3)
@@ -631,14 +547,14 @@ module montgomery(
                     else
                         nextstate <= 5'd2;
                 end
-            // Wait1 3M add state    
+            // Wait1 3M add state
                 5'd5: begin
                     nextstate <= 5'd6;
                 end
-            // Wait2 3M add state 
+            // Wait2 3M add state
                 5'd6: begin
                     nextstate <= 5'd7;
-                end             
+                end
             // Done 3M add state
                 5'd7: begin
                     if (counter == 6)
@@ -666,7 +582,7 @@ module montgomery(
              // Wait2 M-mux state
                 5'd12: begin
                         nextstate <= 5'd13;
-                end               
+                end
             // Done M-mux state
                 5'd13: begin
                     if (counter == 518)
@@ -674,9 +590,9 @@ module montgomery(
                     else
                         nextstate <= 5'd8;
                 end
-                
-                
-                
+
+
+
             // Wait1 M-substract state
                 5'd14: begin
                         nextstate <= 5'd15;
@@ -684,7 +600,7 @@ module montgomery(
             // Wait2 M-substract state
                 5'd15: begin
                         nextstate <= 5'd16;
-                end                 
+                end
             // Done M-subtract state
                 5'd16: begin
                         if (c_mux[1027] == 1)
@@ -699,7 +615,7 @@ module montgomery(
             // Wait2 M-substract state
                 5'd18: begin
                        nextstate <= 5'd19;
-                end 
+                end
             // Done add M state
                 5'd19: begin
                         if (counter[0] == 1)
@@ -707,28 +623,26 @@ module montgomery(
                         else
                             nextstate <= 5'd21;
                 end
-                
+
             // Done state
                 5'd20: begin
                         nextstate <= 5'd0;
                 end
-            // Start add zero mindfuck state
+
+            // Wait1 Mind Fuck state
                 5'd21: begin
                         nextstate <= 5'd22;
-                end      
-             // Wait1 M-substract state
+                end
+            // Wait2 Mind Fuck state
                 5'd22: begin
-                       nextstate <= 5'd23;
+                        nextstate <= 5'd20;
                 end
-            // Wait2 M-substract state
-                5'd23: begin
-                       nextstate <= 5'd20;
-                end
-            // Default state    
+
+            // Default state
                 default: nextstate <= 5'd0;
             endcase
         end
-        
+
 /*        // ideetje om alle done states te combineren, of alleszins meer
           // in principe vooral wachten tot optellig klaar is en dan c-Mux inladen
           // kijken naar hoe signalen verschillen tussen de states
@@ -749,4 +663,3 @@ module montgomery(
             end   */
 
 endmodule
-
