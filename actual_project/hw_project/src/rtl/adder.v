@@ -114,7 +114,7 @@ module mpadder(
     begin
         if (resetn == 0)
             counter <= 0;
-        else if (state == 2'd3)
+        else if (state == 2'd2)
             counter <= 0;
         else if (count_enable == 1)
             counter <= counter + 1;
@@ -135,15 +135,15 @@ module mpadder(
                 input_enable <= 1'b1;
                 count_enable <= 1'b1;
             end
-            // Sub state
+            // Done State
             2'd2: begin
-                input_mux_sel <= 1'b0;
-                input_enable <= 1'b1;
-                count_enable <= 1'b1;
-            end
-            // Done state
-            2'd3: begin
                 input_mux_sel <= 1'b1;
+                input_enable <= start;
+                count_enable <= 1'b0;
+            end
+            // Not used state
+            2'd3: begin
+                input_mux_sel <= 1'b0;
                 input_enable <= 1'b0;
                 count_enable <= 1'b0;
            end
@@ -174,18 +174,15 @@ module mpadder(
                     end
                 2'd1: begin
                     if (counter == 1)
-                        nextstate <= 2'd3;
+                        nextstate <= 2'd2;
                     else
                         nextstate <= state;
                 end
                 2'd2: begin
-                    if (counter == 1)
-                        nextstate <= 2'd3;
+                    if(start)
+                        nextstate <= 2'd1;
                     else
-                        nextstate <= state;
-                end
-                2'd3: begin
-                    nextstate <= 2'd0;
+                        nextstate <= 2'd0;
                 end
                 default: nextstate <= 2'd0;
             endcase
