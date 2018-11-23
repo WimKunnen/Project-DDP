@@ -17,21 +17,22 @@ module exponentiation(
     input  wire [1023:0] in_e,
     input  wire [9:0] in_t,
     output wire [1023:0] result,
-    output wire          done
+    output reg           done
     );
+    
+    // ############
+    // # Datapath #
+    // ############
 
-
-    // Intances of 1027 bit adder/subtracter module.
+    // Montgomery instance and relevant wires.
     reg mont_resetn;
     reg mont_start;
-    reg mont_subtract;
-    wire [1026:0] mont_input_a;
-    wire [1026:0] mont_input_b;
-    wire [1027:0] mont_result;
+    wire [1023:0] mont_input_a;
+    wire [1023:0] mont_input_b;
     wire [1023:0] mont_input_m;
-    wire adder_done;
-    assign result = a;
-    
+    wire [1023:0] mont_result;
+    wire mont_done;
+        
     montgomery mont(
          .clk      (clk           ),
          .resetn   (mont_resetn   ),
@@ -45,256 +46,286 @@ module exponentiation(
 
     assign mont_input_m = in_m;
 
-    reg [1023:0] a;
-    reg [9:0] t;
-    reg [1023:0] x_tilde;
-    reg [1023:0] e;
-    reg [1023:0] input_a;
-    reg [1023:0] input_b;
-    reg [3:0] state, nextstate;
+    // Registers
+    reg input_en;
 
-    assign mont_input_a = input_a;
-    assign mont_input_b = input_b;
+    reg [9:0] t;
+    reg t_count_en;
 
     always @(posedge clk)
     begin
-      case (state)
-        4'h0:
-        begin
-          a     <= in_r;
-          e     <= in_e;
-          t     <= in_t;
-          input_a <= in_x;
-          input_b <= in_r2;
-        end
-        4'h2:
-          x_tilde <= mont_result;
-        4'h3:
-        begin
-          input_a <= a;
-          input_b <= a;
-        end
-        4'h4:
-          a <= mont_result;
-        4'h5:
-          input_b <= x_tilde;
-        4'h6:
-          a <= mont_result;
-        4'h7:
-          input_b <= x_tilde;
-        4'h9:
-          input_b <= 1024'b1;
-        4'ha:
-          a <= mont_result;
-        default: a <= a;
-        endcase
+	    if (input_en == 1)
+		    t <= in_t;
+	    else if (t_count_en == 1)
+		    t <= t - 1;
     end
 
+    reg [1023:0] a;
+    reg a_en;
+    reg a_sel;
+    wire [1023:0] a_input;
+    assign a_input = a_sel == 1 ? in_r : mont_result;
+    assign result = a;
+
+    reg [1023:0] x;
+    reg x_en;
+    
+    reg [1023:0] e;
+    reg e_en;
+    wire [1023:0] e_input;
+    reg e_sel;
+    assign e_input = (e_sel == 1) ? in_e : {1'b0, e[1023:1]};
+
+    always @(posedge clk)
+    begin
+	    if (e_en == 1)
+		    e <= e_input;
+    end
+
+    reg [1023:0] mont_a;
+    reg [1023:0] mont_b;
+    
+    reg mont_a_sel;
+    reg [1:0] mont_b_sel;
+            
+    // Montgomery input multiplexers
+    wire [1023:0] const_one;
+    assign const_one = 1024'h1;
+
+    assign mont_input_a = mont_a_sel == 1 ? in_x : a;
+    assign mont_input_b = mont_b_sel[1] == 1 ? (mont_b_sel[0] == 1 ? in_r2 : a) : (mont_b_sel[0] == 1 ? x : const_one);
+    
+    // Result registers    
+    always @(posedge clk)
+    begin
+        if (resetn == 0)
+        begin
+            done <= 0;
+            x <= 0;
+            a <= 0;
+        end
+        else begin
+            if (x_en == 1)
+                x <= mont_result;
+            if (a_en == 1)
+                a <= a_input;
+        end
+    end
+    
+    // #######
+    // # FSM #
+    // #######
+    
+    reg [3:0] state, nextstate;
+    
     // Reset
     always @(posedge clk)
     begin
         if(resetn==0)
-            state <= 3'b0;
+            state <= 4'd0;
         else
             state <= nextstate;
     end
-
-    // Done register
-    reg done_reg;
-    always @(posedge clk)
-    begin
-    if(resetn == 0)
-        done_reg <= 0;
-    else if (state == 4'hb)
-        done_reg <= 1;
-    else
-        done_reg <= 0;
-    end
-    assign done = done_reg;
-
-    // Add counter
-    reg count_enable;
-    reg [9:0] counter;
-    always @(posedge clk)
-    begin
-        if (resetn == 0)
-            counter <= 0;
-        else if (state == 4'hb)
-            counter <= 0;
-        else if (count_enable == 1 && mont_done == 1)
-            counter <= counter + 1;
-    end
-
-    // FSM
+        
+    
+    // Control signals
     always @(*)
-      begin
-        case (state)
-        // Idle state
-        4'h0:
-          begin
-            if (start)
-             nextstate <= 4'b1;
-            else
-             nextstate <= 4'b0;
-          end
-        // X tilde state
-        4'h1:
-            nextstate <= 4'h2;
-        4'h2:
-          if (mont_done == 1)
-            nextstate <= 4'h3;
-          else
-            nextstate <= state;
-        // Loop state 1
-        4'h3:
-            nextstate <= 4'h4;
-        4'h4:
-          begin
-            if (mont_done)
-            begin
-              if (e[0] == 1)
-                nextstate <= 4'h5;
-              else
-                nextstate <= 4'h7;
+    begin
+        case(state)
+            // Idle state, store R in a on start;
+            4'd0: begin
+		    mont_start <= 0;
+                mont_resetn <= 0;
+                done <= 0;
+		e_sel <= 1;
+		x_en <= 0;
+		mont_a_sel <= 0;
+		mont_b_sel <= 2'b00;
+                if (start == 1)
+                begin
+			a_sel <= 1;
+			a_en <= 1;
+			input_en <= 1;
+			e_en <= 1;
+                end
+		else
+		begin
+			a_sel <= 0;
+			a_en <= 0;
+			input_en <= 0;
+			e_en <= 0;
+                end
+
+
             end
-            else
-              nextstate <= state;
-          end
-        // Loop state 2 e[t] = 1
-        4'h5:
-            nextstate <=4'h6;
-        5'h6:
-          begin
-            if (mont_done)
+            // Start x tilde calculation.
+            4'd1:
             begin
-              if (counter == t)
-                nextstate <= 4'h9;
-              else
-                nextstate <= 4'h3;
+		    a_sel <= 0;
+		    input_en <= 0;
+		    e_en <= 0;
+		    e_sel <= 0;
+                mont_resetn <= 1;
+                mont_a_sel <= 1;
+                mont_b_sel <= 2'b11;
+                mont_start <= 1;
+                a_en <= 0;
             end
-            else
-              nextstate <= state;
-          end
-        // Loop state 2 e[t] = 0
-        4'h7:
-            nextstate <= 4'h8;
-        4'h8:
-          begin
-            if (mont_done)
+            // Wait x tilde calculation
+            4'd2:
             begin
-              if (counter == t)
-                nextstate <= 4'h9;
-              else
-                nextstate <= 4'h3;
+                mont_resetn <= 1;
+                mont_start <= 0;
+                x_en <= mont_done;
             end
-            else
-              nextstate <= state;
-          end
-        // Last mont state
-        4'h9:
-            nextstate <= 4'ha;
-        4'ha:
-          if (mont_done)
-            nextstate <= 4'hb;
-          else
-            nextstate <= state;
-        //Done state
-        4'hb:
-          nextstate <=3'h0;
-        default: nextstate <= 4'b0;
+	    // Start loop, start a = mont(a,a)
+            4'd3:
+            begin
+                x_en <= 0;
+		    a_en <= 0;
+		    e_sel <= 0;
+		    e_en <= 0;
+		    mont_a_sel <= 0;
+		    mont_b_sel <= 2'b10;
+		    mont_start <= 1;
+		    t_count_en <= 1;
+            end
+	    // Wait a = mont(a,a) calculation
+	    4'd4:
+	    begin
+		    mont_start <= 0;
+		    t_count_en <= 0;
+		    a_en <= mont_done;
+	    end
+	    // Start a = mont(a, x)
+	    4'd5:
+	    begin
+		    mont_a_sel <= 0;
+		    mont_b_sel <= 2'b01;
+		    mont_start <= 1;
+	    end
+	    // Wait a = mont(a, x)
+	    4'd6:
+	    begin
+		    mont_start <= 0;
+		    a_sel <= 0;
+		    e_en <= mont_done;
+		    if (e[0] == 1)
+		    begin
+			    a_en <= mont_done;
+		    end
+		    else
+			    a_en <= 0;
+	    end
+	    // Start a = mont(a, 1)
+	    4'd7:
+	    begin
+		    mont_a_sel <= 0;
+		    mont_b_sel <= 2'b00;
+		    mont_start <= 1;
+		    a_en <= 0;
+		    e_en <= 0;
+	    end
+	    // Wait a = mont(a, 1)
+	    4'd8:
+	    begin
+		    mont_start <= 0;
+		    a_sel <= 0;
+		    a_en <= mont_done;
+	    end
+	    // Done
+	    4'd9:
+	    begin
+		    a_en <= 0;
+		    done <= 1;
+	    end
+            default:
+            begin
+                mont_resetn <= 0;
+             end
         endcase
-      end
-
-    // Control path
+    end
+    
+    // Next state logic
     always @(*)
     begin
-      case (state)
-        // Idle state
-        4'h0:
-          begin
-            mont_resetn  <= 1'b0;
-            count_enable <= 1'b0;
-            mont_start   <= 1'b0;
-          end
-        // X tilde state
-        4'h1:
-          begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b1;
-            mont_start <= 1'b1;
-          end
-        4'h2:
+        case(state)
+            // Idle state
+            4'd0:
             begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b0;
-            mont_start <= 1'b0;
-          end
-        // Loop state 1
-        4'h3:
-          begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b1;
-            mont_start <= 1'b1;
-          end
-         4'h4:
+                if (start == 1)
+                    nextstate <= 4'd1;
+                else
+                    nextstate <= state;
+            end
+            // Start x tilde calculation.
+            4'd1:
             begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b1;
-            mont_start <= 1'b0;
-          end
-        // Loop state 2 e[t] = 1
-        4'h5:
-          begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b0;
-            mont_start <= 1'b1;
-          end
-          4'h6:
-           begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b0;
-            mont_start <= 1'b0;
-           end
-        // Loop state 2 e[t] = 0
-        4'h7:
-          begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b0;
-            mont_start <= 1'b1;
-          end
-          4'h8:
-           begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b0;
-            mont_start <= 1'b0;
-           end
-        // Last mont state
-        4'h9:
-          begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b0;
-            mont_start <= 1'b1;
-          end
-          4'ha:
-           begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b0;
-            mont_start <= 1'b0;
-           end
-        // Done state
-        4'hb:
-          begin
-            mont_resetn  <= 1'b1;
-            count_enable <= 1'b0;
-            mont_start <= 1'b0;
-          end
-        default :
-          begin
-            mont_resetn  <= 1'b0;
-            count_enable <= 1'b0;
-            mont_start <= 1'b0;
-          end
-      endcase
+                nextstate <= 4'd2;
+            end
+            // Wait x tilde calculation.
+            4'd2:
+            begin
+                if (mont_done)
+                    nextstate <= 4'd3;
+                else
+                    nextstate <= state;
+            end
+	    // Start loop, a = mont(a,a)
+	    4'd3:
+	    begin
+		    nextstate <= 4'd4;
+	    end
+	    // Wait a = mont(a,a) calculation
+	    4'd4:
+	    begin
+		if (mont_done)
+			nextstate <= 4'd5;
+		else
+                    nextstate <= state;
+	    end
+	    // Start mont(a,x) calculation
+	    4'd5:
+	    begin
+		    nextstate <= 4'd6;
+	    end
+	    // Wait mont(a,x) calculation
+	    4'd6:
+	    begin
+		    if (mont_done == 1)
+		    begin
+			    if (t == 0)
+				    nextstate <= 4'd7;
+			    else
+				    nextstate <= 4'd3;
+		    end
+		    else
+			    nextstate <= state;
+	    end
+	    // Start a = mont(a,1)
+	    4'd7:
+	    begin
+		    nextstate <= 4'd8;
+	    end
+	    // Wait a = mont(a, 1)
+	    4'd8:
+	    begin
+		    if (mont_done == 1)
+			    nextstate <= 4'd9;
+		    else
+			    nextstate <= state;
+	    end
+	    // Done
+	    4'd9:
+	    begin
+		    nextstate <= 4'd0;
+	    end
+            // Default state
+            default:
+            begin
+                nextstate <= 4'd0;
+            end
+        endcase
     end
 
 endmodule
