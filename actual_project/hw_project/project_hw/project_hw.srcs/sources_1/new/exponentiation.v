@@ -100,7 +100,6 @@ module exponentiation(
     begin
         if (resetn == 0)
         begin
-            done <= 0;
             x <= 0;
             a <= 0;
         end
@@ -129,32 +128,32 @@ module exponentiation(
         
     
     // Control signals
-    always @(*)
+    always @(posedge clk)
     begin
         case(state)
             // Idle state, store R in a on start;
             4'd0: begin
 		    mont_start <= 0;
-                mont_resetn <= 0;
-                done <= 0;
-		e_sel <= 1;
-		x_en <= 0;
-		mont_a_sel <= 0;
-		mont_b_sel <= 2'b00;
-                if (start == 1)
-                begin
-			a_sel <= 1;
-			a_en <= 1;
-			input_en <= 1;
-			e_en <= 1;
-                end
-		else
-		begin
-			a_sel <= 0;
-			a_en <= 0;
-			input_en <= 0;
-			e_en <= 0;
-                end
+            mont_resetn <= 0;
+            done <= 0;
+		    e_sel <= 1;
+		    x_en <= 0;
+		    mont_a_sel <= 0;
+		    mont_b_sel <= 2'b00;
+            if (start == 1)
+            begin
+			 a_sel <= 1;
+			 a_en <= 1;
+			 input_en <= 1;
+			 e_en <= 1;
+            end
+		    else
+		    begin
+			 a_sel <= 0;
+			 a_en <= 0;
+			 input_en <= 0;
+			 e_en <= 0;
+            end
 
 
             end

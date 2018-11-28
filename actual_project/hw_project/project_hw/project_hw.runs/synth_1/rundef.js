@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log exponentiation.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source exponentiation.tcl" );
+         "-log rsa_project_wrapper.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source rsa_project_wrapper.tcl" );
 
 
 

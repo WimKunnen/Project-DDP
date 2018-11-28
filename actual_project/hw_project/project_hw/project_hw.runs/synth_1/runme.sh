@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1'
+HD_PWD='/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log exponentiation.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source exponentiation.tcl
+EAStep vivado -log rsa_project_wrapper.vds -m64 -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source rsa_project_wrapper.tcl

@@ -1,0 +1,336 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Nov 26 13:13:40 2018
+# Process ID: 28186
+# Current directory: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_2
+# Command line: vivado -log hweval_adder.vds -tempDir /tmp -mode batch -messageDb vivado.pb -notrace -source hweval_adder.tcl
+# Log file: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_2/hweval_adder.vds
+# Journal file: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/synth_2/vivado.jou
+#-----------------------------------------------------------
+source hweval_adder.tcl -notrace
+Command: synth_design -top hweval_adder -part xc7z010clg400-1 -directive AreaOptimized_high -control_set_opt_threshold 1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28206 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1152.438 ; gain = 165.137 ; free physical = 10270 ; free virtual = 45058
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hweval_adder' [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:3]
+INFO: [Synth 8-638] synthesizing module 'mpadder' [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:3]
+	Parameter adder_width bound to: 1027 - type: integer 
+	Parameter bits_per_adder bound to: 68 - type: integer 
+	Parameter nb_adders bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mpadder' (1#1) [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:3]
+INFO: [Synth 8-256] done synthesizing module 'hweval_adder' (2#1) [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1192.883 ; gain = 205.582 ; free physical = 10216 ; free virtual = 45004
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1192.883 ; gain = 205.582 ; free physical = 10219 ; free virtual = 45008
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Sourcing Tcl File [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
+Constraints for hw_evals
+INFO: [Vivado 12-1808] Property 'PACKAGE_PIN' is not supported for elaborated designs for objects of type 'port'. [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/tcl/constraints.tcl:7]
+Finished Sourcing Tcl File [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/tcl/constraints.tcl]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1576.941 ; gain = 0.008 ; free physical = 9897 ; free virtual = 44686
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9864 ; free virtual = 44652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9864 ; free virtual = 44652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9863 ; free virtual = 44652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "in_a" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "start" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9909 ; free virtual = 44697
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register b_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:34]
+INFO: [Synth 8-3538] Detected potentially large (wide) register a_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:33]
+INFO: [Synth 8-3538] Detected potentially large (wide) register out_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:27]
+INFO: [Synth 8-3538] Detected potentially large (wide) register in_b_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:22]
+INFO: [Synth 8-3538] Detected potentially large (wide) register in_a_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:21]
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     69 Bit       Adders := 15    
+	   3 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input   1027 Bit         XORs := 1     
++---Registers : 
+	             1028 Bit    Registers := 1     
+	             1027 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input   1027 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register b_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:34]
+INFO: [Synth 8-3538] Detected potentially large (wide) register a_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:33]
+INFO: [Synth 8-3538] Detected potentially large (wide) register out_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/adder.v:27]
+INFO: [Synth 8-3538] Detected potentially large (wide) register in_b_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:22]
+INFO: [Synth 8-3538] Detected potentially large (wide) register in_a_reg [/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/src/rtl/hweval_adder.v:21]
+Hierarchical RTL Component report 
+Module hweval_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input   1027 Bit         XORs := 1     
++---Registers : 
+	             1027 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module mpadder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     69 Bit       Adders := 15    
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	             1028 Bit    Registers := 1     
+	             1027 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   1027 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9908 ; free virtual = 44697
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9901 ; free virtual = 44690
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9901 ; free virtual = 44690
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'subtract_reg' (FDRE) to 'in_b_reg[1026]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dut/b_reg[1026] )
+WARNING: [Synth 8-3332] Sequential element (dut/b_reg[1026]) is unused and will be removed from module hweval_adder.
+WARNING: [Synth 8-3332] Sequential element (dut/out_reg[1027]) is unused and will be removed from module hweval_adder.
+WARNING: [Synth 8-3332] Sequential element (subtract_reg) is unused and will be removed from module hweval_adder.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9858 ; free virtual = 44646
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9858 ; free virtual = 44646
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Reading /tmp/.Xil_r0634161/Vivado-28186-pc-klas3-16.esat.kuleuven.be/realtime/hweval_adder_synth.xdc
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 9942 ; free virtual = 44737
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10077 ; free virtual = 44872
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10045 ; free virtual = 44840
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10045 ; free virtual = 44840
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10045 ; free virtual = 44840
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10034 ; free virtual = 44829
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10040 ; free virtual = 44835
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10032 ; free virtual = 44827
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10032 ; free virtual = 44827
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10030 ; free virtual = 44825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10030 ; free virtual = 44825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   272|
+|3     |LUT1   |     2|
+|4     |LUT2   |  3082|
+|5     |LUT3   |     1|
+|6     |LUT4   |     2|
+|7     |FDRE   |  5153|
+|8     |FDSE   |     2|
+|9     |IBUF   |     2|
+|10    |OBUF   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------+------+
+|      |Instance |Module  |Cells |
++------+---------+--------+------+
+|1     |top      |        |  8518|
+|2     |  dut    |mpadder |  6441|
++------+---------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10030 ; free virtual = 44825
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1576.941 ; gain = 113.438 ; free physical = 10028 ; free virtual = 44823
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1576.941 ; gain = 589.641 ; free physical = 10028 ; free virtual = 44823
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 274 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1591.191 ; gain = 524.336 ; free physical = 10030 ; free virtual = 44826
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1623.207 ; gain = 0.000 ; free physical = 10005 ; free virtual = 44802
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 26 13:14:10 2018...

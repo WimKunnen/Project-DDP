@@ -1,0 +1,1 @@
+-wto "eeed9ebff2fa45a49b0fca7f71d3682a" --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "xpm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_rsa_wrapper_behav" "xil_defaultlib.tb_rsa_wrapper" "xil_defaultlib.glbl" -log "elaborate.log" 

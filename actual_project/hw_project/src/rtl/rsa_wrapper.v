@@ -22,25 +22,57 @@ module rsa_wrapper
     output [   3:0] leds
 
     );
+    
+    // Exponentiation instance
+    reg exp_start;
+    wire exp_done;
+    wire [1023:0] exp_result;
+    
+    reg [1023:0] x;
+    reg [1023:0] e;
+    reg [1023:0] r2;
+    reg [1023:0] r;
+    reg [1023:0] m;
+    reg [9:0] t;
+    reg [1023:0] result;
+    
+    exponentiation exp(
+        .clk(clk),
+        .resetn(resetn),
+        .start(exp_start),
+        .in_x(x),
+        .in_r(r),
+        .in_r2(r2),
+        .in_m(m),
+        .in_e(e),
+        .in_t(t),
+        .result(exp_result),
+        .done(exp_done)
+        );
 
     ////////////// - State Machine 
 
     /// - State Machine Parameters
 
-    localparam STATE_BITS           = 3;    
+    localparam STATE_BITS           = 3;
     localparam STATE_WAIT_FOR_CMD   = 3'h0;  
     localparam STATE_READ_DATA      = 3'h1;
     localparam STATE_COMPUTE        = 3'h2;
-    localparam STATE_WRITE_DATA     = 3'h3;
-    localparam STATE_ASSERT_DONE    = 3'h4;
+    localparam STATE_WAIT_COMPUTE   = 3'h3;
+    localparam STATE_WRITE_DATA     = 3'h4;
+    localparam STATE_ASSERT_DONE    = 3'h5;
     
 
     reg [STATE_BITS-1:0] r_state;
     reg [STATE_BITS-1:0] next_state;
     
-    localparam CMD_READ             = 32'h0;
-    localparam CMD_COMPUTE          = 32'h1;    
+    localparam CMD_COMPUTE          = 32'h0;
     localparam CMD_WRITE            = 32'h2;
+    localparam CMD_READ_X           = 32'h1;
+    localparam CMD_READ_E           = 32'h3;
+    localparam CMD_READ_R           = 32'h5;
+    localparam CMD_READ_R2          = 32'h7;
+    localparam CMD_READ_M           = 32'h9;   
 
     /// - State Transition
 
@@ -54,13 +86,18 @@ module rsa_wrapper
                 STATE_WAIT_FOR_CMD:
                     begin
                         if (arm_to_fpga_cmd_valid) begin
-                            case (arm_to_fpga_cmd)
-                                CMD_READ:
+                            case (arm_to_fpga_cmd[0])
+                                1'b0:
+                                case(arm_to_fpga_cmd[21:0])
+                                    22'd0:
+                                        next_state <= STATE_COMPUTE;
+                                    22'd2: 
+                                        next_state <= STATE_WRITE_DATA;
+                                    default:
+                                        next_state <= STATE_WAIT_FOR_CMD;
+                                endcase                      
+                                1'b1:
                                     next_state <= STATE_READ_DATA;
-                                CMD_COMPUTE:                            
-                                    next_state <= STATE_COMPUTE;
-                                CMD_WRITE: 
-                                    next_state <= STATE_WRITE_DATA;
                                 default:
                                     next_state <= r_state;
                             endcase;
@@ -72,7 +109,13 @@ module rsa_wrapper
                     next_state <= (arm_to_fpga_data_valid) ? STATE_ASSERT_DONE : r_state;
                                 
                 STATE_COMPUTE: 
-                    next_state <= STATE_ASSERT_DONE;
+                    next_state <= STATE_WAIT_COMPUTE;
+                    
+                STATE_WAIT_COMPUTE:
+                    if (exp_done == 1)
+                        next_state <= STATE_ASSERT_DONE;
+                    else
+                        next_state <= r_state;      
 
                 STATE_WRITE_DATA:
                     next_state <= (fpga_to_arm_data_ready) ? STATE_ASSERT_DONE : r_state;
@@ -96,36 +139,56 @@ module rsa_wrapper
             r_state <= next_state;   
 
     ////////////// - Computation
-
-    reg [1023:0] core_data;
-    
-    assign accel_din = core_data;
-
+        
     always @(posedge(clk))
         if (resetn==1'b0)
         begin
-            core_data <= 1024'b0;
+            result <= 1024'b0;
         end
         else
         begin
             case (r_state)
                 STATE_READ_DATA: begin
-                    if (arm_to_fpga_data_valid) core_data <= arm_to_fpga_data;
-                    else                        core_data <= core_data; 
+                    if (arm_to_fpga_data_valid) begin
+                        case(arm_to_fpga_cmd[3:1])
+                            3'b000:
+                                x <= arm_to_fpga_data;
+                            3'b001:
+                                e <= arm_to_fpga_data;
+                            3'b010:
+                                r <= arm_to_fpga_data;
+                            3'b011:
+                                r2 <= arm_to_fpga_data;
+                            3'b100:
+                                m <= arm_to_fpga_data;
+                        endcase
+                    end
                 end
                 
                 STATE_COMPUTE: begin
-                    core_data <= {core_data[1023:992]^32'hDEADBEEF, core_data[991:0]};
+                    t <= arm_to_fpga_cmd[31:22];
+                    exp_start <= 1;
+                end
+                
+                STATE_WAIT_COMPUTE: begin
+                    exp_start <= 0;
+                    if (exp_done == 1)
+                        result <= exp_result;
                 end
                 
                 default: begin
-                    core_data <= core_data;
+                    x <= x;
+                    e <= e;
+                    r <= r;
+                    r2 <= r2;
+                    m <= m;
+                    t <= t;
                 end
                 
             endcase;
         end
     
-    assign fpga_to_arm_data       = core_data;
+    assign fpga_to_arm_data       = result;
 
     ////////////// - Valid signals for notifying that the computation is done
 

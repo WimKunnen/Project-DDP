@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1542816146">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1543419826">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="exponentiation.vdi"/>
-  <File Type="BG-DRC" Name="exponentiation.drc"/>
-  <File Type="BG-BGN" Name="exponentiation.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="exponentiation.sysdef"/>
-  <File Type="BITSTR-MMI" Name="exponentiation.mmi"/>
-  <File Type="BITSTR-BMM" Name="exponentiation_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="exponentiation.nky"/>
-  <File Type="BITSTR-RBT" Name="exponentiation.rbt"/>
-  <File Type="BITSTR-MSK" Name="exponentiation.msk"/>
-  <File Type="BG-BIN" Name="exponentiation.bin"/>
-  <File Type="BG-BIT" Name="exponentiation.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="exponentiation_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="exponentiation_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="exponentiation_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="exponentiation_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-CLK" Name="exponentiation_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="exponentiation_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="exponentiation_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="exponentiation_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="exponentiation_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="exponentiation_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="exponentiation_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="exponentiation_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="exponentiation_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="exponentiation_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="exponentiation_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="exponentiation_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="exponentiation_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="exponentiation_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="exponentiation_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="exponentiation_routed.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="exponentiation_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="exponentiation_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="exponentiation_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="exponentiation_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="exponentiation_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="exponentiation_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="exponentiation_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="exponentiation_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="exponentiation_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="exponentiation_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="exponentiation_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="exponentiation_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="exponentiation_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="exponentiation_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="exponentiation_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="exponentiation_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="exponentiation_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="exponentiation_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="exponentiation.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="exponentiation_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="exponentiation_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="exponentiation_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="exponentiation_timing_summary_init.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="exponentiation_postroute_physopt.dcp"/>
-  <File Type="PA-TCL" Name="exponentiation.tcl"/>
+  <File Type="RDI-RDI" Name="rsa_project_wrapper.vdi"/>
+  <File Type="BG-DRC" Name="rsa_project_wrapper.drc"/>
+  <File Type="BG-BGN" Name="rsa_project_wrapper.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="rsa_project_wrapper.sysdef"/>
+  <File Type="BITSTR-MMI" Name="rsa_project_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="rsa_project_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="rsa_project_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="rsa_project_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="rsa_project_wrapper.msk"/>
+  <File Type="BG-BIN" Name="rsa_project_wrapper.bin"/>
+  <File Type="BG-BIT" Name="rsa_project_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="rsa_project_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="rsa_project_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="rsa_project_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="rsa_project_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-CLK" Name="rsa_project_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="rsa_project_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="rsa_project_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="rsa_project_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="rsa_project_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="rsa_project_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="rsa_project_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="rsa_project_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="rsa_project_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="rsa_project_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="rsa_project_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="rsa_project_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="rsa_project_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="rsa_project_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="rsa_project_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="rsa_project_wrapper_routed.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="rsa_project_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="rsa_project_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="rsa_project_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="rsa_project_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="rsa_project_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="rsa_project_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="rsa_project_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="rsa_project_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="rsa_project_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="rsa_project_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="rsa_project_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="rsa_project_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="rsa_project_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="rsa_project_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="rsa_project_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="rsa_project_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="rsa_project_wrapper_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="rsa_project_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="rsa_project_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="rsa_project_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="rsa_project_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="rsa_project_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="rsa_project_wrapper_timing_summary_init.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="rsa_project_wrapper_postroute_physopt.dcp"/>
+  <File Type="PA-TCL" Name="rsa_project_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../src/rtl/adder.v">
@@ -80,17 +80,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/rtl/hweval_montgomery.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../src/rtl/rsa_wrapper.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -98,7 +89,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/rsa_project/rsa_project.bd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -106,9 +96,16 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/hdl/rsa_project_wrapper.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v"/>
         <Attr Name="ImportTime" Val="1542201362"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/rtl/hweval_montgomery.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -124,7 +121,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="exponentiation"/>
+      <Option Name="TopModule" Val="rsa_project_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -141,14 +138,22 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+    <StratHandle Name="Performance_ExtraTimingOpt" Flow="Vivado Implementation 2016">
+      <Desc>Includes alternate algorithms for timing-driven optimization</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
-    <Step Id="place_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">8</Option>
+    </Step>
     <Step Id="post_place_power_opt_design"/>
-    <Step Id="phys_opt_design"/>
-    <Step Id="route_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="route_design">
+      <Option Id="Directive">0</Option>
+    </Step>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>

@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xsim tb_exponentiation_behav -key {Behavioral:sim_1:Functional:tb_exponentiation} -tclbatch tb_exponentiation.tcl -log simulate.log
+ExecStep $xv_path/bin/xsim tb_rsa_wrapper_behav -key {Behavioral:sim_1:Functional:tb_rsa_wrapper} -tclbatch tb_rsa_wrapper.tcl -log simulate.log
