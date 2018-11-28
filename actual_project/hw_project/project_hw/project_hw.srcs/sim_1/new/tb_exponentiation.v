@@ -35,6 +35,7 @@ module tb_exponentiation();
     reg [1023:0]    in_m;
     reg [1023:0]    in_e;
     reg [9:0]    in_t;
+    reg result_ok;
     wire [1023:0]   result;
     wire            done;
 
@@ -68,6 +69,7 @@ module tb_exponentiation();
         in_m    <= 1023'h0;
         in_e    <= 1023'h0;
         in_t    <= 9'h0;
+	result_ok <= 0;
     end
 
     // Reset the circuit
@@ -76,21 +78,6 @@ module tb_exponentiation();
         #`RESET_TIME
         resetn = 1;
     end
-
-    task perform_rsa;
-//        input [1026:0] a;
-//        input [1026:0] b;
-//        begin
-//            in_a <= a;
-//            in_b <= b;
-//            start <= 1'd1;
-//            subtract <= 1'd0;
-//            #`CLK_PERIOD;
-//            start <= 1'd0;
-//            wait (done==1);
-//            #`CLK_PERIOD;
-//        end
-    endtask
     
 //    wire [1023:0] reverse_e;
 //    reg [1023:0] temp_e;
@@ -117,14 +104,11 @@ module tb_exponentiation();
         #`CLK_PERIOD
         start <= 0;
         wait(done==1);
-//        Dec exp      =  0x5a8ccf6f10984531baa72121e107032127601cfaf30008a7e1efcea315dfd3406db0819a755247122b8d18955574fdcf7d2850fdbf18c51653babb8ffad13f8eb0261ff039bfec365221520ae7d4a44f7595f951e4b8da7b8811685e651ef80b1108bb0efc6651b038e63f9168591f870383a7fd74fc43458e37691413acc649L
-//        Plaintext    =  0xa3935ce177636f9ee4e64e8f247296b391dbeba9e29b81ba16396f5d83ea4414bc97ffdc39026a2371538811c3df998b5fed827baa5a032d723676eedb5dd43cf46405c28e6681c3229f74542040a7a025a4de17ca9980ea569fb01e3c4384f23ba7ca66aa85c7720d86e96905133c761fffb07f08e1b39e8649697d7a884221L
-        
-//        --- Execute RSA in HW (slow)
-//        Ciphertext   =  0x7b372b2b2b599c3521461a30464cba185022509950503acf41b533fd6a1762169561898acf750117c64a34a9636230792c33177d869e92069faf74ab35a49dead93a31a0dfa9686d24b05a1ae168dd21cf7ba14811f11e9d4552f3b697c3bb6becc40123c407e1a8fc0881b500df15472e8418d5e21eef405c80a5691e0fc16dL
-//        Plaintext    =  0xa3935ce177636f9ee4e64e8f247296b391dbeba9e29b81ba16396f5d83ea4414bc97ffdc39026a2371538811c3df998b5fed827baa5a032d723676eedb5dd43cf46405c28e6681c3229f74542040a7a025a4de17ca9980ea569fb01e3c4384f23ba7ca66aa85c7720d86e96905133c761fffb07f08e1b39e8649697d7a884221L
-
+	result_ok <= (result == expected);
+	#`CLK_PERIOD
+	#`CLK_PERIOD
+	#`CLK_PERIOD
+	#`CLK_PERIOD
+	$finish;
     end
-    
-    
 endmodule
