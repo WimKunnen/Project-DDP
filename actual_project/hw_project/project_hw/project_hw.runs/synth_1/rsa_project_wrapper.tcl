@@ -4,7 +4,6 @@
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -ruleid {1}  -id {Synth 8-327}  -new_severity {ERROR} 
 set_msg_config  -ruleid {10}  -id {IP_Flow 19-2207}  -new_severity {INFO} 
 set_msg_config  -ruleid {11}  -id {Vivado 12-3482}  -new_severity {INFO} 
@@ -69,7 +68,7 @@ set_property used_in_implementation false [get_files /users/start2017/r0634161/G
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 
-synth_design -top rsa_project_wrapper -part xc7z010clg400-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+synth_design -top rsa_project_wrapper -part xc7z010clg400-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
 
 
 write_checkpoint -force -noxdef rsa_project_wrapper.dcp

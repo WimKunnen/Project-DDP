@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Nov 28 13:45:07 2018
-# Process ID: 9346
+# Start of session at: Wed Nov 28 17:20:15 2018
+# Process ID: 15393
 # Current directory: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project
 # Command line: vivado project_hw/project_hw.xpr -tempDir /tmp
 # Log file: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/vivado.log
@@ -12,79 +12,10 @@
 start_gui
 open_project project_hw/project_hw.xpr
 update_compile_order -fileset sources_1
-launch_simulation
-source tb_exponentiation.tcl
-run 1000 us
-run 200 us
-close_sim
-launch_simulation
-source tb_exponentiation.tcl
-run 100000 us
-relaunch_sim
-run 100000 us
-relaunch_sim
-run 100000 us
-relaunch_sim
-run 100000 us
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top tb_rsa_wrapper [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sim_1
-launch_simulation
-source tb_rsa_wrapper.tcl
-relaunch_sim
-close_sim
-launch_simulation
-source tb_rsa_wrapper.tcl
-relaunch_sim
-close_sim
-launch_simulation
-launch_simulation
-launch_simulation
-source tb_rsa_wrapper.tcl
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-run 100000 us
-relaunch_sim
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top rsa_project_wrapper [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-set_property strategy Flow_AreaOptimized_high [get_runs synth_1]
-set_property strategy Performance_ExtraTimingOpt [get_runs impl_1]
+set_property strategy Performance_ExplorePostRoutePhysOpt [get_runs impl_1]
+set_property strategy Flow_PerfOptimized_high [get_runs synth_1]
 reset_run synth_1
-update_module_reference rsa_project_rsa_wrapper_0_0
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-reset_run synth_1
-update_module_reference rsa_project_rsa_wrapper_0_0
 launch_runs impl_1 -jobs 2
 wait_on_run impl_1
 open_run impl_1
-set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
 report_utilization -name utilization_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-close_design
-open_run impl_1
-close_sim
-close_sim

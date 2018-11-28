@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1543419826">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1543422116">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="rsa_project_wrapper.vdi"/>
   <File Type="BG-DRC" Name="rsa_project_wrapper.drc"/>
@@ -138,23 +138,28 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Performance_ExtraTimingOpt" Flow="Vivado Implementation 2016">
-      <Desc>Includes alternate algorithms for timing-driven optimization</Desc>
+    <StratHandle Name="Performance_ExplorePostRoutePhysOpt" Flow="Vivado Implementation 2016">
+      <Desc>Similar to Peformance_Explore, but enables the physical optimization step (phys_opt_design) with the Explore directive after routing.</Desc>
     </StratHandle>
     <Step Id="init_design"/>
-    <Step Id="opt_design"/>
+    <Step Id="opt_design">
+      <Option Id="Directive">0</Option>
+    </Step>
     <Step Id="power_opt_design"/>
     <Step Id="place_design">
-      <Option Id="Directive">8</Option>
+      <Option Id="Directive">0</Option>
     </Step>
     <Step Id="post_place_power_opt_design"/>
     <Step Id="phys_opt_design" EnableStepBool="1">
       <Option Id="Directive">0</Option>
     </Step>
     <Step Id="route_design">
+      <Option Id="MoreOptsStr"><![CDATA[-tns_cleanup]]></Option>
       <Option Id="Directive">0</Option>
     </Step>
-    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="post_route_phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">0</Option>
+    </Step>
     <Step Id="write_bitstream"/>
   </Strategy>
 </GenRun>

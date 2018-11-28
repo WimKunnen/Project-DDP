@@ -44,7 +44,6 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -ruleid {1}  -id {Synth 8-327}  -new_severity {ERROR} 
 set_msg_config  -ruleid {10}  -id {IP_Flow 19-2207}  -new_severity {INFO} 
 set_msg_config  -ruleid {11}  -id {Vivado 12-3482}  -new_severity {INFO} 
@@ -103,7 +102,7 @@ if {$rc} {
 start_step opt_design
 set rc [catch {
   create_msg_db opt_design.pb
-  opt_design 
+  opt_design -directive Explore
   write_checkpoint -force rsa_project_wrapper_opt.dcp
   report_drc -file rsa_project_wrapper_drc_opted.rpt
   close_msg_db -file opt_design.pb
@@ -119,7 +118,7 @@ start_step place_design
 set rc [catch {
   create_msg_db place_design.pb
   implement_debug_core 
-  place_design -directive ExtraTimingOpt
+  place_design -directive Explore
   write_checkpoint -force rsa_project_wrapper_placed.dcp
   report_io -file rsa_project_wrapper_io_placed.rpt
   report_utilization -file rsa_project_wrapper_utilization_placed.rpt -pb rsa_project_wrapper_utilization_placed.pb
@@ -147,13 +146,14 @@ if {$rc} {
   end_step phys_opt_design
 }
 
+  set_msg_config -source 4 -id {Route 35-39} -severity "critical warning" -new_severity warning
 start_step route_design
 set rc [catch {
   create_msg_db route_design.pb
-  route_design -directive Explore
+  route_design -directive Explore -tns_cleanup
   write_checkpoint -force rsa_project_wrapper_routed.dcp
   report_drc -file rsa_project_wrapper_drc_routed.rpt -pb rsa_project_wrapper_drc_routed.pb
-  report_timing_summary -warn_on_violation -max_paths 10 -file rsa_project_wrapper_timing_summary_routed.rpt -rpx rsa_project_wrapper_timing_summary_routed.rpx
+  report_timing_summary -max_paths 10 -file rsa_project_wrapper_timing_summary_routed.rpt -rpx rsa_project_wrapper_timing_summary_routed.rpx
   report_power -file rsa_project_wrapper_power_routed.rpt -pb rsa_project_wrapper_power_summary_routed.pb -rpx rsa_project_wrapper_power_routed.rpx
   report_route_status -file rsa_project_wrapper_route_status.rpt -pb rsa_project_wrapper_route_status.pb
   report_clock_utilization -file rsa_project_wrapper_clock_utilization_routed.rpt
@@ -164,5 +164,20 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+}
+
+start_step post_route_phys_opt_design
+set rc [catch {
+  create_msg_db post_route_phys_opt_design.pb
+  phys_opt_design -directive Explore
+  write_checkpoint -force rsa_project_wrapper_postroute_physopt.dcp
+  report_timing_summary -warn_on_violation -max_paths 10 -file rsa_project_wrapper_timing_summary_postroute_physopted.rpt -rpx rsa_project_wrapper_timing_summary_postroute_physopted.rpx
+  close_msg_db -file post_route_phys_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed post_route_phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step post_route_phys_opt_design
 }
 

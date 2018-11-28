@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Nov 28 16:43:37 2018
+| Date         : Wed Nov 28 17:25:19 2018
 | Host         : pc-klas2-10.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
 | Command      : report_utilization -file rsa_project_wrapper_utilization_synth.rpt -pb rsa_project_wrapper_utilization_synth.pb
 | Design       : rsa_project_wrapper
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 17242 |     0 |     17600 | 97.97 |
-|   LUT as Logic             | 16969 |     0 |     17600 | 96.41 |
-|   LUT as Memory            |   273 |     0 |      6000 |  4.55 |
+| Slice LUTs*                | 14966 |     0 |     17600 | 85.03 |
+|   LUT as Logic             | 14847 |     0 |     17600 | 84.36 |
+|   LUT as Memory            |   119 |     0 |      6000 |  1.98 |
 |     LUT as Distributed RAM |    10 |     0 |           |       |
-|     LUT as Shift Register  |   263 |     0 |           |       |
-| Slice Registers            | 19644 |     0 |     35200 | 55.81 |
-|   Register as Flip Flop    | 19644 |     0 |     35200 | 55.81 |
+|     LUT as Shift Register  |   109 |     0 |           |       |
+| Slice Registers            | 20218 |     0 |     35200 | 57.44 |
+|   Register as Flip Flop    | 20218 |     0 |     35200 | 57.44 |
 |   Register as Latch        |     0 |     0 |     35200 |  0.00 |
-| F7 Muxes                   |   257 |     0 |      8800 |  2.92 |
+| F7 Muxes                   |   256 |     0 |      8800 |  2.91 |
 | F8 Muxes                   |     0 |     0 |      4400 |  0.00 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 45    |          Yes |           - |          Set |
 | 66    |          Yes |           - |        Reset |
-| 104   |          Yes |         Set |            - |
-| 19429 |          Yes |       Reset |            - |
+| 118   |          Yes |         Set |            - |
+| 19989 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,22 +148,22 @@ Table of Contents
 +----------+-------+----------------------+
 | Ref Name |  Used |  Functional Category |
 +----------+-------+----------------------+
-| FDRE     | 19429 |         Flop & Latch |
-| LUT3     |  8948 |                  LUT |
-| LUT5     |  5006 |                  LUT |
-| LUT6     |  4498 |                  LUT |
-| LUT2     |  1219 |                  LUT |
-| LUT4     |  1186 |                  LUT |
-| CARRY4   |   268 |           CarryLogic |
-| MUXF7    |   257 |                MuxFx |
-| LUT1     |   205 |                  LUT |
-| SRL16E   |   160 |   Distributed Memory |
+| FDRE     | 19989 |         Flop & Latch |
+| LUT3     |  4742 |                  LUT |
+| LUT5     |  3832 |                  LUT |
+| LUT6     |  3783 |                  LUT |
+| LUT4     |  1422 |                  LUT |
+| LUT2     |   910 |                  LUT |
+| CARRY4   |   264 |           CarryLogic |
+| MUXF7    |   256 |                MuxFx |
+| LUT1     |   174 |                  LUT |
 | BIBUF    |   130 |                   IO |
-| FDSE     |   104 |         Flop & Latch |
+| FDSE     |   118 |         Flop & Latch |
 | SRLC32E  |   103 |   Distributed Memory |
 | FDCE     |    66 |         Flop & Latch |
 | FDPE     |    45 |         Flop & Latch |
 | RAMD32   |    14 |   Distributed Memory |
+| SRL16E   |     6 |   Distributed Memory |
 | RAMS32   |     4 |   Distributed Memory |
 | OBUF     |     4 |                   IO |
 | PS7      |     1 | Specialized Resource |
