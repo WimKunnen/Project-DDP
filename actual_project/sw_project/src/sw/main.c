@@ -11,7 +11,8 @@ extern uint32_t N[32],		// modulus
                 d_len,		// decryption exponent length
                 M[32],		// message
                 R_1024[32],	// 2^1024 mod N
-                R2_1024[32];// (2^1024)^2 mod N
+                R2_1024[32],
+                result[32];// (2^1024)^2 mod N
 
 int main()
 {
@@ -30,9 +31,11 @@ STOP_TIMING
     init_HW_access();
 	xil_printf("It did not stuck and HW is initialized!\n\r");
 
+    //Encrypt
+    HW_accelerator(e, M, R_1024, R2_1024, N, result, e_len);
 
-    example_HW_accelerator();
-
+    //Decrypt
+    HW_accelerator(d, result, R_1024, R2_1024, N, result, d_len);
 
     xil_printf("End\n\r");
 

@@ -2,6 +2,7 @@
 #include "common.h"
 #include "platform/interface.h"
 
+#include "mp_arith.h"
 #include "hw_accelerator.h"
 
 // Note that these tree CMDs are same as
@@ -13,6 +14,49 @@
 void init_HW_access(void)
 {
 	interface_init();
+}
+
+void HW_accelerator(unint32_t* key, unint32_t* message, unint32_t* r,unint32_t* r2, unint32_t* modulus, uint32_t* result, uint32_t size) {
+	uint32_t x[32];
+	uint32_t e[32];
+	uint32_t r[32];
+	uint32_t r2[32];
+	uint32_t m[32] = modulus;
+  mod_add(message, 0, m, x, 32);
+	mod_add(key,0, m, e, 32);
+	mod_add(r,0, m, r, 32);
+	mod_add(r2,0, m, r2, 32);
+
+	send_cmd_to_hw(CMD_READ);
+	send_data_to_hw(x);
+	while(!is_done());
+
+	send_cmd_to_hw(CMD_READ);
+	send_data_to_hw(e);
+	while(!is_done());
+
+	send_cmd_to_hw(CMD_READ);
+	send_data_to_hw(r);
+	while(!is_done());
+
+	send_cmd_to_hw(CMD_READ);
+	send_data_to_hw(r2);
+	while(!is_done());
+
+	send_cmd_to_hw(CMD_READ);
+	send_data_to_hw(m);
+	while(!is_done());
+
+	send_cmd_to_hw(CMD_COMPUTE);
+	while(!is_done());
+
+	for(i=0; i<32; i++)
+		result[i] = 0;
+
+	send_cmd_to_hw(CMD_WRITE);
+	read_data_from_hw(result);
+	while(!is_done());
+
 }
 
 void example_HW_accelerator(void)

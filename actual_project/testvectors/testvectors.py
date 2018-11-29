@@ -72,19 +72,19 @@ if operation == 3:
   M = helpers.getModulus(1024)
   A = helpers.getRandomInt(1024) % M
   B = helpers.getRandomInt(1024) % M
-    
+
   C = SW.MontMul(A, B, M)
   # D = HW.MontMul(A, B, M)
   D = HW.MontMul_2bW(A, B, M)
-  
+
   e = (C - D)
-  
+
   print "A                = ", hex(A)           # 1024-bits
   print "B                = ", hex(B)           # 1024-bits
   print "M                = ", hex(M)           # 1024-bits
   print "(A*B*R^-1) mod M = ", hex(C)           # 1024-bits
   print "(A*B*R^-1) mod M = ", hex(D)           # 1024-bits
-  print "error            = ", hex(e)  
+  print "error            = ", hex(e)
 
 #####################################################
 
@@ -104,7 +104,7 @@ if operation == 4:
   print "M                = ", hex(M)           # 1024-bits
   print "(X^E) mod M      = ", hex(C)           # 1024-bits
   print "(X^E) mod M      = ", hex(D)           # 1024-bits
-  print "error            = ", hex(e)         
+  print "error            = ", hex(e)
 
 #####################################################
 
@@ -122,7 +122,7 @@ if operation == 5:
   print "Modulus      = ", hex(N)               # 1024-bits
 
   # Generate Exponents
-  [e,d] = helpers.getRandomExponents(p,q) 
+  [e,d] = helpers.getRandomExponents(p,q)
 
   print "Enc exp      = ", hex(e)               # 16-bits
   print "Dec exp      = ", hex(d)               # 1024-bits
@@ -137,11 +137,11 @@ if operation == 5:
   #####################################################
 
   print "\n--- Execute RSA (for verification)"
-  
+
   # Encrypt
   Ct = SW.MontExp(M, e, N)                      # 1024-bit exponentiation
   print "Ciphertext   = ", hex(Ct)              # 1024-bits
-  
+
   # Decrypt
   Pt = SW.MontExp(Ct, d, N)                     # 1024-bit exponentiation
   print "Plaintext    = ", hex(Pt)              # 1024-bits
@@ -158,6 +158,12 @@ if operation == 5:
   Pt = HW.MontExp(Ct, d, N)                     # 1024-bit exponentiation
   print "Plaintext    = ", hex(Pt)              # 1024-bits
 #####################################################
+  # Change bit order:
+  e = e[::-1]
+  d = d[::-1]
+  print "reversed e   = ", hex(e)
+  print "reversed d   = ", hex(d)
+
 
 if operation == 6:
 
@@ -166,16 +172,16 @@ if operation == 6:
   M = helpers.getModulus(1024)
   A = int(sys.argv[2]) % M
   B = int(sys.argv[3]) % M
-    
+
   C = SW.MontMul(A, B, M)
   # D = HW.MontMul(A, B, M)
   D = HW.MontMul_2bW(A, B, M)
-  
+
   e = (C - D)
-  
+
   print "A                = ", hex(A)           # 1024-bits
   print "B                = ", hex(B)           # 1024-bits
   print "M                = ", hex(M)           # 1024-bits
   print "(A*B*R^-1) mod M = ", hex(C)           # 1024-bits
   print "(A*B*R^-1) mod M = ", hex(D)           # 1024-bits
-  print "error            = ", hex(e)  
+  print "error            = ", hex(e)
