@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Wed Nov 28 17:27:55 2018
-| Host             : pc-klas2-10.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
+| Date             : Fri Nov 30 12:42:54 2018
+| Host             : pc-klas1-8.esat.kuleuven.be running 64-bit CentOS Linux release 7.5.1804 (Core)
 | Command          : report_power -file rsa_project_wrapper_power_routed.rpt -pb rsa_project_wrapper_power_summary_routed.pb -rpx rsa_project_wrapper_power_routed.rpx
 | Design           : rsa_project_wrapper
 | Device           : xc7z010clg400-1
@@ -49,16 +49,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.036 |        3 |       --- |             --- |
-| Slice Logic              |     0.004 |    35483 |       --- |             --- |
-|   LUT as Logic           |     0.004 |    14373 |     17600 |           81.66 |
-|   Register               |    <0.001 |    19972 |     35200 |           56.74 |
+| Clocks                   |     0.037 |        3 |       --- |             --- |
+| Slice Logic              |     0.004 |    35481 |       --- |             --- |
+|   LUT as Logic           |     0.004 |    14375 |     17600 |           81.68 |
+|   Register               |    <0.001 |    19970 |     35200 |           56.73 |
 |   CARRY4                 |    <0.001 |      264 |      4400 |            6.00 |
 |   F7/F8 Muxes            |    <0.001 |      256 |     17600 |            1.45 |
 |   LUT as Distributed RAM |    <0.001 |       10 |      6000 |            0.17 |
 |   LUT as Shift Register  |    <0.001 |      109 |      6000 |            1.82 |
 |   Others                 |     0.000 |      357 |       --- |             --- |
-| Signals                  |     0.009 |    28544 |       --- |             --- |
+| Signals                  |     0.009 |    28542 |       --- |             --- |
 | I/O                      |    <0.001 |        4 |       100 |            4.00 |
 | PS7                      |     1.373 |        1 |       --- |             --- |
 | Static Power             |     0.131 |          |           |                 |
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.056 |       0.049 |      0.007 |
+| Vccint    |       1.000 |     0.056 |       0.050 |      0.007 |
 | Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,7 +150,7 @@ Table of Contents
 +------------------------------------------------------------------------+-----------+
 | rsa_project_wrapper                                                    |     1.423 |
 |   rsa_project_i                                                        |     1.423 |
-|     Interface_Cell                                                     |     0.018 |
+|     Interface_Cell                                                     |     0.019 |
 |       ARCACHE                                                          |     0.000 |
 |       ARUSER                                                           |     0.000 |
 |       axi_dma_0                                                        |     0.004 |

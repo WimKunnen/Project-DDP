@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1'
+HD_PWD='/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,7 +37,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log rsa_project_wrapper.vdi -applog -m64 -tempDir /tmp -messageDb vivado.pb -mode batch -source rsa_project_wrapper.tcl -notrace
 
 

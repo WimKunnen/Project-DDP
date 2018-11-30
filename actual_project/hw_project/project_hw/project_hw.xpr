@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="/users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/project_hw/project_hw.xpr">
+<Project Version="7" Minor="14" Path="/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="eeed9ebff2fa45a49b0fca7f71d3682a"/>
@@ -29,7 +29,7 @@
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/project_hw.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo"/>
-    <Option Name="WTXSimLaunchSim" Val="181"/>
+    <Option Name="WTXSimLaunchSim" Val="140"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -81,11 +81,9 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_pc_0/rsa_project_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hdl/rsa_project.v"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_rsa_wrapper_0_0/rsa_project_rsa_wrapper_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_processing_system7_0_0/rsa_project_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_xlconstant_0_0/rsa_project_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_processing_system7_0_0/rsa_project_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_rsa_wrapper_0_0/rsa_project_rsa_wrapper_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_rst_processing_system7_0_100M_0/rsa_project_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_command_interface_0_0/rsa_project_command_interface_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_axis_dwidth_converter_1_0/rsa_project_axis_dwidth_converter_1_0.xci"/>
@@ -97,13 +95,15 @@
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_axi_dma_0_0/rsa_project_axi_dma_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_ARUSER_0/rsa_project_ARUSER_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_ARCACHE_0/rsa_project_ARCACHE_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_us_0/rsa_project_auto_us_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_pc_1/rsa_project_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_pc_0/rsa_project_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_us_1/rsa_project_auto_us_1.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hdl/rsa_project.hwdef"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hw_handoff/rsa_project_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hw_handoff/rsa_project.hwh"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="rsa_project_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_us_1/rsa_project_auto_us_1.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_us_0/rsa_project_auto_us_0.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_pc_1/rsa_project_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hdl/rsa_project.v"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/rsa_project_wrapper.v">
         <FileInfo>
@@ -238,30 +238,25 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Similar to Peformance_Explore, but enables the physical optimization step (phys_opt_design) with the Explore directive after routing." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="To compensate for optimistic delay estimation, add extra delay cost to long distance and high fanout connections. (high setting, most pessimistic)" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Performance_ExplorePostRoutePhysOpt" Flow="Vivado Implementation 2016">
-          <Desc>Similar to Peformance_Explore, but enables the physical optimization step (phys_opt_design) with the Explore directive after routing.</Desc>
+        <StratHandle Name="Performance_NetDelay_high" Flow="Vivado Implementation 2016">
+          <Desc>To compensate for optimistic delay estimation, add extra delay cost to long distance and high fanout connections. (high setting, most pessimistic)</Desc>
         </StratHandle>
         <Step Id="init_design"/>
-        <Step Id="opt_design">
-          <Option Id="Directive">0</Option>
-        </Step>
+        <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
         <Step Id="place_design">
-          <Option Id="Directive">0</Option>
+          <Option Id="Directive">2</Option>
         </Step>
         <Step Id="post_place_power_opt_design"/>
         <Step Id="phys_opt_design" EnableStepBool="1">
-          <Option Id="Directive">0</Option>
+          <Option Id="Directive">2</Option>
         </Step>
         <Step Id="route_design">
           <Option Id="Directive">0</Option>
-          <Option Id="MoreOptsStr"><![CDATA[-tns_cleanup]]></Option>
         </Step>
-        <Step Id="post_route_phys_opt_design" EnableStepBool="1">
-          <Option Id="Directive">0</Option>
-        </Step>
+        <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
