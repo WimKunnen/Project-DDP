@@ -9,16 +9,22 @@ LD_SRCS += \
 C_SRCS += \
 ../src/hw_accelerator.c \
 ../src/main.c \
+../src/mp_arith.c \
+../src/print_arr.c \
 ../src/testvector.c 
 
 OBJS += \
 ./src/hw_accelerator.o \
 ./src/main.o \
+./src/mp_arith.o \
+./src/print_arr.o \
 ./src/testvector.o 
 
 C_DEPS += \
 ./src/hw_accelerator.d \
 ./src/main.d \
+./src/mp_arith.d \
+./src/print_arr.d \
 ./src/testvector.d 
 
 

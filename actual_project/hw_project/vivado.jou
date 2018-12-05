@@ -2,20 +2,42 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Nov 28 17:20:15 2018
-# Process ID: 15393
-# Current directory: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project
+# Start of session at: Wed Dec  5 20:02:51 2018
+# Process ID: 7644
+# Current directory: /users/start2016/r0629332/Project-DDP/actual_project/hw_project
 # Command line: vivado project_hw/project_hw.xpr -tempDir /tmp
-# Log file: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/vivado.log
-# Journal file: /users/start2017/r0634161/Git/Project-DDP/actual_project/hw_project/vivado.jou
+# Log file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.log
+# Journal file: /users/start2016/r0629332/Project-DDP/actual_project/hw_project/vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project project_hw/project_hw.xpr
 update_compile_order -fileset sources_1
-set_property strategy Performance_ExplorePostRoutePhysOpt [get_runs impl_1]
-set_property strategy Flow_PerfOptimized_high [get_runs synth_1]
+file mkdir /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sdk
+file copy -force /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.runs/impl_1/rsa_project_wrapper.sysdef /users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.sdk/rsa_project_wrapper.hdf
+
+update_module_reference rsa_project_rsa_wrapper_0_0
 reset_run synth_1
-launch_runs impl_1 -jobs 2
+launch_runs impl_1
 wait_on_run impl_1
 open_run impl_1
-report_utilization -name utilization_1
+reset_run synth_1
+update_module_reference rsa_project_rsa_wrapper_0_0
+launch_runs impl_1
+wait_on_run impl_1
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+launch_simulation
+source tb_exponentiation.tcl
+run 100000 us
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_rsa_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_rsa_wrapper.tcl
+run 100000 us
+close_sim
+close_sim

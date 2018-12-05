@@ -1,0 +1,8 @@
+#ifndef _HW_ACCEL_H_
+#define _HW_ACCEL_H_
+
+void init_HW_access(void);
+void example_HW_accelerator(void);
+void HW_accelerator(uint32_t* key, uint32_t* message, uint32_t* r,uint32_t* r2, uint32_t* modulus, uint32_t* result, uint32_t size);
+uint32_t calc_length(uint32_t *exp);
+#endif

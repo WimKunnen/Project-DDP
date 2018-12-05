@@ -6,7 +6,7 @@
 <Project Version="7" Minor="14" Path="/users/start2016/r0629332/Project-DDP/actual_project/hw_project/project_hw/project_hw.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="eeed9ebff2fa45a49b0fca7f71d3682a"/>
+    <Option Name="Id" Val="c7256dacc86943a6ab0a53aabde068ac"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -29,7 +29,7 @@
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/project_hw.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo"/>
-    <Option Name="WTXSimLaunchSim" Val="140"/>
+    <Option Name="WTXSimLaunchSim" Val="25"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -81,9 +81,10 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_xlconstant_0_0/rsa_project_xlconstant_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_processing_system7_0_0/rsa_project_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hdl/rsa_project.v"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_rsa_wrapper_0_0/rsa_project_rsa_wrapper_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_processing_system7_0_0/rsa_project_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_xlconstant_0_0/rsa_project_xlconstant_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_rst_processing_system7_0_100M_0/rsa_project_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_command_interface_0_0/rsa_project_command_interface_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_axis_dwidth_converter_1_0/rsa_project_axis_dwidth_converter_1_0.xci"/>
@@ -95,26 +96,25 @@
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_axi_dma_0_0/rsa_project_axi_dma_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_ARUSER_0/rsa_project_ARUSER_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_ARCACHE_0/rsa_project_ARCACHE_0.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_us_0/rsa_project_auto_us_0.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_pc_1/rsa_project_auto_pc_1.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_pc_0/rsa_project_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_us_1/rsa_project_auto_us_1.xci"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hdl/rsa_project.hwdef"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hw_handoff/rsa_project_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hw_handoff/rsa_project.hwh"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_us_0/rsa_project_auto_us_0.xci"/>
         <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="rsa_project_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hdl/rsa_project.v"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_pc_0/rsa_project_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hw_handoff/rsa_project.hwh"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hw_handoff/rsa_project_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="hdl/rsa_project.hwdef"/>
+        <CompFileExtendedInfo CompFileName="rsa_project.bd" FileRelPathName="ip/rsa_project_auto_pc_1/rsa_project_auto_pc_1.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/rsa_project_wrapper.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v"/>
-          <Attr Name="ImportTime" Val="1542201362"/>
+          <Attr Name="ImportTime" Val="1544023662"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../src/rtl/hweval_montgomery.v">
+      <File Path="$PPRDIR/../src/rtl/hweval_adder.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -122,7 +122,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../src/rtl/hweval_adder.v">
+      <File Path="$PPRDIR/../src/rtl/hweval_montgomery.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -196,7 +196,6 @@
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="xsim.simulate.runtime" Val="1100000ns"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -222,40 +221,23 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2016">
-          <Desc>Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold</Desc>
-        </StratHandle>
-        <Step Id="synth_design">
-          <Option Id="RepFanoutThreshold">400</Option>
-          <Option Id="ResourceSharing">2</Option>
-          <Option Id="FsmExtraction">1</Option>
-          <Option Id="NoCombineLuts">1</Option>
-          <Option Id="ShregMinSize">5</Option>
-          <Option Id="KeepEquivalentRegisters">1</Option>
-        </Step>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="To compensate for optimistic delay estimation, add extra delay cost to long distance and high fanout connections. (high setting, most pessimistic)" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Performance_NetDelay_high" Flow="Vivado Implementation 2016">
-          <Desc>To compensate for optimistic delay estimation, add extra delay cost to long distance and high fanout connections. (high setting, most pessimistic)</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
-        <Step Id="place_design">
-          <Option Id="Directive">2</Option>
-        </Step>
+        <Step Id="place_design"/>
         <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1">
-          <Option Id="Directive">2</Option>
-        </Step>
-        <Step Id="route_design">
-          <Option Id="Directive">0</Option>
-        </Step>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>

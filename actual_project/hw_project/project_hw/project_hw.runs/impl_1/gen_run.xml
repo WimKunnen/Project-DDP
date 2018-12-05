@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1543577981">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1544037916">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="rsa_project_wrapper.vdi"/>
   <File Type="BG-DRC" Name="rsa_project_wrapper.drc"/>
@@ -97,13 +97,13 @@
     <File Path="$PSRCDIR/sources_1/imports/hdl/rsa_project_wrapper.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/rsa_project/hdl/rsa_project_wrapper.v"/>
-        <Attr Name="ImportTime" Val="1542201362"/>
+        <Attr Name="ImportTime" Val="1544023662"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/rtl/hweval_montgomery.v">
+    <File Path="$PPRDIR/../src/rtl/hweval_adder.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -111,7 +111,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/rtl/hweval_adder.v">
+    <File Path="$PPRDIR/../src/rtl/hweval_montgomery.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -138,22 +138,14 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Performance_NetDelay_high" Flow="Vivado Implementation 2016">
-      <Desc>To compensate for optimistic delay estimation, add extra delay cost to long distance and high fanout connections. (high setting, most pessimistic)</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
-    <Step Id="place_design">
-      <Option Id="Directive">2</Option>
-    </Step>
+    <Step Id="place_design"/>
     <Step Id="post_place_power_opt_design"/>
-    <Step Id="phys_opt_design" EnableStepBool="1">
-      <Option Id="Directive">2</Option>
-    </Step>
-    <Step Id="route_design">
-      <Option Id="Directive">0</Option>
-    </Step>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>

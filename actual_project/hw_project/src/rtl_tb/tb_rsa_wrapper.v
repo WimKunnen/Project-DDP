@@ -141,81 +141,99 @@ module tb_rsa_wrapper();
     end
     endtask
 
-    localparam CMD_COMPUTE          = 32'h0;
-    localparam CMD_WRITE            = 32'h2;
-    localparam CMD_READ_X           = 32'h1;
-    localparam CMD_READ_E           = 32'h3;
-    localparam CMD_READ_R           = 32'h5;
-    localparam CMD_READ_R2          = 32'h7;
-    localparam CMD_READ_M           = 32'h9;   
+    localparam CMD_COMPUTE          = 32'd0;
+    localparam CMD_READ_X           = 32'd1;
+    localparam CMD_READ_E           = 32'd3;
+    localparam CMD_READ_R           = 32'd5;
+    localparam CMD_READ_R2          = 32'd7;
+    localparam CMD_READ_M           = 32'd9;   
+    localparam CMD_WRITE_RESULT     = 32'd2;
+    localparam CMD_WRITE_X          = 32'd4;
+    localparam CMD_WRITE_E          = 32'd6;
+    localparam CMD_WRITE_M          = 32'd8;
+    localparam CMD_WRITE_R          = 32'd10;
+    localparam CMD_WRITE_R2         = 32'd12;
     
+
     initial begin
 
         #`RESET_TIME
         result_ok <= 0;
-        
-        // Your task: 
-        // Design a testbench to test your accelerator using the tasks defined above: send_cmd_to_hw, send_data_to_hw, read_data_from_hw, waitdone
-        
-        input_data  <= 1024'h00000000000000000123456789abcdef00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
-        output_data <= 1024'b0;
-        
-        #`CLK_PERIOD;
 
-        ///////////////////// START EXAMPLE  /////////////////////
-        
-        //// --- Send the read command and transfer input data to FPGA
+        // RSA
+        // Seed 2018.1 test        
+          
+//        --- Precomputed Values
+//        p            =  0xfd80487fb832db6ec4253c85e79446d81458ed4c19961031bc190db8060d4dca1ff8a52d795ebcd0770e0cf9ba4e0dc8e751a7a152557a0b5968c2ccee895953L
+//        q            =  0xfcc62312fbd14327a70d448b8bcdb0183b94a6c368424b39a9316f922150325c2c950fba496dda7767555b95e82d0d9516eef83ccd36e8054c80abf745ac0623L
+//        Modulus      =  0xfa4e7b51226515d0e92378ffe256d9eae5cacff8c27aaff54a4610610a7d0913304b50b9f696a1efa4623e5f7bad7b390e555ba7d273160c97d5b36df4fbf212c51b32a4d1246ef5db42cbd7dba82236dc21b5d2467bcd097411d85c2dcd7091da854ec1e2994493b226ee57f0cd6ead98995d533ce41b69fe8e590c37a32859L
+//        Enc exp      =  0xdb6b
+//        Dec exp      =  0x5dafa8338cfd5e5c95bc1b8cf179c8c635e9f805dbb16d5782c6cc76d935467388465fb01df29f5123e1a1429b221e44ffdd2744bbcd5abae08e1cf99dac542a9e1b62182e288f95297971a79f243b05123ea753c7170d144bfd981365f0dd50a891a66781f93b8683063c6b1c78b4a1cc4a07fd7e58ca7d41b489001af386c3L
+//        Message      =  0xa4260ac649fc1f3c7799f4d803919d69de4f85cb2bbb7d355c1fd7c0c8f784c5cea64825c5b553502364fad4664037598de4da1147015c5e408dd53d633651148eace4141fa295a9c03a30ce9e1f2eb390f402a3a5a1dc715ca3c278a5830b3fdbc652d08c0113fcc373961fdfccfd8cc2b088992c465cc246d2a369db13e82cL
+//        R            =  0x5b184aedd9aea2f16dc87001da926151a3530073d85500ab5b9ef9ef582f6eccfb4af4609695e105b9dc1a0845284c6f1aaa4582d8ce9f3682a4c920b040ded3ae4cd5b2edb910a24bd34282457ddc923de4a2db98432f68bee27a3d2328f6e257ab13e1d66bb6c4dd911a80f3291526766a2acc31be4960171a6f3c85cd7a7L
+//        R2           =  610654ea1affa796d4ee25da281a5ac770223f748d061be89e519b814750ab9395df9c72b1e8ae65d87e5a1f004d38b3198b924b334d470258b2ed62d86e6604cc6592bc6327ce8d59838d3d206e951162324c23754e28734455a80676dfc526b18ad7cfa37c5c82a01a46423e0e4800013d01e02c54bec3e7b54a3e4af2cd17L
 
-        $display("Test for input %h", input_data);
+//        --- Execute RSA (for verification)
+//        Ciphertext   =  0x1c1f19b8a6bef4e86bf8574df7b576cfc8d2f79010eae22f0e4a6c11fa34def6dcc19b0204f3cfb17f8735d364aa2aec61b3d0015d5a17f6eb6008daf85af4c184eea3de7e0d87e2447a540cada80aca352c7cfac809b7257aa646005f1f3611846dc881c9e0bee49ce09f59fba086a60a86e8e183bd1d82bdafaea75d183991L
+//        Plaintext    =  0xa4260ac649fc1f3c7799f4d803919d69de4f85cb2bbb7d355c1fd7c0c8f784c5cea64825c5b553502364fad4664037598de4da1147015c5e408dd53d633651148eace4141fa295a9c03a30ce9e1f2eb390f402a3a5a1dc715ca3c278a5830b3fdbc652d08c0113fcc373961fdfccfd8cc2b088992c465cc246d2a369db13e82cL
+        
+//        --- Execute RSA in HW (slow)
+//        Ciphertext   =  0x1c1f19b8a6bef4e86bf8574df7b576cfc8d2f79010eae22f0e4a6c11fa34def6dcc19b0204f3cfb17f8735d364aa2aec61b3d0015d5a17f6eb6008daf85af4c184eea3de7e0d87e2447a540cada80aca352c7cfac809b7257aa646005f1f3611846dc881c9e0bee49ce09f59fba086a60a86e8e183bd1d82bdafaea75d183991L
+//        Plaintext    =  0xa4260ac649fc1f3c7799f4d803919d69de4f85cb2bbb7d355c1fd7c0c8f784c5cea64825c5b553502364fad4664037598de4da1147015c5e408dd53d633651148eace4141fa295a9c03a30ce9e1f2eb390f402a3a5a1dc715ca3c278a5830b3fdbc652d08c0113fcc373961fdfccfd8cc2b088992c465cc246d2a369db13e82cL
+
+        $display("Test for seed 2018.1");
                 
-        $display("Sending read x, e command");
-        input_data <= 1024'ha3935ce177636f9ee4e64e8f247296b391dbeba9e29b81ba16396f5d83ea4414bc97ffdc39026a2371538811c3df998b5fed827baa5a032d723676eedb5dd43cf46405c28e6681c3229f74542040a7a025a4de17ca9980ea569fb01e3c4384f23ba7ca66aa85c7720d86e96905133c761fffb07f08e1b39e8649697d7a884221;
+        // Message = 0xa4260ac649fc1f3c7799f4d803919d69de4f85cb2bbb7d355c1fd7c0c8f784c5cea64825c5b553502364fad4664037598de4da1147015c5e408dd53d633651148eace4141fa295a9c03a30ce9e1f2eb390f402a3a5a1dc715ca3c278a5830b3fdbc652d08c0113fcc373961fdfccfd8cc2b088992c465cc246d2a369db13e82cL
+        input_data <= 1024'ha4260ac649fc1f3c7799f4d803919d69de4f85cb2bbb7d355c1fd7c0c8f784c5cea64825c5b553502364fad4664037598de4da1147015c5e408dd53d633651148eace4141fa295a9c03a30ce9e1f2eb390f402a3a5a1dc715ca3c278a5830b3fdbc652d08c0113fcc373961fdfccfd8cc2b088992c465cc246d2a369db13e82c;
         send_cmd_to_hw(CMD_READ_X);
         send_data_to_hw(input_data);
         waitdone();
-        input_data <= 1024'h904f;
+        
+        // Enc exp = 0xdb6b
+        // Note: we mirrored the bits first
+        input_data <= 1024'hd6db;
         send_cmd_to_hw(CMD_READ_E);
         send_data_to_hw(input_data);
         waitdone();
         
-        $display("Sending read m, r, r2 command");
-        input_data <= 1024'hd6caa56f9ac67cf3932698b1c068d9252fe3483e00e33f3bb0a6b6faf9f25cfb23749d2ac5da383b7a454d3580621814a05504fed95e18c6af8fcad44080e42a3c2d4832e0548ca5f48b44d5fec2f34a5e135748e8312392c45f644048a79a66c64333caa6cf0cf313c461e4e017ed1640cfde4e6076f0440a3a596e8c9d096b;
+        // Modulus = 0xfa4e7b51226515d0e92378ffe256d9eae5cacff8c27aaff54a4610610a7d0913304b50b9f696a1efa4623e5f7bad7b390e555ba7d273160c97d5b36df4fbf212c51b32a4d1246ef5db42cbd7dba82236dc21b5d2467bcd097411d85c2dcd7091da854ec1e2994493b226ee57f0cd6ead98995d533ce41b69fe8e590c37a32859L
+        input_data <= 1024'hfa4e7b51226515d0e92378ffe256d9eae5cacff8c27aaff54a4610610a7d0913304b50b9f696a1efa4623e5f7bad7b390e555ba7d273160c97d5b36df4fbf212c51b32a4d1246ef5db42cbd7dba82236dc21b5d2467bcd097411d85c2dcd7091da854ec1e2994493b226ee57f0cd6ead98995d533ce41b69fe8e590c37a32859;
         send_cmd_to_hw(CMD_READ_M);
         send_data_to_hw(input_data);
         waitdone();
-        input_data <= 1024'h29355a906539830c6cd9674e3f9726dad01cb7c1ff1cc0c44f594905060da304dc8b62d53a25c7c485bab2ca7f9de7eb5faafb0126a1e7395070352bbf7f1bd5c3d2b7cd1fab735a0b74bb2a013d0cb5a1eca8b717cedc6d3ba09bbfb758659939bccc355930f30cec3b9e1b1fe812e9bf3021b19f890fbbf5c5a6917362f695;
+        
+        // R
+        input_data <= 1024'h5b184aedd9aea2f16dc87001da926151a3530073d85500ab5b9ef9ef582f6eccfb4af4609695e105b9dc1a0845284c6f1aaa4582d8ce9f3682a4c920b040ded3ae4cd5b2edb910a24bd34282457ddc923de4a2db98432f68bee27a3d2328f6e257ab13e1d66bb6c4dd911a80f3291526766a2acc31be4960171a6f3c85cd7a7;
         send_cmd_to_hw(CMD_READ_R);
         send_data_to_hw(input_data);
         waitdone();
-        input_data <= 1024'hb243e11d7992baebf34d6b3b22cc7f79b9acc20c23ec8692a8c42e64d159463dc83e99b358878212e49ec9c2ef4f9c32bba05826df631a507a6121524d3d1914e1c771058a19b62773d9ea4e8dfaa74c5a36c8e0d696870f4f571f7ed5386a43fc50322897f5cb1ab4eda146b847decb284096240f456964447fe6d8e14a3049;
+        
+        // R2        
+        input_data <= 1024'h610654ea1affa796d4ee25da281a5ac770223f748d061be89e519b814750ab9395df9c72b1e8ae65d87e5a1f004d38b3198b924b334d470258b2ed62d86e6604cc6592bc6327ce8d59838d3d206e951162324c23754e28734455a80676dfc526b18ad7cfa37c5c82a01a46423e0e4800013d01e02c54bec3e7b54a3e4af2cd17;
         send_cmd_to_hw(CMD_READ_R2);
         send_data_to_hw(input_data);
         waitdone();
 
-        //// --- Perform the compute operation
-        expected <= 1024'h7b372b2b2b599c3521461a30464cba185022509950503acf41b533fd6a1762169561898acf750117c64a34a9636230792c33177d869e92069faf74ab35a49dead93a31a0dfa9686d24b05a1ae168dd21cf7ba14811f11e9d4552f3b697c3bb6becc40123c407e1a8fc0881b500df15472e8418d5e21eef405c80a5691e0fc16d;
+        // Compute
+        expected <= 1024'h1c1f19b8a6bef4e86bf8574df7b576cfc8d2f79010eae22f0e4a6c11fa34def6dcc19b0204f3cfb17f8735d364aa2aec61b3d0015d5a17f6eb6008daf85af4c184eea3de7e0d87e2447a540cada80aca352c7cfac809b7257aa646005f1f3611846dc881c9e0bee49ce09f59fba086a60a86e8e183bd1d82bdafaea75d183991;
 
-        $display("Sending compute command");
         compute_command(10'd16, compute_cmd);
         send_cmd_to_hw(compute_cmd);
         waitdone();
 
-	    //// --- Send write command and transfer output data from FPGA
-        
-        $display("Sending write command");
-        send_cmd_to_hw(CMD_WRITE);
+	    // Read result
+        send_cmd_to_hw(CMD_WRITE_RESULT);
         read_data_from_hw(output_data);
         waitdone();
         
         result_ok <= (expected == output_data);
-        #`CLK_PERIOD;
-        #`CLK_PERIOD;
-        #`CLK_PERIOD;
 
-        //// --- Print the array contents
-
+        //// Print the result.
         $display("Output is      %h", output_data);
-                  
+        
+        #`CLK_PERIOD;
+        #`CLK_PERIOD;
+               
         ///////////////////// END EXAMPLE  /////////////////////  
         
         $finish;

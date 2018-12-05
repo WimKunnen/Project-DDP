@@ -35,6 +35,7 @@ module rsa_wrapper
     reg [1023:0] m;
     reg [9:0] t;
     reg [1023:0] result;
+    reg [1023:0] out_data;
     
     exponentiation exp(
         .clk(clk),
@@ -55,24 +56,31 @@ module rsa_wrapper
     /// - State Machine Parameters
 
     localparam STATE_BITS           = 3;
-    localparam STATE_WAIT_FOR_CMD   = 3'h0;  
-    localparam STATE_READ_DATA      = 3'h1;
-    localparam STATE_COMPUTE        = 3'h2;
-    localparam STATE_WAIT_COMPUTE   = 3'h3;
-    localparam STATE_WRITE_DATA     = 3'h4;
-    localparam STATE_ASSERT_DONE    = 3'h5;
+    localparam STATE_WAIT_FOR_CMD   = 3'd0;  
+    localparam STATE_READ_DATA      = 3'd1;
+    localparam STATE_COMPUTE        = 3'd2;
+    localparam STATE_WAIT_COMPUTE   = 3'd3;
+    localparam STATE_WRITE_DATA     = 3'd4;
+    localparam STATE_ASSERT_DONE    = 3'd5;
     
 
     reg [STATE_BITS-1:0] r_state;
     reg [STATE_BITS-1:0] next_state;
     
-    localparam CMD_COMPUTE          = 32'h0;
-    localparam CMD_WRITE            = 32'h2;
-    localparam CMD_READ_X           = 32'h1;
-    localparam CMD_READ_E           = 32'h3;
-    localparam CMD_READ_R           = 32'h5;
-    localparam CMD_READ_R2          = 32'h7;
-    localparam CMD_READ_M           = 32'h9;   
+    localparam CMD_COMPUTE          = 32'd0;
+    localparam CMD_READ_X           = 32'd1;
+    localparam CMD_READ_E           = 32'd3;
+    localparam CMD_READ_R           = 32'd5;
+    localparam CMD_READ_R2          = 32'd7;
+    localparam CMD_READ_M           = 32'd9;
+    localparam CMD_WRITE_RESULT     = 32'd2;
+    localparam CMD_WRITE_X          = 32'd4;
+    localparam CMD_WRITE_E          = 32'd6;
+    localparam CMD_WRITE_M          = 32'd8;
+    localparam CMD_WRITE_R          = 32'd10;
+    localparam CMD_WRITE_R2         = 32'd12;
+    
+    assign fpga_to_arm_data = out_data;
 
     /// - State Transition
 
@@ -93,13 +101,23 @@ module rsa_wrapper
                                         next_state <= STATE_COMPUTE;
                                     22'd2: 
                                         next_state <= STATE_WRITE_DATA;
+                                    22'd4:
+                                        next_state <= STATE_WRITE_DATA;
+                                    22'd6:
+                                        next_state <= STATE_WRITE_DATA;
+                                    22'd8:
+                                        next_state <= STATE_WRITE_DATA;
+                                    22'd10:
+                                        next_state <= STATE_WRITE_DATA;
+                                    22'd12:
+                                        next_state <= STATE_WRITE_DATA;
                                     default:
                                         next_state <= STATE_WAIT_FOR_CMD;
                                 endcase                      
                                 1'b1:
                                     next_state <= STATE_READ_DATA;
                                 default:
-                                    next_state <= r_state;
+                                    next_state <= r_state;    
                             endcase;
                         end else
                             next_state <= r_state;
@@ -125,7 +143,6 @@ module rsa_wrapper
 
                 default:
                     next_state <= STATE_WAIT_FOR_CMD;
-
             endcase
         end
     end
@@ -176,6 +193,25 @@ module rsa_wrapper
                         result <= exp_result;
                 end
                 
+                STATE_WRITE_DATA: begin
+                    case(arm_to_fpga_cmd)
+                        CMD_WRITE_RESULT:
+                            out_data <= result;
+//                        CMD_WRITE_X:
+//                            out_data <= x;
+//                        CMD_WRITE_E:
+//                            out_data <= e;
+//                        CMD_WRITE_M:
+//                            out_data <= m;
+//                        CMD_WRITE_R:
+//                            out_data <= r;
+//                        CMD_WRITE_R2:
+//                            out_data <= r2;
+                        default:
+                            out_data <= result;
+                    endcase
+                end
+                
                 default: begin
                     x <= x;
                     e <= e;
@@ -187,8 +223,6 @@ module rsa_wrapper
                 
             endcase;
         end
-    
-    assign fpga_to_arm_data       = result;
 
     ////////////// - Valid signals for notifying that the computation is done
 

@@ -158,12 +158,6 @@ if operation == 5:
   Pt = HW.MontExp(Ct, d, N)                     # 1024-bit exponentiation
   print "Plaintext    = ", hex(Pt)              # 1024-bits
 #####################################################
-  # Change bit order:
-  e = e[::-1]
-  d = d[::-1]
-  print "reversed e   = ", hex(e)
-  print "reversed d   = ", hex(d)
-
 
 if operation == 6:
 
