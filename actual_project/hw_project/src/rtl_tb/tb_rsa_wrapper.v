@@ -74,6 +74,7 @@ module tb_rsa_wrapper();
         arm_to_fpga_data_valid  = 0;
         arm_to_fpga_data        = 0;
         fpga_to_arm_data_ready  = 0;
+        compute_cmd             = 0;
     end
 
     task send_cmd_to_hw;

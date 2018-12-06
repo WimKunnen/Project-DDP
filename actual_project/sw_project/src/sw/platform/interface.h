@@ -14,8 +14,8 @@
 #define S2MM_SA_OFFSET      0x12 // (0x48/4)
 #define S2MM_LENGTH_OFFSET  0x16 // (0x58/4)
 
-unsigned int * dma_config;
-unsigned int * accelerator_port;
+volatile unsigned int * dma_config;
+volatile unsigned int * accelerator_port;
 
 void interface_init();
 inline void send_cmd_to_hw(uint32_t cmd);

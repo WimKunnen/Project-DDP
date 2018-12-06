@@ -238,10 +238,10 @@ module exponentiation(
 		    a_en <= 0;
 		    done <= 1;
 	    end
-            default:
-            begin
-                mont_resetn <= 0;
-             end
+        default:
+        begin
+          mont_resetn <= 0;
+        end
         endcase
     end
     
@@ -317,13 +317,13 @@ module exponentiation(
 	    // Done
 	    4'd9:
 	    begin
-		    nextstate <= 4'd0;
+		   nextstate <= 4'd0;
 	    end
-            // Default state
-            default:
-            begin
-                nextstate <= 4'd0;
-            end
+        // Default state
+        default:
+        begin
+           nextstate <= 4'd0;
+        end
         endcase
     end
 

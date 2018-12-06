@@ -7,7 +7,8 @@ src/hw_accelerator.o src/hw_accelerator.o: ../src/hw_accelerator.c \
  ../../hw_bsp/ps7_cortexa9_0/include/xparameters_ps.h \
  ../../hw_bsp/ps7_cortexa9_0/include/xil_cache.h \
  ../src/platform/interface.h ../src/print_arr.h ../src/mp_arith.h \
- ../src/hw_accelerator.h
+ ../src/hw_accelerator.h ../../hw_bsp/ps7_cortexa9_0/include/sleep.h \
+ ../../hw_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h
 
 ../src/common.h:
 
@@ -34,3 +35,7 @@ src/hw_accelerator.o src/hw_accelerator.o: ../src/hw_accelerator.c \
 ../src/mp_arith.h:
 
 ../src/hw_accelerator.h:
+
+../../hw_bsp/ps7_cortexa9_0/include/sleep.h:
+
+../../hw_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h:

@@ -37,7 +37,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log rsa_project_wrapper.vdi -applog -m64 -tempDir /tmp -messageDb vivado.pb -mode batch -source rsa_project_wrapper.tcl -notrace
 
 
