@@ -1,0 +1,44 @@
+#include "common.h"
+#include "print_arr.h"
+#include "hw_accelerator.h"
+
+// These variables are defined in the testvector.c
+// that is created by the testvector generator python script
+extern uint32_t N[32],		// modulus
+                e[32],		// encryption exponent
+                e_len,		// encryption exponent length
+                d[32],		// decryption exponent
+                d_len,		// decryption exponent length
+                M[32],		// message
+                R_N[32],	// 2^1024 mod N
+                R2_N[32];
+
+int main()
+{
+    init_platform();
+    init_performance_counters(1);
+
+    xil_printf("Begin\n\r");
+	xil_printf("If the FPGA is not programmed, the program will stuck here!\n\r");
+
+
+    init_HW_access();
+	xil_printf("It did not stuck and HW is initialized!\n\r");
+
+	uint32_t* result[32];
+    //Encrypt
+	START_TIMING
+    HW_accelerator(e, M, R_N, R2_N, N, result, e_len);
+	STOP_TIMING
+
+    //Decrypt
+    HW_accelerator(d, result, R_N, R2_N, N, result, d_len);
+	xil_printf("Result:\r\n");
+	print_arr(result, 32);
+
+    xil_printf("End\n\r");
+
+    cleanup_platform();
+
+    return 0;
+}

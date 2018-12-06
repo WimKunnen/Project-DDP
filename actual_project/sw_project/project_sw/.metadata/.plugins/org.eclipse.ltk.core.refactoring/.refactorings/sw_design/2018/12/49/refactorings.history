@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;sw_design/src/print_arr&apos; to &apos;print_arr.c&apos;" description="Rename resource &apos;print_arr&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/print_arr" name="print_arr.c" stamp="1544027680053" updateReferences="true"/>
+</session>
