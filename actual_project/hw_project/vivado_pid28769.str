@@ -2726,3 +2726,4 @@ dismissDialog("Export Hardware"); // af:x (cv:JFrame)
 // TclEventType: DG_UPDATE_GRAPH
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,603 MB. GUI used memory: 219 MB. Current time: 12/6/18 4:12:34 PM CET

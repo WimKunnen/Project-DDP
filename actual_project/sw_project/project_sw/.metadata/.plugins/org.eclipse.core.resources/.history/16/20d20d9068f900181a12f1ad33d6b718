@@ -116,11 +116,7 @@ void HW_accelerator(uint32_t* key, uint32_t* message, uint32_t* r,uint32_t* r2, 
 	send_cmd_to_hw(command);
 	while(!is_done());
 
-//	getchar();
-	//sleep(1);
-		dmb();
-		dsb();
-		isb();
+	getchar();
 
 	send_cmd_to_hw(CMD_WRITE);
 	read_data_from_hw(result);
