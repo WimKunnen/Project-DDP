@@ -29,14 +29,14 @@ int main()
 	xil_printf("It did not stuck and HW is initialized!\n\r");
 
 	test_2018_1();
-
 	test_2018_2();
-
+	getchar();
 	test_2018_3();
-
+	getchar();
 	test_2018_4();
-
+	getchar();
 	test_2018_5();
+	xil_printf("Finished running all tests.\n\r");
 
     xil_printf("End\n\r");
 
@@ -86,9 +86,15 @@ void test_2018_1() {
 
     // Compare original and result
     if (compare_arr(M_1, result, 32) == 1)
-    	xil_printf("Success: Decrypted message is equal to original message!\r\n");
+    	xil_printf("SUCCESS: Decrypted message is equal to original message!\r\n");
     else
-    	xil_printf("Failure: Decrypted message is not equal to original message!\r\n");
+    	xil_printf("FAILURE: Decrypted message is not equal to original message!\r\n");
+
+    dmb();
+    dsb();
+    isb();
+    xil_printf("Send any character to run next test. (e.g. press a + enter) \r\n");
+    getchar();
 }
 
 void test_2018_2() {
@@ -132,9 +138,15 @@ void test_2018_2() {
 
     // Compare original and result
     if (compare_arr(M_2, result, 32) == 1)
-    	xil_printf("Success: Decrypted message is equal to original message!\r\n");
+    	xil_printf("SUCCESS: Decrypted message is equal to original message!\r\n");
     else
-    	xil_printf("Failure: Decrypted message is not equal to original message!\r\n");
+    	xil_printf("FAILURE: Decrypted message is not equal to original message!\r\n");
+
+    dmb();
+    dsb();
+    isb();
+    xil_printf("Send any character to run next test. (e.g. press a + enter) \r\n");
+    getchar();
 }
 
 void test_2018_3() {
@@ -178,9 +190,15 @@ void test_2018_3() {
 
     // Compare original and result
     if (compare_arr(M_3, result, 32) == 1)
-    	xil_printf("Success: Decrypted message is equal to original message!\r\n");
+    	xil_printf("SUCCESS: Decrypted message is equal to original message!\r\n");
     else
-    	xil_printf("Failure: Decrypted message is not equal to original message!\r\n");
+    	xil_printf("FAILURE: Decrypted message is not equal to original message!\r\n");
+
+    dmb();
+    dsb();
+    isb();
+    xil_printf("Send any character to run next test. (e.g. press a + enter) \r\n");
+    getchar();
 }
 
 void test_2018_4() {
@@ -224,9 +242,15 @@ void test_2018_4() {
 
     // Compare original and result
     if (compare_arr(M_4, result, 32) == 1)
-    	xil_printf("Success: Decrypted message is equal to original message!\r\n");
+    	xil_printf("SUCCESS: Decrypted message is equal to original message!\r\n");
     else
-    	xil_printf("Failure: Decrypted message is not equal to original message!\r\n");
+    	xil_printf("FAILURE: Decrypted message is not equal to original message!\r\n");
+
+    dmb();
+    dsb();
+    isb();
+    xil_printf("Send any character to run next test. (e.g. press a + enter) \r\n");
+    getchar();
 }
 
 void test_2018_5() {
@@ -270,7 +294,13 @@ void test_2018_5() {
 
     // Compare original and result
     if (compare_arr(M_5, result, 32) == 1)
-    	xil_printf("Success: Decrypted message is equal to original message!\r\n");
+    	xil_printf("SUCCESS: Decrypted message is equal to original message!\r\n");
     else
-    	xil_printf("Failure: Decrypted message is not equal to original message!\r\n");
+    	xil_printf("FAILURE: Decrypted message is not equal to original message!\r\n");
+
+    dmb();
+    dsb();
+    isb();
+    xil_printf("Send any character to run next test. (e.g. press a + enter) \r\n");
+    getchar();
 }
