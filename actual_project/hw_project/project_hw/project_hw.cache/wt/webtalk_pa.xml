@@ -3,17 +3,17 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Dec  6 14:49:06 2018">
+<application name="pa" timeStamp="Fri Dec  7 17:17:10 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="812e5c7adf5a42378755e2678fd4834b" type="ProjectID"/>
-<property name="ProjectIteration" value="21" type="ProjectIteration"/>
+<property name="ProjectIteration" value="25" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
 <property name="SrcSetCount" value="1" type="SrcSetCount"/>
 <property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
 <property name="DesignMode" value="RTL" type="DesignMode"/>
-<property name="SynthesisStrategy" value="Flow_PerfOptimized_high" type="SynthesisStrategy"/>
+<property name="SynthesisStrategy" value="Flow_AreaOptimized_high" type="SynthesisStrategy"/>
 <property name="ImplStrategy" value="Performance_NetDelay_high" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
@@ -23,29 +23,42 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="NewExportHardware" value="4" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="5" type="JavaHandler"/>
 <property name="OpenRSBHierarchyBlock" value="1" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="5" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="14" type="JavaHandler"/>
 <property name="RecustomizeCore" value="3" type="JavaHandler"/>
-<property name="ReportTimingSummary" value="5" type="JavaHandler"/>
-<property name="ReportUtilization" value="3" type="JavaHandler"/>
+<property name="ReportTimingSummary" value="10" type="JavaHandler"/>
+<property name="ReportUtilization" value="8" type="JavaHandler"/>
 <property name="RunBitgen" value="10" type="JavaHandler"/>
-<property name="RunImplementation" value="11" type="JavaHandler"/>
-<property name="RunSynthesis" value="1" type="JavaHandler"/>
+<property name="RunImplementation" value="16" type="JavaHandler"/>
+<property name="RunSynthesis" value="5" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
 <property name="SaveRSBDesign" value="1" type="JavaHandler"/>
-<property name="SetTopNode" value="4" type="JavaHandler"/>
+<property name="SetTopNode" value="6" type="JavaHandler"/>
 <property name="ShowSource" value="1" type="JavaHandler"/>
-<property name="ShowView" value="10" type="JavaHandler"/>
+<property name="ShowView" value="12" type="JavaHandler"/>
 <property name="SimulationBreak" value="3" type="JavaHandler"/>
-<property name="SimulationClose" value="1" type="JavaHandler"/>
-<property name="SimulationRelaunch" value="16" type="JavaHandler"/>
+<property name="SimulationClose" value="2" type="JavaHandler"/>
+<property name="SimulationRelaunch" value="21" type="JavaHandler"/>
 <property name="SimulationRestart" value="3" type="JavaHandler"/>
-<property name="SimulationRun" value="12" type="JavaHandler"/>
+<property name="SimulationRun" value="16" type="JavaHandler"/>
 <property name="SimulationRunAll" value="1" type="JavaHandler"/>
-<property name="SimulationRunForTime" value="31" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="41" type="JavaHandler"/>
 <property name="ViewTaskIPIntegrator" value="1" type="JavaHandler"/>
-<property name="ViewTaskImplementation" value="7" type="JavaHandler"/>
+<property name="ViewTaskImplementation" value="8" type="JavaHandler"/>
 <property name="ViewTaskProjectManager" value="4" type="JavaHandler"/>
 <property name="ViewTaskSimulation" value="1" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Open Synthesized Design, Report Timing Summary], 22, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Synthesized Design, Report Utilization], 28, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectTab_CLOSE_DESIGN, Close Design" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs], 3, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Summary], 1, false" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="2" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="29" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="23" type="TclMode"/>
 </item>
 </section>
 </application>

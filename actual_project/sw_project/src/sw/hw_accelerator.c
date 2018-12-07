@@ -4,7 +4,6 @@
 #include "print_arr.h"
 #include "mp_arith.h"
 #include "hw_accelerator.h"
-#include "sleep.h"
 #include "xpseudo_asm_gcc.h"
 
 // Custom commands
@@ -64,119 +63,39 @@ void shift_arr(uint32_t *exp, uint32_t amount) {
 void HW_accelerator(uint32_t* key, uint32_t* message, uint32_t* r,uint32_t* r2, uint32_t* modulus, uint32_t* result, uint32_t size) {
 	flip(key);
 	shift_arr(key, 1024-size);
-//	xil_printf("Flipped key:\r\n");
-//	print_arr(key, 32);
 
-//	dmb();
-//	dsb();
-//	isb();
-//	sleep(0.01);
-
-//	xil_printf("Message:\r\n");
-//	print_arr(message, 32);
-//	print_array_contents(message);
 	send_cmd_to_hw(CMD_READ_X);
 	send_data_to_hw(message);
 	while(!is_done());
 
-//	sleep(0.01);
-
-//	xil_printf("Exponent:\r\n");
-//	print_arr(key, 32);
 	send_cmd_to_hw(CMD_READ_E);
 	send_data_to_hw(key);
 	while(!is_done());
 
-//	sleep(0.01);
-
-//	xil_printf("R:\r\n");
-//	print_arr(r, 32);
 	send_cmd_to_hw(CMD_READ_R);
 	send_data_to_hw(r);
 	while(!is_done());
 
-//	sleep(0.01);
-
-//	xil_printf("R2:\r\n");
-//	print_arr(r2, 32);
 	send_cmd_to_hw(CMD_READ_R2);
 	send_data_to_hw(r2);
 	while(!is_done());
 
-
-//	xil_printf("Modulus:\r\n");
-//	print_arr(modulus, 32);
 	send_cmd_to_hw(CMD_READ_M);
 	send_data_to_hw(modulus);
 	while(!is_done());
 
 	uint32_t command = CMD_COMPUTE;
 	command = command | (size << 22);
-//	xil_printf("Command:\r\n%08x\r\n", command);
 	send_cmd_to_hw(command);
 	while(!is_done());
 
-//	getchar();
-	//sleep(1);
-		dmb();
-		dsb();
-		isb();
+	dmb();
+	dsb();
+	isb();
 
 	send_cmd_to_hw(CMD_WRITE);
 	read_data_from_hw(result);
 	while(!is_done());
-
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
-//
-//	send_cmd_to_hw(CMD_WRITE);
-//	read_data_from_hw(result);
-//	while(!is_done());
 }
 
 void example_HW_accelerator(void)

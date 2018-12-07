@@ -201,10 +201,10 @@ module rsa_wrapper
 //                            out_data <= x;
 //                        CMD_WRITE_E:
 //                            out_data <= e;
-                        CMD_WRITE_M:
-                            out_data <= m;
-                        CMD_WRITE_R:
-                            out_data <= r;
+//                        CMD_WRITE_M:
+//                            out_data <= m;
+//                        CMD_WRITE_R:
+//                            out_data <= r;
 //                        CMD_WRITE_R2:
 //                            out_data <= r2;
                         default:
