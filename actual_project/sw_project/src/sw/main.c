@@ -1,6 +1,7 @@
 #include "common.h"
 #include "print_arr.h"
 #include "hw_accelerator.h"
+#include "xpseudo_asm_gcc.h"
 
 // These variables are defined in the testvector.c
 // that is created by the testvector generator python script
@@ -27,17 +28,29 @@ int main()
 
 	uint32_t result[32];
     //Encrypt
+	dmb();
+	dsb();
+	isb();
 	START_TIMING
     HW_accelerator(e, M, R_N, R2_N, N, result, e_len);
+	dmb();
+	dsb();
+	isb();
 	STOP_TIMING
 	xil_printf("Result:\r\n");
 	print_arr(result, 32);
 
     //Decrypt
-//	START_TIMING
+	dmb();
+	dsb();
+	isb();
+	START_TIMING
 	xil_printf("Decrypt:\r\n");
     HW_accelerator(d, result, R_N, R2_N, N, result, d_len);
-//	STOP_TIMING
+	dmb();
+	dsb();
+	isb();
+    STOP_TIMING
 	xil_printf("Result:\r\n");
     print_arr(result, 32);
 
